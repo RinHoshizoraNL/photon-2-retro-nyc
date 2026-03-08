@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+    "$basetexture" "rin/nypd/props/sp_mk7/sp_mark7"
+    "$bumpmap" "rin/nypd/props/sp_mk7/sp_mark7_nm"
+$phong "1"
+    $phongexponent "7"
+    $phongboost "1"
+    $phongfresnelranges "[.05 .3 1]"
+	"$rimlight"               "1"
+	"$rimlightexponent"       "17"
+	"$rimlightboost"          "1.2"	
+}
