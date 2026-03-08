@@ -39,8 +39,7 @@ VEHICLE.Equipment = {
 					},
 				}
 			},
-
-		}
+        }
 	},
 	{
 		Category = "Siren",
