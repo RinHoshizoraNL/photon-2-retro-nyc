@@ -44,6 +44,32 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
+		Category = "Lightbar",
+		Options = {
+			{
+				Option = "Federal Signal Vision",
+				Components = {
+					{
+						Component = "photon_fedsig_vision_nypd",
+						Position = Vector( 0, -19, 58.5 ),
+						Angles = Angle( 0, 180, 0 ),
+						Scale = 1.07,
+						BodyGroups = {
+							["rear_ta"] = 1,
+							["straps"] = 1,
+						},
+					},
+					{
+						Component = "photon_whe_500_nypd",
+						Position = Vector( 0, -32, 62.7 ),
+						Angles = Angle( 0, -90, 0 ),
+						Scale = 0.85,
+					},
+				}
+			}
+		}
+	},
+	{
 		Category = "Grille Lights",
 		Options = {
             {
