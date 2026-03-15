@@ -9,7 +9,7 @@ VEHICLE.Author		= "Rin Hoshizora"
 local sequence = Photon2.SequenceBuilder.New
 
 VEHICLE.Equipment = {
-    	{
+    {
 		Category = "Livery",
 		Options = {
 			{
@@ -34,10 +34,26 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
+		Category = "Lightbar",
+		Options = {
+            {
+				Option = "Code3 MX7000",
+				Components = {
+					{
+						Component = "photon_c3_mx7000_nycems",
+						Position = Vector( 0, -19.5, 67.7 ),
+						Angles = Angle( 0, 180, 0 ),
+						Scale = 1.07,
+					},
+                }
+			},
+		}
+	},
+	{
 		Category = "Siren",
 		Options = {
 			{
-				Option = "Federal Signal Smart Siren",
+				Option = "Federal Signal PA300",
 				Components = {
 					{
 						Name = "@siren_speaker",
@@ -46,7 +62,7 @@ VEHICLE.Equipment = {
 						Position = Vector( 0, 107, 29.3 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1,
-						Siren = "fedsig_smartsiren",
+						Siren = "pa300_1",
 						Templates = {
 							["Sound"] = { 
 								Tone = {
@@ -84,10 +100,13 @@ VEHICLE.Equipment = {
 						RenderGroup = RENDERGROUP_OPAQUE,
 					},
 					{
-						Model = "models/gandhi/props/vision.mdl",
-						Position = Vector( 0, 5.6, 25 ),
+						Model = "models/gandhi/props/mastercom.mdl",
+						Position = Vector( 0, 1.2, 24.5),
 						Angles = Angle( 20, 270, 0 ),
-						Scale = 0.8,
+						Scale = 1.1,
+						SubMaterials = {
+							[0] = "rin/nypd/props/pa300/pa300",
+						},
 						RenderGroup = RENDERGROUP_OPAQUE,
 					},
 					{
@@ -112,6 +131,24 @@ VEHICLE.Equipment = {
 						Position = Vector( 0, 122, 19 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -125.4, 31.8 ),
+						Angles = Angle( 0, 270, 00 ),
+						Scale = 0.95,
+						SubMaterials = {
+							[1] = "rin/ems/props/plates/plate_ems",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, 122.7, 19 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/ems/props/plates/plate_ems",
+						},
 					},
 				}
 			}
