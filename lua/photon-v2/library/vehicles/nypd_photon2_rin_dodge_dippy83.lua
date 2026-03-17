@@ -72,6 +72,25 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
+		Category = "Spotlight",
+		Options = {
+			{
+				Option = "Spotlight",
+				Components = {
+					{
+						Component = "photon_par46_left",
+						Position = Vector( -35.2, 15, 45 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[5] = "sentry/shared/env_cubemap_model"
+						}
+					},
+				}
+			},
+		}
+	},
+	{
 		Category = "Police Equipment",
 		Options = {
 			{
