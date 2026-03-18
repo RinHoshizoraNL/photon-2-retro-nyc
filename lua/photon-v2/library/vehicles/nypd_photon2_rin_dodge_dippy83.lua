@@ -145,10 +145,10 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Bumper Guard Front",
+		Category = "Front Bumper Guard",
 		Options = {
 			{
-				Option = "Bumper Guard Front",
+				Option = "Front Bumper Guard",
 				Props = {
 					{
 						Model = "models/sprops/geometry/qhex_12.mdl",
@@ -223,7 +223,10 @@ VEHICLE.Equipment = {
 						},
 					},
 				}
-			}
+			},
+			{
+				Option = "None",
+			},
 		}
 	},
 }
