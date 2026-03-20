@@ -39,6 +39,50 @@ VEHICLE.Equipment = {
         }
 	},
 	{
+		Category = "Rear Deck Lights",
+		Options = {
+            {
+				Option = "Rear Deck Lights",
+				Components = {
+					{
+						Component = "photon_par46_flasher_nypd",
+						Position = Vector( -22, -75, 41 ),
+						Angles = Angle( 0, 180, 0 ),
+						Scale = 0.7,
+						Phase = 180,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Component = "photon_par46_flasher_nypd",
+						Position = Vector( 22, -75, 41 ),
+						Angles = Angle( 0, 180, 0 ),
+						Scale = 0.7,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+                },
+				Props = {
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( -22, -75, 38 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 0.7, 0.7, 1.5 ),
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( 22, -75, 38  ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 0.7, 0.7, 1.5 ),
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+				},
+			},
+			{
+				Option = "None",
+			},
+		}
+	},
+	{
 		Category = "Equipment",
 		Options = {
 			{
