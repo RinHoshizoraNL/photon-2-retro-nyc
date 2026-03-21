@@ -1,21 +1,23 @@
 if (Photon2.ReloadVehicleFile()) then return end
 local VEHICLE = Photon2.LibraryVehicle()
 
-VEHICLE.Title 		= "1995 Ford Crown Victoria NYC EMS"
-VEHICLE.Vehicle		= "96cvpi_sgm"
+VEHICLE.Title 		= "1995 Chevrolet Caprice NYC EMS"
+VEHICLE.Vehicle		= "95caprice_sgm"
 VEHICLE.Category 	= "Photon 2 NYC: NYC EMS"
 VEHICLE.Author		= "Rin Hoshizora"
 
 local sequence = Photon2.SequenceBuilder.New
 
 VEHICLE.Equipment = {
-    {
+	{
 		Category = "Livery",
 		Options = {
 			{
 				Option = "EMS 1995",
 				SubMaterials = {
-					{ Id = 6, Material = "rin/ems/crownvic96/ems_95" }
+					{ Id = 22, Material = "rin/ems/caprice95/ems_95" },
+					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
+					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
 				},
 			},
 		}
@@ -27,7 +29,7 @@ VEHICLE.Equipment = {
 				Option = "Default",
 				Components = {
 					{
-						Component = "photon_standard_sgmcvpi96",
+						Component = "photon_standard_chevcap91_nypd",
 					}
 				}
 			}
@@ -41,9 +43,9 @@ VEHICLE.Equipment = {
 				Components = {
 					{
 						Component = "photon_c3_mx7000_nycems",
-						Position = Vector( 0, -19.5, 67.7 ),
-						Angles = Angle( 0, 180, 0 ),
-						Scale = 1.07,
+						Position = Vector( 0, -15, 59.6 ),
+						Angles = Angle( 0, 180, 1.5 ),
+						Scale = 1.08,
 					},
                 }
 			},
@@ -59,7 +61,7 @@ VEHICLE.Equipment = {
 						Name = "@siren_speaker",
 						Component = "siren_prototype",
 						Model = "models/gandhi/props/es100.mdl",
-						Position = Vector( 0, 107, 29.3 ),
+						Position = Vector( 0, 104, 24 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1,
 						Siren = "pa300_1",
@@ -80,28 +82,24 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Police Equipment",
+		Category = "Equipment",
 		Options = {
 			{
-				Option = "Police Equipment",
+				Option = "Equipment",
 				BodyGroups = {
-					{ BodyGroup = "pillars", Value = 0 },
-					{ BodyGroup = "hubcaps_fl", Value = 0 },
-					{ BodyGroup = "hubcaps_fr", Value = 1 },
-					{ BodyGroup = "hubcaps_rl", Value = 1 },
-					{ BodyGroup = "hubcaps_rr", Value = 1 },
+					{ BodyGroup = "trim", Value = 0 },
 				},
 				Props = {
 					{
 						Model = "models/sentry/props/procopper_cvpi.mdl",
-						Position = Vector( 0, 1.5, 0),
+						Position = Vector( 0, 4.5, -4),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1,
 						RenderGroup = RENDERGROUP_OPAQUE,
 					},
 					{
 						Model = "models/gandhi/props/mastercom.mdl",
-						Position = Vector( 0, 1.2, 24.5),
+						Position = Vector( 0, 4, 20.5),
 						Angles = Angle( 20, 270, 0 ),
 						Scale = 1.1,
 						SubMaterials = {
@@ -111,14 +109,14 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/gandhi/props/radio.mdl",
-						Position = Vector( 0, 9, 25.7 ),
+						Position = Vector( 0, 12, 21.8 ),
 						Angles = Angle( 200, 270, 0 ),
 						Scale = 0.32,
 						RenderGroup = RENDERGROUP_OPAQUE,
 					},
 					{
 						Model = "models/rob/oldpolicepack/motorola.mdl",
-						Position = Vector( 0, 21, 31.2 ),
+						Position = Vector( 0, 24, 27.5 ),
 						Angles = Angle( 20, 270, 0 ),
 						Scale = 1,
 						SubMaterials = {
@@ -127,35 +125,35 @@ VEHICLE.Equipment = {
 						RenderGroup = RENDERGROUP_OPAQUE,
 					},
 					{
-						Model = "models/schmal/antennas/antenna_3.mdl",
-						Position = Vector( 25, -106, 45.5 ),
-						Angles = Angle( 4, 0, 6 ),
-						Scale = 1
-					},
-					{
-						Model = "models/schmal/antennas/antenna_3.mdl",
-						Position = Vector( -25, -106, 45.5 ),
-						Angles = Angle( -4, 0, 6 ),
-						Scale = 1
-					},
-					{
 						Model = "models/supermighty/photon/front_holder.mdl",
-						Position = Vector( 0, 122, 19 ),
+						Position = Vector( 0, 114, 12 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1
 					},
 					{
+						Model = "models/schmal/antenna_absc.mdl",
+						Position = Vector( 25, -105, 40 ),
+						Angles = Angle( 4, 0, 6 ),
+						Scale = 1
+					},
+					{
+						Model = "models/schmal/antenna_absc.mdl",
+						Position = Vector( -25, -105, 40 ),
+						Angles = Angle( -4, 0, 6 ),
+						Scale = 1
+					},
+					{
 						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, -125.4, 31.8 ),
+						Position = Vector( 0, -123.2, 25.2 ),
 						Angles = Angle( 0, 270, 00 ),
-						Scale = 0.95,
+						Scale = 1,
 						SubMaterials = {
 							[1] = "rin/ems/props/plates/plate_ems",
 						},
 					},
 					{
 						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, 122.7, 19 ),
+						Position = Vector( 0, 114.7, 12 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 0.99,
 						SubMaterials = {
