@@ -42,21 +42,20 @@ VEHICLE.Equipment = {
         }
 	},
 	{
-		Category = "Rear Deck Lights",
+		Category = "Additional Brake Lights",
 		Options = {
             {
-				Option = "Rear Deck Lights",
+				Option = "Additional Brake Lights",
 				Components = {
 					{
-						Component = "photon_par46_flasher_nypd",
+						Component = "photon_par46_brake_nypd",
 						Position = Vector( -22, -75, 41 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 0.7,
-						Phase = 180,
 						RenderGroup = RENDERGROUP_OPAQUE,
 					},
 					{
-						Component = "photon_par46_flasher_nypd",
+						Component = "photon_par46_brake_nypd",
 						Position = Vector( 22, -75, 41 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 0.7,

@@ -1,0 +1,7 @@
+"DecalModulate"
+{
+	"$basetexture" "rin/papd/props/aerodynic/glass"
+	"$model" "1"
+	"$nocull" "1"
+}
+
