@@ -81,6 +81,23 @@ VEHICLE.Equipment = {
 				Option = "Police Equipment",
 				Props = {
 					{
+						Model = "models/gandhi/props/mastercom.mdl",
+						Position = Vector( 2.5, 48.5, 63.5),
+						Angles = Angle( 48, 270, 0 ),
+						Scale = 1.35,
+						SubMaterials = {
+							[0] = "rin/nypd/props/sp_mk7/sp_mark7",
+						},
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Model = "models/gandhi/props/radio.mdl",
+						Position = Vector( 2.5, 63.5, 77.6 ),
+						Angles = Angle( 245, 270, 0 ),
+						Scale = 0.32,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
 						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
 						Position = Vector( 0, -119.1, 35.2 ),
 						Angles = Angle( -8, 270, 0 ),
