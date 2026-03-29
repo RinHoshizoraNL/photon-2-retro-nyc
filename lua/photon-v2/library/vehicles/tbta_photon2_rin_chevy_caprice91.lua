@@ -1,0 +1,375 @@
+if (Photon2.ReloadVehicleFile()) then return end
+local VEHICLE = Photon2.LibraryVehicle()
+
+VEHICLE.Title 		= "1991 Chevrolet Caprice TBTA"
+VEHICLE.Vehicle		= "91caprice_sgm"
+VEHICLE.Category 	= "Photon 2 NYC: TBTA"
+VEHICLE.Author		= "Rin Hoshizora"
+
+local sequence = Photon2.SequenceBuilder.New
+
+VEHICLE.Equipment = {
+	{
+		Category = "Livery",
+		Options = {
+			{
+				Option = "Patrol 1991",
+				SubMaterials = {
+					{ Id = 20, Material = "rin/tbta/caprice91/tbta_91" },
+					{ Id = 16, Material = "rin/nypd/caprice95/seats_blue" },
+					{ Id = 24, Material = "rin/nypd/caprice95/dash_blue" }
+				},
+			},
+		}
+	},
+	{
+		Category = "Lighting",
+		Options = {
+			{
+				Option = "Default",
+				Components = {
+					{
+						Component = "photon_standard_chevcap91_nypd",
+					}
+				}
+			}
+		}
+	},
+	{
+		Category = "Lightbar",
+		Options = {
+            {
+				Option = "Federal Signal Aerodynic",
+				Components = {
+					{
+                        Component = "photon_fedsig_aerodynic_fdny",
+                        Position = Vector( 0, -13, 58.6 ),
+                        Angles = Angle( 0, 180, 2 ),
+                        Scale = 0.9,
+					},
+				}
+			},
+        }
+	},
+	{
+		Category = "Highriser",
+		Options = {
+			{
+				Option = "Highriser",
+				Props = {
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( -24, -41.3, 57.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( 24, -41.3, 57.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( -24, -22.6, 57.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( 24, -22.6, 57.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
+						Position = Vector( 24, -32, 62.3 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 1, 8, 0.6 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
+						Position = Vector( -24, -32, 62.3 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 1, 8, 0.6 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
+						Position = Vector( 24, -30.9, 69.3 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 1, 7.29, 0.6 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
+						Position = Vector( -24, -30.9, 69.3 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 1, 7.29, 0.6 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
+						Position = Vector( 24, -20.9, 65.8 ),
+						Angles = Angle( 0, 0, 90 ),
+						Scale = Vector( 1, 1.8, 0.6 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
+						Position = Vector( -24, -20.9, 65.8 ),
+						Angles = Angle( 0, 0, 90 ),
+						Scale = Vector( 1, 1.8, 0.6 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
+						Position = Vector( 24, -40.9, 65.8 ),
+						Angles = Angle( 0, 0, 90 ),
+						Scale = Vector( 1, 1.8, 0.6 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
+						Position = Vector( -24, -40.9, 65.8 ),
+						Angles = Angle( 0, 0, 90 ),
+						Scale = Vector( 1, 1.8, 0.6 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
+						Position = Vector( 0, -32, 62.3 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = Vector( 1, 15, 0.2 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
+						Position = Vector( 0, -31, 71.45 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = Vector( 2, 17, 0.9 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/geometry/hhex_12.mdl",
+						Position = Vector( 0, -31, 75 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 1.7, 2, 1 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sentry/props/c3pse550.mdl",
+						Position = Vector( 0, -31, 77.1 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
+							[1] = "photon/common/blank",
+						},
+					},
+				},
+				Components = {
+					{
+						Component = "photon_whe_500_nypd",
+						Position = Vector( 0, -44.2, 63.2 ),
+						Angles = Angle( 0, -90, 0 ),
+						Scale = 0.92,
+					},
+					{
+						Component = "photon_mars_flasher_nypd",
+						Position = Vector( 19.7, -31, 70.7 ),
+						Angles = Angle( 90, 0, 0 ),
+						Scale = 1,
+					},
+					{
+						Component = "photon_mars_flasher_nypd",
+						Position = Vector( -19.7, -31, 70.7 ),
+						Angles = Angle( -90, 0, 0 ),
+						Scale = 1,
+						Phase = 180,
+						States = { "A", "A" },
+						SubMaterials = {
+							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
+						},
+					},
+					{
+						Component = "photon_mars_flasher_nypd",
+						Position = Vector( 18, -31, 67 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						Phase = 180,
+						States = { "A", "A" },
+						SubMaterials = {
+							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
+						},
+					},
+					{
+						Component = "photon_mars_flasher_nypd",
+						Position = Vector( -18, -31, 67 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+					},
+					{
+						Component = "patlite_hkf",
+						Position = Vector( 1, -31, 77 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 0.8,
+						States = {
+							[1] = "A",
+							[2] = "A",
+							[3] = "A",
+							[4] = "A",
+						},
+						SubMaterials = {
+							[2] = "photon/common/blank",
+							[4] = "photon/common/blank",
+							[5] = "photon/common/blank",
+							[6] = "photon/common/blank",
+							[7] = "photon/common/blank",
+						},
+					},
+				}
+			}
+		}
+	},
+	{
+		Category = "Siren",
+		Options = {
+			{
+				Option = "Federal Signal PA300",
+				Components = {
+					{
+						Name = "@siren_speaker",
+						Component = "siren_prototype",
+						Model = "models/gandhi/props/es100.mdl",
+						Position = Vector( 0, 104, 24 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1,
+						Siren = "pa300_1",
+						Templates = {
+							["Sound"] = { 
+								Tone = {
+									DSP = 0,
+									Pitch = 100
+								}
+							}
+						},
+						Inputs = { 
+							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
+						}
+					},
+				}
+			}
+		}
+	},
+	{
+		Category = "Spotlight",
+		Options = {
+			{
+				Option = "Spotlight",
+				Components = {
+					{
+						Component = "photon_par46_left",
+						Position = Vector( -37.5, 30, 42 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[5] = "sentry/shared/env_cubemap_model"
+						}
+					},
+				}
+			},
+		}
+	},
+	{
+		Category = "Police Equipment",
+		Options = {
+			{
+				Option = "Police Equipment",
+				BodyGroups = {
+					{ BodyGroup = "trim", Value = 0 },
+				},
+				Props = {
+					{
+						Model = "models/supermighty/photon/dashcam.mdl",
+						Position = Vector( 7.5, 15, 51),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Model = "models/gandhi/props/mastercom.mdl",
+						Position = Vector( 0.2, 27, 30.2),
+						Angles = Angle( 90, 270, 0 ),
+						Scale = 1.35,
+						SubMaterials = {
+							[0] = "rin/nypd/props/pa300/pa300",
+						},
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Model = "models/gandhi/props/radio.mdl",
+						Position = Vector( 0, 26.5, 24 ),
+						Angles = Angle( 270, 270, 0 ),
+						Scale = 0.32,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Model = "models/sentry/props/setina_partition_cvpi.mdl",
+						Position = Vector( 0, 0, -5),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Model = "models/supermighty/photon/front_holder.mdl",
+						Position = Vector( 0, 114, 12 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -123.2, 25.2 ),
+						Angles = Angle( 0, 270, 00 ),
+						Scale = 1,
+						SubMaterials = {
+							[1] = "rin/tbta/props/plates/plate_tbta",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, 114.7, 12 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/tbta/props/plates/plate_tbta",
+						},
+					},
+				}
+			}
+		}
+	},
+}
