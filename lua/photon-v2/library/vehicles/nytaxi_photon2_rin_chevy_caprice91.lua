@@ -1,8 +1,8 @@
 if (Photon2.ReloadVehicleFile()) then return end
 local VEHICLE = Photon2.LibraryVehicle()
 
-VEHICLE.Title 		= "1995 Chevrolet Caprice NYC Taxi"
-VEHICLE.Vehicle		= "95caprice_sgm"
+VEHICLE.Title 		= "1991 Chevrolet Caprice NYC Taxi"
+VEHICLE.Vehicle		= "91caprice_sgm"
 VEHICLE.Category 	= "Photon 2 NYC: NYC Taxi"
 VEHICLE.Author		= "Rin Hoshizora"
 
@@ -15,9 +15,9 @@ VEHICLE.Equipment = {
 			{
 				Option = "Taxi",
 				SubMaterials = {
-					{ Id = 22, Material = "rin/taxi/caprice95/taxi_95" },
-					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
-					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
+					{ Id = 20, Material = "rin/taxi/caprice91/taxi_91" },
+					{ Id = 16, Material = "rin/nypd/caprice95/seats_blue" },
+					{ Id = 24, Material = "rin/nypd/caprice95/dash_blue" }
 				},
 			},
 		}
@@ -25,6 +25,20 @@ VEHICLE.Equipment = {
 	{
 		Category = "Taxi Sign",
 		Options = {
+			{
+				Option = "Taxi Sign With Advert",
+				Props = {
+					{
+						Model = "models/sentry/props/taxiadsign.mdl",
+						Position = Vector( 0, -21, 60.5 ),
+						Angles = Angle( -0.5, 90, 0 ),
+						Scale = 0.8,
+						SubMaterials = {
+							[0] = "rin/taxi/props/signs/sign_03",
+						},
+					},
+				}
+			},
 			{
 				Option = "Taxi Sign",
 				Props = {
@@ -35,68 +49,6 @@ VEHICLE.Equipment = {
 						Scale = 1
 					},
 				}
-			},
-			{
-				Option = "Taxi Sign With Advert",
-				Props = {
-					{
-						Model = "models/sentry/props/taxiadsign.mdl",
-						Position = Vector( 0, -21, 60.5 ),
-						Angles = Angle( -0.5, 90, 0 ),
-						Scale = 0.8,
-						SubMaterials = {
-							[0] = "rin/taxi/props/signs/sign_02",
-						},
-					},
-				}
-			}
-		}
-	},
-	{
-		Category = "Wheels",
-		Options = {
-			{
-				Option = "Steelies",
-				Bones = {
-					{ Bone = "fl_wheel", Scale = 0, Position = Vector(0, 0, 0), Angles = Angle(0, 0, 0) },
-					{ Bone = "fr_wheel", Scale = 0, Position = Vector(0, 0, 0), Angles = Angle(0, 0, 0) },
-					{ Bone = "bl_wheel", Scale = 0, Position = Vector(0, 0, 0), Angles = Angle(0, 0, 0) },
-					{ Bone = "br_wheel", Scale = 0, Position = Vector(0, 0, 0), Angles = Angle(0, 0, 0) },
-				},
-				Props = {
-					{
-						Model = "models/rin/95caprice/steelie/rin_steelies.mdl",
-						Position = Vector( 0, 0, 0 ),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = 1,
-						Bones = {
-							["wheel_fl"] = { 
-								Position = Vector( -2.7, 0, 0 ),
-								Angles = Angle( 0, 0, 0 ),
-								Scale = 1,
-								Follow = { Attachment = "wheel_fl" }
-							},
-							["wheel_fr"] = { 
-								Position = Vector( -2.7, 0, 0 ),
-								Angles = Angle( 0, 0, 0 ),
-								Scale = 1,
-								Follow = { Attachment = "wheel_fr" }
-							},
-							["wheel_rl"] = { 
-								Position = Vector( -2.7, 0, 0 ),
-								Angles = Angle( 0, 0, 0 ),
-								Scale = 1,
-								Follow = { Attachment = "wheel_rl" }
-							},
-							["wheel_rr"] = { 
-								Position = Vector( -2.7, 0, 0 ),
-								Angles = Angle( 0, 0, 0 ),
-								Scale = 1,
-								Follow = { Attachment = "wheel_rr" }
-							},
-						},
-					}	
-				},
 			},
 		}
 	},

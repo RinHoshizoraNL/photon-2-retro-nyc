@@ -24,6 +24,20 @@ VEHICLE.Equipment = {
 		Category = "Taxi Sign",
 		Options = {
 			{
+				Option = "Taxi Sign With Advert",
+				Props = {
+					{
+						Model = "models/sentry/props/taxiadsign.mdl",
+						Position = Vector( 0, -22, 68.5 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.9,
+						SubMaterials = {
+							[0] = "rin/taxi/props/signs/sign_01",
+						},
+					},
+				}
+			},
+			{
 				Option = "Taxi Sign",
 				Props = {
 					{

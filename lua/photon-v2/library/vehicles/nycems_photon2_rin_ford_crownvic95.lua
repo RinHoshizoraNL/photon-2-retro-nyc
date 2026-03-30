@@ -53,7 +53,7 @@ VEHICLE.Equipment = {
 		Category = "Siren",
 		Options = {
 			{
-				Option = "Federal Signal PA300",
+				Option = "Federal Signal PA4000",
 				Components = {
 					{
 						Name = "@siren_speaker",
@@ -62,7 +62,7 @@ VEHICLE.Equipment = {
 						Position = Vector( 0, 107, 29.3 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1,
-						Siren = "pa300_1",
+						Siren = "fs_pa4000",
 						Templates = {
 							["Sound"] = { 
 								Tone = {
