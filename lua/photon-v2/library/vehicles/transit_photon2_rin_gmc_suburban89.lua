@@ -32,6 +32,20 @@ VEHICLE.Equipment = {
 					{ BodyGroup = "brushguard", Value = 3 },
 				},
 			},
+			{
+				Option = "Patrol 1986",
+				SubMaterials = {
+					{ Id = 1, Material = "rin/transit/suburban89/transit_86" },
+					{ Id = 0, Material = "rin/transit/suburban89/transit_86" },
+				},
+				BodyGroups = {
+					{ BodyGroup = "bumpers", Value = 0 },
+					{ BodyGroup = "grille", Value = 1 },
+					{ BodyGroup = "mirrors", Value = 0 },
+					{ BodyGroup = "wheels", Value = 0 },
+					{ BodyGroup = "brushguard", Value = 3 },
+				},
+			},
 		}
 	},
 	{
