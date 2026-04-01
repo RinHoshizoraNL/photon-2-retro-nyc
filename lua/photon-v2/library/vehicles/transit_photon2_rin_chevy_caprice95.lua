@@ -39,7 +39,7 @@ VEHICLE.Equipment = {
 		Category = "Grille Lights",
 		Options = {
             {
-				Option = "Federal Signal GH1",
+				Option = "Whelen 900",
 				Components = {
 					{
 						Component = "anemolis_whelen_900_halogen",

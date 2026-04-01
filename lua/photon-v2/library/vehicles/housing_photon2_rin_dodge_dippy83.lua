@@ -70,7 +70,7 @@ VEHICLE.Equipment = {
 		Category = "Siren",
 		Options = {
 			{
-				Option = "Federal Signal PA300",
+				Option = "Scientific Prototypes Mark-VII",
 				Components = {
 					{
 						Name = "@siren_speaker",
@@ -79,7 +79,7 @@ VEHICLE.Equipment = {
 						Position = Vector( 0, 97, 22.5 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1,
-						Siren = "pa300_1",
+						Siren = "sp_mk7",
 						Templates = {
 							["Sound"] = { 
 								Tone = {
@@ -111,7 +111,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( 90, 262, 0 ),
 						Scale = 1.15,
 						SubMaterials = {
-							[0] = "rin/nypd/props/pa300/pa300",
+							[0] = "rin/nypd/props/sp_mk7/sp_mark7",
 						},
 						RenderGroup = RENDERGROUP_OPAQUE,
 					},
