@@ -110,8 +110,8 @@ COMPONENT.ElementStates = {
 			Activity = "Sweep",
 			SweepStart = 360-30,
 			SweepEnd = 30,
-			Speed = 100,
-			Direction = -1,
+			Speed = 120,
+			Direction = 1,
 			SweepPause = 0
 		},
 		RearSweep = {
@@ -142,6 +142,27 @@ COMPONENT.ElementStates = {
 			IntensityTransitions = true, 
 			BloomColor = PhotonColor( 255, 110, 0 ):Blend( amber ):GetBlendColor(),
 			DrawColor = PhotonColor( 130,255,230 ):Blend( amber ):GetBlendColor()
+		},
+		["Proxy_RC"] = {
+			Proxy = { Type = "FROM_LIGHT", Key = 1, Value = "AngleOutput" }
+		},
+		["Proxy_RI_L"] = {
+			Proxy = { Type = "FROM_LIGHT", Key = 2, Value = "AngleOutput" }
+		},
+		["Proxy_RI_R"] = {
+			Proxy = { Type = "FROM_LIGHT", Key = 3, Value = "AngleOutput" }
+		},
+		["Proxy_RM_l"] = {
+			Proxy = { Type = "FROM_LIGHT", Key = 4, Value = "AngleOutput" }		
+		},
+		["Proxy_RM_R"] = {
+			Proxy = { Type = "FROM_LIGHT", Key = 5, Value = "AngleOutput" }
+		},
+		["Proxy_RO_L"] = {
+			Proxy = { Type = "FROM_LIGHT", Key = 6, Value = "AngleOutput" }
+		},
+		["Proxy_RO_R"] = {
+			Proxy = { Type = "FROM_LIGHT", Key = 7, Value = "AngleOutput" }
 		}
 	},
 	["2D"] = {
@@ -189,6 +210,63 @@ COMPONENT.ElementStates = {
 			SourceDetailColor = PhotonColor( 130,255,230):Blend(amber):GetBlendColor(), 
 			InnerGlowColor = PhotonColor(200, 110, 0):Blend(amber):Scale( aScale ):GetBlendColor(),
 			ShapeGlowColor = PhotonColor(255, 110, 0):Blend(amber):GetBlendColor()
+		},
+		["Proxy_RC"] = {
+			Proxy = { Type = "FROM_LIGHT", Key = 1, Value = "AngleOutput" }
+		},
+		["Proxy_RI_L"] = {
+			Proxy = { Type = "FROM_LIGHT", Key = 2, Value = "AngleOutput" }
+		},
+		["Proxy_RI_R"] = {
+			Proxy = { Type = "FROM_LIGHT", Key = 3, Value = "AngleOutput" }
+		},
+		["Proxy_RM_l"] = {
+			Proxy = { Type = "FROM_LIGHT", Key = 4, Value = "AngleOutput" }		
+		},
+		["Proxy_RM_R"] = {
+			Proxy = { Type = "FROM_LIGHT", Key = 5, Value = "AngleOutput" }
+		},
+		["Proxy_RO_L"] = {
+			Proxy = { Type = "FROM_LIGHT", Key = 6, Value = "AngleOutput" }
+		},
+		["Proxy_RO_R"] = {
+			Proxy = { Type = "FROM_LIGHT", Key = 7, Value = "AngleOutput" }
+		}
+	},
+	["Projected"] = {
+		["~R"] = {
+			IntensityTransitions = true,
+			Color = PhotonColor( 255, 15, 10 )
+		},
+		["~B"] = {
+			IntensityTransitions = true,
+			Color = PhotonColor( 45, 175, 255 )
+		},
+		["~SW"] = {
+			IntensityTransitions = true,
+			Color = PhotonColor( 255, 225, 200)
+		},
+		-- Keeping proxies here for now if I decide to add color inserts at somepoint
+		Proxy_RC = {
+			Proxy = { Type = "FROM_LIGHT", Key = 1, Value = "AngleOutput" }
+		},
+		Proxy_RI_L = {
+			Proxy = { Type = "FROM_LIGHT", Key = 2, Value = "AngleOutput" }
+		},
+		Proxy_RI_R = {
+			Proxy = { Type = "FROM_LIGHT", Key = 3, Value = "AngleOutput" }
+		},
+		Proxy_RM_l = {
+			Proxy = { Type = "FROM_LIGHT", Key = 4, Value = "AngleOutput" }		
+		},
+		Proxy_RM_R = {
+			Proxy = { Type = "FROM_LIGHT", Key = 5, Value = "AngleOutput" }
+		},
+		Proxy_RO_L = {
+			Proxy = { Type = "FROM_LIGHT", Key = 6, Value = "AngleOutput" }
+		},
+		Proxy_RO_R = {
+			Proxy = { Type = "FROM_LIGHT", Key = 7, Value = "AngleOutput" }
 		}
 	}
 }
@@ -265,43 +343,7 @@ COMPONENT.Templates = {
 			IntensityGainFactor = rot_igf,
 			IntensityLossFactor = rot_ilf,
 			DeactivationState = "~OFF",
-			Intensity = 0,
-			States = {
-				["~R"] = {
-					IntensityTransitions = true,
-					Color = PhotonColor( 255, 15, 10 )
-				},
-				["~B"] = {
-					IntensityTransitions = true,
-					Color = PhotonColor( 45, 175, 255 )
-				},
-				["~SW"] = {
-					IntensityTransitions = true,
-					Color = PhotonColor( 255, 225, 200)
-				},
-				-- Keeping proxies here for now if I decide to add color inserts at somepoint
-				Proxy_RC = {
-					Proxy = { Type = "FROM_LIGHT", Key = 1, Value = "AngleOutput" }
-				},
-				Proxy_RI_L = {
-					Proxy = { Type = "FROM_LIGHT", Key = 2, Value = "AngleOutput" }
-				},
-				Proxy_RI_R = {
-					Proxy = { Type = "FROM_LIGHT", Key = 3, Value = "AngleOutput" }
-				},
-				Proxy_RM_l = {
-					Proxy = { Type = "FROM_LIGHT", Key = 4, Value = "AngleOutput" }		
-				},
-				Proxy_RM_R = {
-					Proxy = { Type = "FROM_LIGHT", Key = 5, Value = "AngleOutput" }
-				},
-				Proxy_RO_L = {
-					Proxy = { Type = "FROM_LIGHT", Key = 6, Value = "AngleOutput" }
-				},
-				Proxy_RO_R = {
-					Proxy = { Type = "FROM_LIGHT", Key = 7, Value = "AngleOutput" }
-				}
-			}
+			Intensity = 0
 		}
 	}
 }
@@ -484,8 +526,8 @@ COMPONENT.Segments = {
 			-- STAGE1
 			[3] = "[Point0] 4 2 1 3 5 [Point180] 6 7",
 			-- STAGE 2
-			[4] = "[Point0] 6 4 2 1 3 5 7 [Point180Fast] 1",
-			[5] = "[RotateFaster] 2 3 [RotateFast] 1 4 5 [RotateMedium] 6 7",
+			[4] = "[RotateStart] 6 4 2 3 5 7 [SweepForward] 1",
+			[5] = "[RotateFaster] 2 3 [RotateFast] 4 5 [RotateMedium] 6 7 [SweepForward] 1",
 			-- STAGE 3
 			[6] = "[RotateStart] 1",
 			[7] = "[RotateStart] 2 1 3",
@@ -498,19 +540,19 @@ COMPONENT.Segments = {
 
 			STAGE1 = sequence():Add(2):Hold(40):Add(3):SetRepeating( false ),
 			STAGE2 = sequence():Add(2):Hold(40):Add(4):Hold(11):Add(5):SetRepeating( false ),
-			STAGE3 = sequence():Add(2):Hold(40):Sequential(6,9):Stretch(3):Add(10):SetRepeating( false ),
+			STAGE3 = sequence():Add(2):Hold(40):Sequential(6,9):Stretch(2):Add(10):SetRepeating( false ),
 		}
 	},
 	RotatorStage1 = {
 		Off = "~OFF",
 		Frames = {
-			[1] = "RIL ROR",
-			[2] = "ROL RIR",
+			[1] = "RML ROR",
+			[2] = "ROL RMR",
 		},
 		Sequences = {
 			ON = { 1 },
 
-			STAGE1 = sequence():Alternate(1,2,8)
+			STAGE1 = sequence():Alternate(1,2,7)
 		}
 	},
 	RotatorLight = {
@@ -541,7 +583,7 @@ COMPONENT.Segments = {
 	Takedown = {
 		Off = "~OFF",
 		Frames = {
-			[1] = "RC RMR RML [Point0] 1 4 5"
+			[1] = "RIR RIL [Point0] 2 3"
 		},
 		Sequences = {
 			ON = { 1 }
@@ -550,7 +592,7 @@ COMPONENT.Segments = {
 	AlleyLeft = {
 		Off = "~OFF",
 		Frames = {
-			[1] = "RMR [Point90] 5"
+			[1] = "RIR [Point90] 3"
 		},
 		Sequences = {
 			ON = { 1 }
@@ -559,7 +601,7 @@ COMPONENT.Segments = {
 	AlleyRight = {
 		Off = "~OFF",
 		Frames = {
-			[1] = "RML [Point270] 4"
+			[1] = "RIL [Point270] 2"
 		},
 		Sequences = {
 			ON = { 1 }

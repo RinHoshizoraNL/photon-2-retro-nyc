@@ -1,18 +1,18 @@
 if (Photon2.ReloadComponentFile()) then return end
 local COMPONENT = Photon2.LibraryComponent()
 
-COMPONENT.Author = "Rin Hoshizora"
+COMPONENT.Author = "Rin Hoshizora & LilRanbay"
 
 COMPONENT.Credits = {
-	Code = "Schmal",
+	Code = "Rin Hoshizora & LilRanbay",
 	Model = "Khuutznetsov",
 }
 
-COMPONENT.Phase = nil
-
 COMPONENT.Title = [[Federal Signal GH1 NYPD]]
-COMPONENT.Category = "Interior"
+COMPONENT.Category = "Perimeter"
 COMPONENT.Model = "models/lightbars/fs_gh1/fs_gh1.mdl"
+
+COMPONENT.BodyGroups = { ["type"] = 0 }
 
 COMPONENT.Preview = {
 	Position = Vector(),
@@ -23,30 +23,27 @@ COMPONENT.Preview = {
 COMPONENT.Templates = {
 	["2D"] = {
 		Light = {
-			Shape = PhotonMaterial.GenerateLightQuad("photon/lights/edge_strobe_shape.png").MaterialName,
-			Detail = PhotonMaterial.GenerateLightQuad("photon/lights/edge_strobe_detail.png").MaterialName,
-			Width = 4.7,
+			Width = 4.46,
 			Height = 6,
-			Scale = 2,
+			Scale = 0.5,
+			Detail = PhotonMaterial.GenerateLightQuad("photon/lights/edge_halogen_detail.png").MaterialName,
+			Shape = PhotonMaterial.GenerateLightQuad("photon/lights/edge_halogen_shape.png").MaterialName,
 			IntensityGainFactor = 8,
 			IntensityLossFactor = 4,
-			DeactivationState = "~OFF",
-			States = halogenStates
+			DeactivationState = "~OFF"
 		}
 	}
 }
 
 COMPONENT.States = {
-	[1] = "R"
+	[1] = "~R"
 }
-
-COMPONENT.Elements = {
-	[1] = { "Light", Vector( 1.5, 0, 3.3 ), Angle( 0, 270, 0 ) }
-}
-
-COMPONENT.ElementStates = {}
 
 COMPONENT.StateMap = "[1] 1"
+
+COMPONENT.Elements = {
+	[1] = { "Light", Vector( 1.59, 0, 3.27 ), Angle( 0, -90, 0 ) }
+}
 
 local sequence = Photon2.SequenceBuilder.New
 
@@ -55,40 +52,12 @@ COMPONENT.Segments = {
 		Off = "~OFF",
 		Frames = {
 			[1] = "1",
-			[2] = "1",
 		},
 		Sequences = {
-			["ON"] = {
-
-			},
 			["OFF"] = { 0 },
-			["HALOGEN"] = sequence():Flash(0, 1, 1):Stretch(4),
-		}
-	},
-}
 
-COMPONENT.InputPriorities = {
-	["Virtual.Siren"] = 200
-}
-
-COMPONENT.VirtualOutputs = {
-	-- Virtual channel name
-	["Virtual.Siren"] = {
-		{
-			Mode = "T1",
-			Conditions = {
-				["Emergency.Siren"] = { "T1" },
-				["Emergency.Warning"] = { "MODE1", "MODE2", "MODE3" }
-			}
+			["HALOGEN"] = sequence():Alternate(1, 0, 8)
 		}
-		-- Mode
-		-- ["T1"] = { -- T1 is active when...
-		-- 	{ -- (Condition #1)
-		-- 		-- Siren mode is set to T1...
-		-- 		["Emergency.Siren"] = { "T1" },
-		-- 		-- AND Warning mode is MODE1, MODE2 or MODE3
-		-- 	}
-		-- }
 	}
 }
 
@@ -100,15 +69,5 @@ COMPONENT.Inputs = {
 		["MODE3"] = {
 			Light = "HALOGEN"
 		}
-	},
-	["Emergency.Marker"] = {
-		["ON"] = {
-			Light = "ON"
-		}
 	}
-	-- ["Virtual.Siren"] = {
-	-- 	["T1"] = {
-	-- 		Light = "ON"
-	-- 	}
-	-- }
 }
