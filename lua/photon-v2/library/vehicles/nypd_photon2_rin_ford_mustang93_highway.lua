@@ -30,7 +30,7 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Highway Patrol 1993",
+				Option = "Highway Patrol 1994",
 				SubMaterials = {
 					{ Id = 7, Material = "rin/nypd/mustang93/highway_93" },
 				},
@@ -42,6 +42,23 @@ VEHICLE.Equipment = {
 						Scale = 1.05,
 						SubMaterials = {
 							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+				}
+			},
+			{
+				Option = "Highway Patrol 1996",
+				SubMaterials = {
+					{ Id = 7, Material = "rin/nypd/mustang93/highway_96" },
+				},
+				Props = {
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -106.1, 34.4 ),
+						Angles = Angle( -4, 270, 0 ),
+						Scale = 1.05,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol96",
 						},
 					},
 				}
