@@ -115,10 +115,10 @@ COMPONENT.Elements = {
 	[5] = { "Mesh", Vector( 0, 0, 0 ), Angle( 0, -90, 0 ), "sentry/props/jetstream/lights/5", DrawMaterial = "sentry/props/jetstream/lights/lights_on", },
 	[6] = { "Mesh", Vector( 0, 0, 0 ), Angle( 0, -90, 0 ), "sentry/props/jetstream/lights/6", DrawMaterial = "sentry/props/jetstream/lights/lights_on", },
 
-	[7] = { "Rotator", BoneId = 2, Axis = "z", Speed = -560 },
-	[8] = { "Rotator", BoneId = 3, Axis = "z", Speed = -900 },
+	[7] = { "Rotator", BoneId = 2, Axis = "z", Speed = 560 },
+	[8] = { "Rotator", BoneId = 3, Axis = "z", Speed = 800 },
 	[9] = { "Rotator", BoneId = 5, Axis = "z", Speed = -416 },
-	[10] = { "Rotator", BoneId = 4, Axis = "z", Speed = -895 },
+	[10] = { "Rotator", BoneId = 4, Axis = "z", Speed = -795 },
 	[11] = { "Rotator", BoneId = 1, Axis = "z", Speed = -557.5 },
 
 	[12] = { "Mesh", Vector( 0, 0, 0 ), Angle( -90, 0, 0 ), "sentry/props/jetstream/lights/rot", DrawMaterial = "sentry/props/jetstream/lights/lights_on", BoneParent = 2,},

@@ -77,12 +77,12 @@ COMPONENT.StateMap = "[ROT] 1 2 3 4 5 6 [1] 7 [2] 8 [3] 9 15 [4] 10 16 [5] 11 17
 local fov = 90
 
 COMPONENT.Elements = {
-	[1] = { "Rotator", BoneId = 3, Axis = "z", Speed = -380 },
-	[2] = { "Rotator", BoneId = 2, Axis = "z", Speed = -380 },
-	[3] = { "Rotator", BoneId = 1, Axis = "z", Speed = -380 },
-	[4] = { "Rotator", BoneId = 5, Axis = "z", Speed = 380 },
+	[1] = { "Rotator", BoneId = 3, Axis = "z", Speed = -280 },
+	[2] = { "Rotator", BoneId = 2, Axis = "z", Speed = 380 },
+	[3] = { "Rotator", BoneId = 1, Axis = "z", Speed = -280 },
+	[4] = { "Rotator", BoneId = 5, Axis = "z", Speed = -280 },
 	[5] = { "Rotator", BoneId = 6, Axis = "z", Speed = 380 }, -- 5
-	[6] = { "Rotator", BoneId = 7, Axis = "z", Speed = 380 }, -- 3
+	[6] = { "Rotator", BoneId = 7, Axis = "z", Speed = -280 }, -- 3
 
 	[7] = { "Mesh", Vector( 0.0, 0.0, 0.0 ), Angle( 90, -90, 90 ), "sentry/props/aerodynic2/light", DrawMaterial = "sentry/props/c3xl/glow_gradient_a", BoneParent = 4 },
 	[8] = { "Mesh", Vector( 0.0, 0.0, 0.0 ), Angle( -90, -90, 90 ), "sentry/props/aerodynic2/light", DrawMaterial = "sentry/props/c3xl/glow_gradient_a", BoneParent = 4 },

@@ -77,9 +77,9 @@ COMPONENT.StateMap = "[ROT] 1 2 3 4 5 6 [1] 7 [2] 8 [3] 9 15 [4] 10 16 [5] 11 17
 local fov = 90
 
 COMPONENT.Elements = {
-	[1] = { "Rotator", BoneId = 3, Axis = "z", Speed = -360 },
-	[2] = { "Rotator", BoneId = 2, Axis = "z", Speed = -360 },
-	[3] = { "Rotator", BoneId = 1, Axis = "z", Speed = -360 },
+	[1] = { "Rotator", BoneId = 3, Axis = "z", Speed = 360 },
+	[2] = { "Rotator", BoneId = 2, Axis = "z", Speed = 360 },
+	[3] = { "Rotator", BoneId = 1, Axis = "z", Speed = 360 },
 	[4] = { "Rotator", BoneId = 5, Axis = "z", Speed = 360 },
 	[5] = { "Rotator", BoneId = 6, Axis = "z", Speed = 360 }, -- 5
 	[6] = { "Rotator", BoneId = 7, Axis = "z", Speed = 360 }, -- 3
