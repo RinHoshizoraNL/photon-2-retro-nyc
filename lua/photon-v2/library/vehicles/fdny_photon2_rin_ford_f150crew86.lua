@@ -130,15 +130,15 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Q Siren",
+		Category = "Siren",
 		Options = {
 			{
-				Option = "Q Siren",
+				Option = "Siren",
 				Props = {
 					{
-						Model = "models/sentry/props/q2b.mdl",
-						Position = Vector( 33, -24, 119.85 ),
-						Angles = Angle( 0, 0, 0 ),
+						Model = "models/sentry/props/skybolt_speaker.mdl",
+						Position = Vector( 33, -24, 108 ),
+						Angles = Angle( 0, 180, 0 ),
 						Scale = 1,
 					},
 				}
