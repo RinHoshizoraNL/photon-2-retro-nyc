@@ -1,0 +1,7 @@
+"DecalModulate"
+{
+	"$basetexture" "rin/ems/props/twinsonic/redblue"
+	"$model" "1"
+	"$nocull" "1"
+}
+
