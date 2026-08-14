@@ -83,9 +83,65 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
+				Option = "Youth Officer 1995",
+				SubMaterials = {
+					{ Id = 22, Material = "rin/nypd/caprice95/youth_95" },
+					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
+					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
+				},
+				Props = {
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -123.2, 25.2 ),
+						Angles = Angle( 0, 270, 00 ),
+						Scale = 1,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, 114.7, 12 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+				},
+			},
+			{
 				Option = "Patrol 1994",
 				SubMaterials = {
 					{ Id = 22, Material = "rin/nypd/caprice95/patrol_94" },
+					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
+					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
+				},
+				Props = {
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -123.2, 25.2 ),
+						Angles = Angle( 0, 270, 00 ),
+						Scale = 1,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, 114.7, 12 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+				},
+			},
+			{
+				Option = "Youth Officer 1994",
+				SubMaterials = {
+					{ Id = 22, Material = "rin/nypd/caprice95/youth_94" },
 					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
 					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
 				},

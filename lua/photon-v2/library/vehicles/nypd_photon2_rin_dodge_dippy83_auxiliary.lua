@@ -15,12 +15,60 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Patrol",
+				Option = "Auxiliary 1983",
 				SubMaterials = {
 					{ Id = 23, Material = "rin/nypd/diplomat83/aux_83" },
 					{ Id = 12, Material = "rin/nypd/diplomat83/dash_blue" },
 					{ Id = 13, Material = "rin/nypd/diplomat83/seats_blue" },
 					{ Id = 21, Material = "rin/nypd/props/white" },
+				},
+				Props = {
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -125.5, 26.7 ),
+						Angles = Angle( -16, 270, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_aux95",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( -31, 105.7, 15 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_aux95",
+						},
+					},
+				},
+			},
+			{
+				Option = "Auxiliary 1996",
+				SubMaterials = {
+					{ Id = 23, Material = "rin/nypd/diplomat83/aux_96" },
+					{ Id = 12, Material = "rin/nypd/diplomat83/dash_blue" },
+					{ Id = 13, Material = "rin/nypd/diplomat83/seats_blue" },
+				},
+				Props = {
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -125.5, 26.7 ),
+						Angles = Angle( -16, 270, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol96",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( -31, 105.7, 15 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol96",
+						},
+					},
 				},
 			},
 		}
@@ -164,24 +212,6 @@ VEHICLE.Equipment = {
 						Position = Vector( -31, 105, 15 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, -125.5, 26.7 ),
-						Angles = Angle( -16, 270, 0 ),
-						Scale = 1,
-						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_aux95",
-						},
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( -31, 105.7, 15 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 0.99,
-						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_aux95",
-						},
 					},
 				}
 			}

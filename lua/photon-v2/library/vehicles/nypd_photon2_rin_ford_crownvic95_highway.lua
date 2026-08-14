@@ -346,17 +346,60 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Police Equipment",
+		Category = "Wheels",
 		Options = {
 			{
-				Option = "Police Equipment",
+				Option = "Hubcaps",
 				BodyGroups = {
-					{ BodyGroup = "pillars", Value = 0 },
 					{ BodyGroup = "hubcaps_fl", Value = 0 },
 					{ BodyGroup = "hubcaps_fr", Value = 1 },
 					{ BodyGroup = "hubcaps_rl", Value = 1 },
 					{ BodyGroup = "hubcaps_rr", Value = 1 },
-				},
+				}
+			},
+			{
+				Option = "Hubcaps one missing",
+				BodyGroups = {
+					{ BodyGroup = "hubcaps_fl", Value = 0 },
+					{ BodyGroup = "hubcaps_fr", Value = 1 },
+					{ BodyGroup = "hubcaps_rl", Value = 2 },
+					{ BodyGroup = "hubcaps_rr", Value = 1 },
+				}
+			},
+            {
+				Option = "Steelies",
+				BodyGroups = {
+					{ BodyGroup = "hubcaps_fl", Value = 1 },
+					{ BodyGroup = "hubcaps_fr", Value = 0 },
+					{ BodyGroup = "hubcaps_rl", Value = 0 },
+					{ BodyGroup = "hubcaps_rr", Value = 0 },
+				}
+			},
+			{
+				Option = "Steelies missing centercaps",
+				BodyGroups = {
+					{ BodyGroup = "hubcaps_fl", Value = 2 },
+					{ BodyGroup = "hubcaps_fr", Value = 2 },
+					{ BodyGroup = "hubcaps_rl", Value = 2 },
+					{ BodyGroup = "hubcaps_rr", Value = 2 },
+				}
+			},
+			{
+				Option = "Steelies missing one centercap",
+				BodyGroups = {
+					{ BodyGroup = "hubcaps_fl", Value = 1 },
+					{ BodyGroup = "hubcaps_fr", Value = 2 },
+					{ BodyGroup = "hubcaps_rl", Value = 0 },
+					{ BodyGroup = "hubcaps_rr", Value = 0 },
+				}
+			},
+		}
+	},
+	{
+		Category = "Police Equipment",
+		Options = {
+			{
+				Option = "Police Equipment",
 				Props = {
 					{
 						Model = "models/supermighty/photon/dashcam.mdl",

@@ -1,0 +1,364 @@
+if (Photon2.ReloadVehicleFile()) then return end
+local VEHICLE = Photon2.LibraryVehicle()
+
+VEHICLE.Title 		= "1995 Ford Crown Victoria NYPD Unmarked"
+VEHICLE.Vehicle		= "96cvpi_sgm"
+VEHICLE.Category 	= "Photon 2 NYC: NYPD"
+VEHICLE.Author		= "Rin Hoshizora"
+
+local sequence = Photon2.SequenceBuilder.New
+
+VEHICLE.Equipment = {
+    {
+		Category = "Paint",
+		Options = {
+            {
+				Option = "Medium Wedgewood Blue Metallic",
+				Properties = {
+					Skin = 0,
+					Color = Color(19,35,53)
+				}
+			},
+			{
+				Option = "Arctic Blue Metallic",
+				Properties = {
+					Skin = 0,
+					Color = Color(99,123,124)
+				}
+			},
+			{
+				Option = "Portofino Blue Metallic",
+				Properties = {
+					Skin = 0,
+					Color = Color(86, 100, 130)
+				}
+			},
+			{
+				Option = "Light Denim Blue Metallic",
+				Properties = {
+					Skin = 0,
+					Color = Color(108, 118, 138)
+				}
+			},
+			{
+				Option = "Deep Jewel Green Metallic",
+				Properties = {
+					Skin = 0,
+					Color = Color(4, 25, 15)
+				}
+			},
+			{
+				Option = "Dark Tourmaline Metallic",
+				Properties = {
+					Skin = 0,
+					Color = Color(4, 25, 24)
+				}
+			},
+			{
+				Option = "Medium Willow Metallic",
+				Properties = {
+					Skin = 0,
+					Color = Color(15, 45, 43)
+				}
+			},
+			{
+				Option = "Dark Toreador Red Metallic",
+				Properties = {
+					Skin = 0,
+					Color = Color(58, 0, 0)
+				}
+			},
+            {
+				Option = "Medium Berry Metallic",
+				Properties = {
+					Skin = 0,
+					Color = Color(48, 3, 12)
+				}
+			},
+			{
+				Option = "Medium Graphite Metallic",
+				Properties = {
+					Skin = 0,
+					Color = Color(48, 48, 48)
+				}
+			},
+			{
+				Option = "Tungsten Gray Metallic",
+				Properties = {
+					Skin = 0,
+					Color = Color(72, 72, 72)
+				}
+			},
+			{
+				Option = "Opal Frost Metallic",
+				Properties = {
+					Skin = 0,
+					Color = Color(140, 150, 167)
+				}
+			},
+			{
+				Option = "Silver Frost Metallic",
+				Properties = {
+					Skin = 0,
+					Color = Color(168, 168, 168)
+				}
+			},
+			{
+				Option = "Mocha Frost Metallic",
+				Properties = {
+					Skin = 0,
+					Color = Color(174, 168, 150)
+				}
+			},
+			{
+				Option = "Medium Mocha Metallic",
+				Properties = {
+					Skin = 0,
+					Color = Color(127, 108, 87)
+				}
+			},
+			{
+				Option = "Black",
+				Properties = {
+					Skin = 0,
+					Color = Color(0, 0, 0)
+				}
+			},
+			{
+				Option = "Performance White",
+				Properties = {
+					Skin = 0,
+					Color = Color(255, 255, 255)
+				}
+			},
+        }
+	},
+	{
+		Category = "Lighting",
+		Options = {
+			{
+				Option = "Default",
+				Components = {
+					{
+						Component = "photon_standard_sgmcvpi96",
+					}
+				}
+			}
+		}
+	},
+	{
+		Category = "Dash light",
+		Options = {
+            {
+				Option = "Beacon",
+				Components = {
+					{
+						Component = "patlite_hkf",
+						Position = Vector( 0, 33, 47.4 ),
+						Angles = Angle( -4, 270, -1 ),
+						Scale = .75,
+						BodyGroups = {
+							["trim"] = 0,
+						},
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+				},
+				Props = {
+					{
+						Model = "models/sprops/misc/tubes_thin/size_2/t_h_tube_24x12.mdl",
+						Position = Vector( 0, 31, 49),
+						Angles = Angle( 1, 0, 86 ),
+						Scale = Vector( 0.3, 0.5, 0.5),
+						SubMaterials = {
+							[0] = "sentry/shared/black"
+						},
+					    RenderGroup = RENDERGROUP_OPAQUE,
+					},
+				}
+			},
+		}
+	},
+	{
+		Category = "Rear Deck",
+		Options = {
+			{
+				Option = "Federal Signal GH1",
+				Components = {
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( -22.4, -74.5, 47.5 ),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( 22.4, -74.5, 47.5 ),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1,
+						Phase = 180,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( -17.15, -74.5, 47.5 ),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1,
+						Phase = 180,
+						SubMaterials = {
+							[2] = "sentry/shared/glass"
+						},
+						States = {
+							[1] = "SW",
+						},
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( 17.15, -74.5, 47.5 ),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[2] = "sentry/shared/glass"
+						},
+						States = {
+							[1] = "SW",
+						},
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+				}
+			}
+		}
+	},
+	{
+		Category = "Siren",
+		Options = {
+			{
+				Option = "Federal Signal Smart Siren",
+				Components = {
+					{
+						Name = "@siren_speaker",
+						Component = "siren_prototype",
+						Model = "models/gandhi/props/es100.mdl",
+						Position = Vector( 0, 107, 29.3 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1,
+						Siren = "fedsig_smartsiren",
+						Templates = {
+							["Sound"] = { 
+								Tone = {
+									DSP = 0,
+									Pitch = 100
+								}
+							}
+						},
+						Inputs = { 
+							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
+						}
+					},
+				}
+			}
+		}
+	},
+	{
+		Category = "Wheels",
+		Options = {
+			{
+				Option = "Hubcaps",
+				BodyGroups = {
+					{ BodyGroup = "hubcaps_fl", Value = 0 },
+					{ BodyGroup = "hubcaps_fr", Value = 1 },
+					{ BodyGroup = "hubcaps_rl", Value = 1 },
+					{ BodyGroup = "hubcaps_rr", Value = 1 },
+				}
+			},
+			{
+				Option = "Hubcaps one missing",
+				BodyGroups = {
+					{ BodyGroup = "hubcaps_fl", Value = 0 },
+					{ BodyGroup = "hubcaps_fr", Value = 1 },
+					{ BodyGroup = "hubcaps_rl", Value = 2 },
+					{ BodyGroup = "hubcaps_rr", Value = 1 },
+				}
+			},
+        }
+	},
+	{
+		Category = "Police Equipment",
+		Options = {
+			{
+				Option = "Police Equipment",
+				Props = {
+					{
+						Model = "models/supermighty/photon/dashcam.mdl",
+						Position = Vector( 7.5, 15, 59.5),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Model = "models/sentry/props/procopper_cvpi.mdl",
+						Position = Vector( 0, 1.5, 0),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Model = "models/photon_ex/controllers/fedsig_scsb.mdl",
+						Position = Vector( 0, 5.6, 25 ),
+						Angles = Angle( 20, 270, 0 ),
+						Scale = 1,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Model = "models/gandhi/props/radio.mdl",
+						Position = Vector( 0, 9, 25.7 ),
+						Angles = Angle( 200, 270, 0 ),
+						Scale = 0.32,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Model = "models/rob/oldpolicepack/motorola.mdl",
+						Position = Vector( 0, 21, 31.2 ),
+						Angles = Angle( 20, 270, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[0] = "rin/nypd/props/mdt/mdt",
+						},
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Model = "models/schmal/antennas/antenna_2.mdl",
+						Position = Vector( 0, -107, 46.1 ),
+						Angles = Angle( 0, 0, 6 ),
+						Scale = 1
+					},
+					{
+						Model = "models/supermighty/photon/front_holder.mdl",
+						Position = Vector( 0, 122, 19 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -125.4, 31.8 ),
+						Angles = Angle( 0, 270, 00 ),
+						Scale = 0.95,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_civ_2",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, 122.7, 19 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_civ_2",
+						},
+					},
+				}
+			}
+		}
+	},
+}

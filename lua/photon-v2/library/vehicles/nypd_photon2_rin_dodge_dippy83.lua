@@ -23,6 +23,33 @@ VEHICLE.Equipment = {
 					{ Id = 21, Material = "rin/nypd/props/blue" },
 				},
 			},
+			{
+				Option = "K9 Unit",
+				SubMaterials = {
+					{ Id = 23, Material = "rin/nypd/diplomat83/k9_83" },
+					{ Id = 12, Material = "rin/nypd/diplomat83/dash_blue" },
+					{ Id = 13, Material = "rin/nypd/diplomat83/seats_blue" },
+					{ Id = 21, Material = "rin/nypd/props/blue" },
+				},
+			},
+			{
+				Option = "Movie-TV Unit",
+				SubMaterials = {
+					{ Id = 23, Material = "rin/nypd/diplomat83/movie_83" },
+					{ Id = 12, Material = "rin/nypd/diplomat83/dash_blue" },
+					{ Id = 13, Material = "rin/nypd/diplomat83/seats_blue" },
+					{ Id = 21, Material = "rin/nypd/props/blue" },
+				},
+			},
+			{
+				Option = "Quality Of Life Unit",
+				SubMaterials = {
+					{ Id = 23, Material = "rin/nypd/diplomat83/quality_83" },
+					{ Id = 12, Material = "rin/nypd/diplomat83/dash_blue" },
+					{ Id = 13, Material = "rin/nypd/diplomat83/seats_blue" },
+					{ Id = 21, Material = "rin/nypd/props/blue" },
+				},
+			},
 		}
 	},
 	{
