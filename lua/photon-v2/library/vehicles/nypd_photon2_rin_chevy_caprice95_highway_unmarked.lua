@@ -193,6 +193,58 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
+		Category = "Rear Deck",
+		Options = {
+			{
+				Option = "Federal Signal GH1",
+				Components = {
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( -22.4, -78, 40 ),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( 22.4, -78, 40 ),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1,
+						Phase = 180,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( -17.15, -78, 40 ),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1,
+						Phase = 180,
+						SubMaterials = {
+							[2] = "sentry/shared/glass"
+						},
+						States = {
+							[1] = "SW",
+						},
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( 17.15, -78, 40 ),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[2] = "sentry/shared/glass"
+						},
+						States = {
+							[1] = "SW",
+						},
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+				}
+			}
+		}
+	},
+	{
 		Category = "Spotlight",
 		Options = {
 			{
