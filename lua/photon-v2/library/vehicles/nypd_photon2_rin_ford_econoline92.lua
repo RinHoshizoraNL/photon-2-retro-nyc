@@ -13,7 +13,7 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Patrol 1992",
+				Option = "Patrol 92",
 				SubMaterials = {
 					{ Id = 21, Material = "rin/nypd/econoline92/patrol_92" },
 					{ Id = 17, Material = "sentry/econoline/leather4" },
@@ -48,7 +48,7 @@ VEHICLE.Equipment = {
 				}
 			},
 			{
-				Option = "Patrol 1994",
+				Option = "Patrol 94",
 				SubMaterials = {
 					{ Id = 21, Material = "rin/nypd/econoline92/patrol_94" },
 					{ Id = 17, Material = "sentry/econoline/leather4" },
@@ -83,7 +83,7 @@ VEHICLE.Equipment = {
 				}
 			},
 			{
-				Option = "Patrol 1996",
+				Option = "Patrol 96",
 				SubMaterials = {
 					{ Id = 21, Material = "rin/nypd/econoline92/patrol_96" },
 					{ Id = 17, Material = "sentry/econoline/leather4" },
@@ -110,7 +110,7 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
-				Option = "Crime Stoppers 1992",
+				Option = "Crime Stoppers 92",
 				SubMaterials = {
 					{ Id = 21, Material = "rin/nypd/econoline92/crime_92" },
 					{ Id = 17, Material = "sentry/econoline/leather4" },
@@ -145,7 +145,7 @@ VEHICLE.Equipment = {
 				}
 			},
 			{
-				Option = "Crime Stoppers 1996",
+				Option = "Crime Stoppers 96",
 				SubMaterials = {
 					{ Id = 21, Material = "rin/nypd/econoline92/crime_96" },
 					{ Id = 17, Material = "sentry/econoline/leather4" },
@@ -172,7 +172,7 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
-				Option = "Recruitment 1996",
+				Option = "Recruitment 96",
 				SubMaterials = {
 					{ Id = 21, Material = "rin/nypd/econoline92/recruitment_96" },
 					{ Id = 17, Material = "sentry/econoline/leather4" },

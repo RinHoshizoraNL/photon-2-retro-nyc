@@ -30,7 +30,7 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Highway Patrol 1994",
+				Option = "Highway Patrol 94",
 				SubMaterials = {
 					{ Id = 7, Material = "rin/nypd/mustang93/highway_93" },
 				},
@@ -47,7 +47,7 @@ VEHICLE.Equipment = {
 				}
 			},
 			{
-				Option = "Highway Patrol 1996",
+				Option = "Highway Patrol 96",
 				SubMaterials = {
 					{ Id = 7, Material = "rin/nypd/mustang93/highway_96" },
 				},

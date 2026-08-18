@@ -13,7 +13,7 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Auxiliary 1992",
+				Option = "Auxiliary 92",
 				SubMaterials = {
 					{ Id = 20, Material = "rin/nypd/caprice91/aux_92" },
 					{ Id = 16, Material = "rin/nypd/caprice95/seats_blue" },
@@ -41,7 +41,7 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
-				Option = "Auxiliary 1995",
+				Option = "Auxiliary 95",
 				SubMaterials = {
 					{ Id = 20, Material = "rin/nypd/caprice95/aux_95" },
 					{ Id = 16, Material = "rin/nypd/caprice95/seats_blue" },
@@ -69,7 +69,7 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
-				Option = "Auxiliary 1996",
+				Option = "Auxiliary 96",
 				SubMaterials = {
 					{ Id = 20, Material = "rin/nypd/caprice95/aux_96" },
 					{ Id = 16, Material = "rin/nypd/caprice95/seats_blue" },

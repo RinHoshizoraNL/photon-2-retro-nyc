@@ -13,7 +13,7 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Highway Patrol 1992",
+				Option = "Highway Patrol 92",
 				SubMaterials = {
 					{ Id = 20, Material = "rin/nypd/caprice91/highway_92" },
 					{ Id = 16, Material = "rin/nypd/caprice95/seats_blue" },
@@ -30,7 +30,7 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
-				Option = "Highway Patrol 1991",
+				Option = "Highway Patrol 91",
 				SubMaterials = {
 					{ Id = 20, Material = "rin/nypd/caprice91/highway_91" },
 					{ Id = 16, Material = "rin/nypd/caprice95/seats_blue" },

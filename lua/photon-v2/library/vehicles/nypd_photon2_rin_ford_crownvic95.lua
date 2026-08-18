@@ -13,7 +13,7 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Patrol 1995 A",
+				Option = "Patrol 95 A",
 				SubMaterials = {
 					{ Id = 6, Material = "rin/nypd/crownvic96/patrol_95a" }
 				},
@@ -46,7 +46,7 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
-				Option = "Patrol 1995 B",
+				Option = "Patrol 95 B",
 				SubMaterials = {
 					{ Id = 6, Material = "rin/nypd/crownvic96/patrol_95b" }
 				},
@@ -79,7 +79,7 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
-				Option = "Patrol 1996",
+				Option = "Patrol 96",
 				SubMaterials = {
 					{ Id = 6, Material = "rin/nypd/crownvic96/patrol_96" }
 				},
@@ -156,7 +156,40 @@ VEHICLE.Equipment = {
                 }
 			},
 			{
-				Option = "Supervisor 1996",
+				Option = "Supervisor 95",
+				SubMaterials = {
+					{ Id = 6, Material = "rin/nypd/crownvic96/supervisor_95" }
+				},
+				Props = {
+					{
+						Model = "models/gandhi/props/nypd.mdl",
+						Position = Vector( 0, 120, 23.3),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1,
+						Color = Color(1, 123, 208),
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -125.4, 31.8 ),
+						Angles = Angle( 0, 270, 00 ),
+						Scale = 0.95,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, 122.7, 19 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+				},
+			},
+			{
+				Option = "Supervisor 96",
 				SubMaterials = {
 					{ Id = 6, Material = "rin/nypd/crownvic96/supervisor_96" }
 				},
@@ -233,7 +266,7 @@ VEHICLE.Equipment = {
                 }
 			},
 			{
-				Option = "New Livery Prototype 1995",
+				Option = "New Livery Prototype 95",
 				SubMaterials = {
 					{ Id = 6, Material = "rin/nypd/crownvic96/prototype_95" }
 				},

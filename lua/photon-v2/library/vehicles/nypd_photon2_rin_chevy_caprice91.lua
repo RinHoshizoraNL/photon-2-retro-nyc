@@ -13,7 +13,7 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Patrol 1992",
+				Option = "Patrol 92",
 				SubMaterials = {
 					{ Id = 20, Material = "rin/nypd/caprice91/patrol_92" },
 					{ Id = 16, Material = "rin/nypd/caprice95/seats_blue" },
@@ -21,9 +21,17 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
-				Option = "Patrol 1991",
+				Option = "Patrol 91",
 				SubMaterials = {
 					{ Id = 20, Material = "rin/nypd/caprice91/patrol_91" },
+					{ Id = 16, Material = "rin/nypd/caprice95/seats_blue" },
+					{ Id = 24, Material = "rin/nypd/caprice95/dash_blue" }
+				},
+			},
+			{
+				Option = "Supervisor 92",
+				SubMaterials = {
+					{ Id = 20, Material = "rin/nypd/caprice91/supervisor_92" },
 					{ Id = 16, Material = "rin/nypd/caprice95/seats_blue" },
 					{ Id = 24, Material = "rin/nypd/caprice95/dash_blue" }
 				},

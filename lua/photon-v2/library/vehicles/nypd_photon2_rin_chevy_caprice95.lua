@@ -13,7 +13,7 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Patrol 1995 A",
+				Option = "Patrol 95 A",
 				SubMaterials = {
 					{ Id = 22, Material = "rin/nypd/caprice95/patrol_95a" },
 					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
@@ -48,7 +48,7 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
-				Option = "Patrol 1995 B",
+				Option = "Patrol 95 B",
 				SubMaterials = {
 					{ Id = 22, Material = "rin/nypd/caprice95/patrol_95b" },
 					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
@@ -83,35 +83,7 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
-				Option = "Youth Officer 1995",
-				SubMaterials = {
-					{ Id = 22, Material = "rin/nypd/caprice95/youth_95" },
-					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
-					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
-				},
-				Props = {
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, -123.2, 25.2 ),
-						Angles = Angle( 0, 270, 00 ),
-						Scale = 1,
-						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_patrol95",
-						},
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, 114.7, 12 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 0.99,
-						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_patrol95",
-						},
-					},
-				},
-			},
-			{
-				Option = "Patrol 1994",
+				Option = "Patrol 94",
 				SubMaterials = {
 					{ Id = 22, Material = "rin/nypd/caprice95/patrol_94" },
 					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
@@ -139,35 +111,7 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
-				Option = "Youth Officer 1994",
-				SubMaterials = {
-					{ Id = 22, Material = "rin/nypd/caprice95/youth_94" },
-					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
-					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
-				},
-				Props = {
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, -123.2, 25.2 ),
-						Angles = Angle( 0, 270, 00 ),
-						Scale = 1,
-						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_patrol95",
-						},
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, 114.7, 12 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 0.99,
-						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_patrol95",
-						},
-					},
-				},
-			},
-			{
-				Option = "Patrol 1996",
+				Option = "Patrol 96",
 				SubMaterials = {
 					{ Id = 22, Material = "rin/nypd/caprice95/patrol_96" },
 					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
@@ -197,6 +141,118 @@ VEHICLE.Equipment = {
 						Scale = 0.99,
 						SubMaterials = {
 							[1] = "rin/nypd/props/plates/plate_patrol96",
+						},
+					},
+				},
+			},
+			{
+				Option = "Supervisor 95",
+				SubMaterials = {
+					{ Id = 22, Material = "rin/nypd/caprice95/supervisor_95" },
+					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
+					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
+				},
+				Props = {
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -123.2, 25.2 ),
+						Angles = Angle( 0, 270, 00 ),
+						Scale = 1,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, 114.7, 12 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+				},
+			},
+			{
+				Option = "K-9 Unit 95",
+				SubMaterials = {
+					{ Id = 22, Material = "rin/nypd/caprice95/k9_95" },
+					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
+					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
+				},
+				Props = {
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -123.2, 25.2 ),
+						Angles = Angle( 0, 270, 00 ),
+						Scale = 1,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, 114.7, 12 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+				},
+			},
+			{
+				Option = "Youth Officer 95",
+				SubMaterials = {
+					{ Id = 22, Material = "rin/nypd/caprice95/youth_95" },
+					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
+					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
+				},
+				Props = {
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -123.2, 25.2 ),
+						Angles = Angle( 0, 270, 00 ),
+						Scale = 1,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, 114.7, 12 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+				},
+			},
+			{
+				Option = "Youth Officer 94",
+				SubMaterials = {
+					{ Id = 22, Material = "rin/nypd/caprice95/youth_94" },
+					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
+					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
+				},
+				Props = {
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -123.2, 25.2 ),
+						Angles = Angle( 0, 270, 00 ),
+						Scale = 1,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, 114.7, 12 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
 						},
 					},
 				},

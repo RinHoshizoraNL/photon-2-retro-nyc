@@ -15,7 +15,7 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Patrol 1989",
+				Option = "Patrol",
 				SubMaterials = {
 					{ Id = 7, Material = "rin/nypd/caprice89/patrol_89" },
 				},

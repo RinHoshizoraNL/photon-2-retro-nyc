@@ -13,7 +13,7 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Auxiliary 1992",
+				Option = "Auxiliary 92",
 				SubMaterials = {
 					{ Id = 21, Material = "rin/nypd/econoline92/aux_92" },
 					{ Id = 17, Material = "sentry/econoline/leather4" },
@@ -48,7 +48,7 @@ VEHICLE.Equipment = {
 				}
 			},
 			{
-				Option = "Auxiliary 1996",
+				Option = "Auxiliary 96",
 				SubMaterials = {
 					{ Id = 21, Material = "rin/nypd/econoline92/aux_96" },
 					{ Id = 17, Material = "sentry/econoline/leather4" },

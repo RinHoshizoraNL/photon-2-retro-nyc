@@ -13,7 +13,7 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "ESU 1986",
+				Option = "ESU 86",
 				SubMaterials = {
 					{ Id = 22, Material = "rin/nypd/f150crew86/esu_86" },
 				},
@@ -46,7 +46,7 @@ VEHICLE.Equipment = {
 				}
 			},
 			{
-				Option = "ESU 1994",
+				Option = "ESU 94",
 				SubMaterials = {
 					{ Id = 22, Material = "rin/nypd/f150crew86/esu_94" },
 				},

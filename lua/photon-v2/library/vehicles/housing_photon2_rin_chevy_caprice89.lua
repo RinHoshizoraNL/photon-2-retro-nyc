@@ -15,9 +15,15 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Patrol 1989",
+				Option = "Patrol",
 				SubMaterials = {
 					{ Id = 7, Material = "rin/housing/caprice89/housing_89" },
+				},
+			},
+			{
+				Option = "Supervisor",
+				SubMaterials = {
+					{ Id = 7, Material = "rin/housing/caprice89/supervisor_89" },
 				},
 			},
 		}

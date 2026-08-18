@@ -19,7 +19,7 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "k9 Unit 1986",
+				Option = "k9 Unit 86",
 				SubMaterials = {
 					{ Id = 1, Material = "rin/nypd/suburban89/k9_89" },
 					{ Id = 0, Material = "rin/nypd/suburban89/k9_89" },
@@ -42,7 +42,7 @@ VEHICLE.Equipment = {
 				}
 			},
 			{
-				Option = "k9 Unit 1995",
+				Option = "k9 Unit 95",
 				SubMaterials = {
 					{ Id = 1, Material = "rin/nypd/suburban89/k9_95" },
 					{ Id = 0, Material = "rin/nypd/suburban89/k9_95" },

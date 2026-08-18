@@ -13,7 +13,7 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Highway Patrol 1996",
+				Option = "Highway Patrol",
 				SubMaterials = {
 					{ Id = 6, Material = "rin/nypd/crownvic96/highway_96_slick" }
 				},

@@ -13,9 +13,17 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Patrol 1991",
+				Option = "Patrol",
 				SubMaterials = {
 					{ Id = 20, Material = "rin/housing/caprice91/housing_91" },
+					{ Id = 16, Material = "rin/nypd/caprice95/seats_blue" },
+					{ Id = 24, Material = "rin/nypd/caprice95/dash_blue" }
+				},
+			},
+			{
+				Option = "Recruitment Unit",
+				SubMaterials = {
+					{ Id = 20, Material = "rin/housing/caprice91/recruitment_91" },
 					{ Id = 16, Material = "rin/nypd/caprice95/seats_blue" },
 					{ Id = 24, Material = "rin/nypd/caprice95/dash_blue" }
 				},

@@ -15,7 +15,7 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Auxiliary 1983",
+				Option = "Auxiliary 83",
 				SubMaterials = {
 					{ Id = 23, Material = "rin/nypd/diplomat83/aux_83" },
 					{ Id = 12, Material = "rin/nypd/diplomat83/dash_blue" },
@@ -44,7 +44,7 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
-				Option = "Auxiliary 1996",
+				Option = "Auxiliary 96",
 				SubMaterials = {
 					{ Id = 23, Material = "rin/nypd/diplomat83/aux_96" },
 					{ Id = 12, Material = "rin/nypd/diplomat83/dash_blue" },
