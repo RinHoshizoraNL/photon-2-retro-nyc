@@ -1,9 +1,9 @@
 if (Photon2.ReloadVehicleFile()) then return end
 local VEHICLE = Photon2.LibraryVehicle()
 
-VEHICLE.Title 		= "1994 Ford F150 Housing Police ESU"
+VEHICLE.Title 		= "1986 Ford F150 NYPD ESU"
 VEHICLE.Vehicle		= "86f150_crew_sgm"
-VEHICLE.Category 	= "Photon 2 NYC: Housing Police"
+VEHICLE.Category 	= "Photon 2 NYC: NYPD"
 VEHICLE.Author		= "Rin Hoshizora"
 
 local sequence = Photon2.SequenceBuilder.New
@@ -13,10 +13,80 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Housing Police Rescue",
+				Option = "ESU 1986",
 				SubMaterials = {
-					{ Id = 22, Material = "rin/housing/f150crew86/housing_94" },
+					{ Id = 22, Material = "rin/nypd/f150crew86/esu_86" },
 				},
+				Components = {
+					{
+                        Component = "fedsig_aerodynicny",
+                        Position = Vector( 0, 0, 83.75 ),
+                        Angles = Angle( 0, 180, 1 ),
+                        Scale = 1.1,
+					},
+					{
+						Component = "siren_prototype",
+						Model = "models/gandhi/props/es100.mdl",
+						Position = Vector( 0, 96, 45 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1,
+						Siren = "sp_mk7",
+						Templates = {
+							["Sound"] = { 
+								Tone = {
+									DSP = 0,
+									Pitch = 100
+								}
+							}
+						},
+						Inputs = { 
+							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
+						}
+					},
+				}
+			},
+			{
+				Option = "ESU 1994",
+				SubMaterials = {
+					{ Id = 22, Material = "rin/nypd/f150crew86/esu_94" },
+				},
+				Components = {
+					{
+						Component = "photon_fedsig_vision_nypd",
+						Position = Vector( 0, 0, 83.3 ),
+						Angles = Angle( 0, 180, 0 ),
+						Scale = 1.15,
+						BodyGroups = {
+							["rear_ta"] = 1,
+							["straps"] = 1,
+						},
+					},
+					{
+						Component = "photon_whe_500_nypd",
+						Position = Vector( 0, -160.5, 115.25 ),
+						Angles = Angle( 0, -90, 0 ),
+						Scale = 0.85,
+					},
+					{
+						Component = "siren_prototype",
+						Model = "models/gandhi/props/es100.mdl",
+						Position = Vector( 0, 96, 45 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1,
+						Siren = "fedsig_smartsiren",
+						Templates = {
+							["Sound"] = { 
+								Tone = {
+									DSP = 0,
+									Pitch = 100
+								}
+							}
+						},
+						Inputs = { 
+							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
+						}
+					},
+				}
 			},
 		}
 	},
@@ -33,27 +103,30 @@ VEHICLE.Equipment = {
 			}
 		}
 	},
-	{
-		Category = "Front Lightbar",
+	 {
+		Category = "Front Flashers",
 		Options = {
             {
-				Option = "Federal Signal Vision",
+				Option = "Whelen 900",
 				Components = {
 					{
-						Component = "photon_fedsig_vision_nypd",
-						Position = Vector( 0, 0, 83.3 ),
-						Angles = Angle( 0, 180, 0 ),
-						Scale = 1.15,
-						BodyGroups = {
-							["rear_ta"] = 1,
-							["straps"] = 1,
-						},
+						Component = "anemolis_whelen_900_halogen",
+						Position = Vector( 16.1, 114, 35.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						Phase = 90,
 					},
-				}
+					{
+						Component = "anemolis_whelen_900_halogen",
+						Position = Vector( -15.5, 114, 35.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+					},
+				},
 			},
-        }
+		}
 	},
-	{
+    {
 		Category = "Left Flasher",
 		Options = {
             {
@@ -148,22 +221,6 @@ VEHICLE.Equipment = {
 						Component = "code3_xl_mini",
 						Position = Vector( 0, -152, 115.25 ),
 						Angles = Angle( 0, 0, 0 ),
-						Scale = 0.85,
-					},
-				}
-			}
-		}
-	},
-	{
-		Category = "Traffic Advisor",
-		Options = {
-			{
-				Option = "Traffic Advisor",
-				Components = {
-					{
-						Component = "photon_whe_500_nypd",
-						Position = Vector( 0, -160.5, 115.25 ),
-						Angles = Angle( 0, -90, 0 ),
 						Scale = 0.85,
 					},
 				}
@@ -285,36 +342,6 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Siren",
-		Options = {
-			{
-				Option = "Federal Signal PA300",
-				Components = {
-					{
-						Name = "@siren_speaker",
-						Component = "siren_prototype",
-						Model = "models/gandhi/props/es100.mdl",
-						Position = Vector( 0, 96, 45 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 1,
-						Siren = "pa300_1",
-						Templates = {
-							["Sound"] = { 
-								Tone = {
-									DSP = 0,
-									Pitch = 100
-								}
-							}
-						},
-						Inputs = { 
-							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
-						}
-					},
-				}
-			}
-		}
-	},
-	{
 		Category = "Pushbar",
 		Options = {
 			{
@@ -325,6 +352,7 @@ VEHICLE.Equipment = {
 						Position = Vector( 0.3, 108, 25 ),
 						Angles = Angle( 0, 270, 0 ),
 						Scale = Vector( 0.7, 0.82, 0.75 ),
+						Color = Color(1, 123, 208),
 					},
 					{
 						Model = "models/supermighty/photon/front_holder.mdl",
@@ -348,7 +376,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 270, 0 ),
 						Scale = 1,
 						SubMaterials = {
-							[1] = "rin/housing/props/plates/plate_patrol91",
+							[1] = "rin/nypd/props/plates/plate_patrol95",
 						},
 					},
 					{
@@ -357,7 +385,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1,
 						SubMaterials = {
-							[1] = "rin/housing/props/plates/plate_patrol91",
+							[1] = "rin/nypd/props/plates/plate_patrol95",
 						},
 					},
 				}
