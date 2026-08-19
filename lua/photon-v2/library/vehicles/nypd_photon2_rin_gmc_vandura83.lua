@@ -21,18 +21,14 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Patrol",
+				Option = "Patrol 83",
 				SubMaterials = {
 					{ Id = 11, Material = "rin/nypd/vandura83/patrol_83" },
 				},
-			},
-		}
-	},
-	{
-		Category = "Lightbar",
-		Options = {
-            {
-				Option = "Federal Signal Aerodynic",
+				BodyGroups = {
+					{ BodyGroup = "wheels", Value = 0 },
+					{ BodyGroup = "badges", Value = 0 },
+				},
 				Components = {
 					{
                         Component = "fedsig_aerodynicny",
@@ -40,18 +36,7 @@ VEHICLE.Equipment = {
                         Angles = Angle( 0, 180, 0 ),
                         Scale = 1.02,
 					},
-				}
-			},
-        }
-	},
-	{
-		Category = "Siren",
-		Options = {
-			{
-				Option = "Scientific Prototypes Mark-VII",
-				Components = {
 					{
-						Name = "@siren_speaker",
 						Component = "siren_prototype",
 						Model = "models/gandhi/props/es100.mdl",
 						Position = Vector( 0, 95, 50 ),
@@ -71,7 +56,96 @@ VEHICLE.Equipment = {
 						}
 					},
 				}
-			}
+			},
+			{
+				Option = "Truck Enforcement 95",
+				SubMaterials = {
+					{ Id = 11, Material = "rin/nypd/vandura83/truck_95" },
+				},
+				BodyGroups = {
+					{ BodyGroup = "wheels", Value = 0 },
+					{ BodyGroup = "badges", Value = 0 },
+				},
+				Components = {
+					{
+						Component = "photon_fedsig_vision_nypd",
+						Position = Vector( 0, 35, 101.7 ),
+						Angles = Angle( 0, 180, 2 ),
+						Scale = 1.1,
+						BodyGroups = {
+							["rear_ta"] = 1,
+							["straps"] = 1,
+						},
+					},
+					{
+						Component = "photon_whe_500_nypd",
+						Position = Vector( 0, -105, 103 ),
+						Angles = Angle( 0, -90, 0 ),
+						Scale = 0.9,
+					},
+					{
+						Component = "code3_xl_mini",
+						Position = Vector( 0, -94, 103.9 ),
+						Angles = Angle( 0, 0, 2 ),
+						Scale = 0.85,
+					},
+					{
+						Component = "siren_prototype",
+						Model = "models/gandhi/props/es100.mdl",
+						Position = Vector( 0, 95, 50 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1,
+						Siren = "fedsig_smartsiren",
+						Templates = {
+							["Sound"] = { 
+								Tone = {
+									DSP = 0,
+									Pitch = 100
+								}
+							}
+						},
+						Inputs = { 
+							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
+						}
+					},
+				},
+				Props = {
+					{
+						Model = "models/schmal/antenna_gps.mdl",
+						Position = Vector( -19, -105, 101 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+					},
+					{
+						Model = "models/schmal/antenna_gps.mdl",
+						Position = Vector( 19, -105, 101 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+					},
+					{
+						Model = "models/schmal/antenna_motorola.mdl",
+						Position = Vector( 0, 5, 103.3 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+					},
+					{
+						Model = "models/schmal/antenna_vhf_2.mdl",
+						Position = Vector( 0, -15, 102 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+					},
+				},
+			},
+			{
+				Option = "Recruitment Unit 83",
+				SubMaterials = {
+					{ Id = 11, Material = "rin/nypd/vandura83/recruitment_83" },
+				},
+				BodyGroups = {
+					{ BodyGroup = "wheels", Value = 1 },
+					{ BodyGroup = "badges", Value = 1 },
+				},
+			},
 		}
 	},
 	{

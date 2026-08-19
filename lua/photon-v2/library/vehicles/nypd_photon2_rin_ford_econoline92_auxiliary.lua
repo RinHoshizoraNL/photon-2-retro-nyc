@@ -100,6 +100,22 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
+		Category = "Rear Lightbar",
+		Options = {
+			{
+				Option = "Code3 XL Mini",--SHOULD BE A MINI JETSTREAM BUT SORRY DON'T HAVE ONE :(
+				Components = {
+					{
+						Component = "code3_xl_mini",
+						Position = Vector( 0, -130, 88.7 ),
+						Angles = Angle( 0, 0, 5.5 ),
+						Scale = 0.85,
+					},
+				}
+			}
+		}
+	},
+	{
 		Category = "Siren",
 		Options = {
 			{

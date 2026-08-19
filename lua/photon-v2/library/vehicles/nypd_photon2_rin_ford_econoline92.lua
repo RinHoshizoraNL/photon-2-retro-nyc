@@ -110,6 +110,41 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
+				Option = "Homeless Outreach Unit 94",
+				SubMaterials = {
+					{ Id = 21, Material = "rin/nypd/econoline92/homeless_94" },
+					{ Id = 17, Material = "sentry/econoline/leather4" },
+                },
+				Props = {
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 16.3, -150, 41.5 ),
+						Angles = Angle( -5, 271, 00 ),
+						Scale = 1.05,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, 107.8, 20 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.97,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol95",
+						},
+					},
+				},
+				Components = {
+					{
+                        Component = "fedsig_jetstream",
+                        Position = Vector( 0, 10, 88.4 ),
+                        Angles = Angle( 0, 180, 1 ),
+                        Scale = 1.15,
+					},
+				}
+			},
+			{
 				Option = "Crime Stoppers 92",
 				SubMaterials = {
 					{ Id = 21, Material = "rin/nypd/econoline92/crime_92" },
@@ -221,6 +256,22 @@ VEHICLE.Equipment = {
 					},
                 }
 			},
+		}
+	},
+	{
+		Category = "Rear Lightbar",
+		Options = {
+			{
+				Option = "Code3 XL Mini",--SHOULD BE A MINI JETSTREAM BUT SORRY DON'T HAVE ONE :(
+				Components = {
+					{
+						Component = "code3_xl_mini",
+						Position = Vector( 0, -130, 88.7 ),
+						Angles = Angle( 0, 0, 5.5 ),
+						Scale = 0.85,
+					},
+				}
+			}
 		}
 	},
 	{

@@ -19,14 +19,6 @@ VEHICLE.Equipment = {
 				SubMaterials = {
 					{ Id = 7, Material = "rin/nypd/caprice89/patrol_89" },
 				},
-			},
-		}
-	},
-	{
-		Category = "Lightbar",
-		Options = {
-            {
-				Option = "Federal Signal Aerodynic",
 				Components = {
 					{
                         Component = "fedsig_aerodynicny",
@@ -36,9 +28,86 @@ VEHICLE.Equipment = {
 					},
 				}
 			},
-        }
+			{
+				Option = "Office Of The Chief Of Department",
+				SubMaterials = {
+					{ Id = 7, Material = "rin/nypd/caprice89/ocd_89" },
+				},
+				Components = {
+					{
+						Component = "photon_fedsig_vision_nypd",
+						Position = Vector( 0, -6, 61 ),
+						Angles = Angle( 0, 180, 0 ),
+						Scale = 1.1,
+						BodyGroups = {
+							["rear_ta"] = 1,
+							["straps"] = 1,
+						},
+					},
+					{
+						Component = "photon_whe_500_nypd",
+						Position = Vector( 0, -19.3, 65.3 ),
+						Angles = Angle( 0, -90, 0 ),
+						Scale = 0.9,
+					},
+				}
+			},
+		}
 	},
 	{
+		Category = "Siren",
+		Options = {
+			{
+				Option = "Scientific Prototypes Mark-VII",
+				Components = {
+					{
+						Component = "siren_prototype",
+						Model = "models/gandhi/props/es100.mdl",
+						Position = Vector( 0, 100, 30 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1,
+						Siren = "sp_mk7",
+						Templates = {
+							["Sound"] = { 
+								Tone = {
+									DSP = 0,
+									Pitch = 100
+								}
+							}
+						},
+						Inputs = { 
+							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
+						}
+					},
+				}
+			},
+			{
+				Option = "Federal Signal PA300",
+				Components = {
+					{
+						Component = "siren_prototype",
+						Model = "models/gandhi/props/es100.mdl",
+						Position = Vector( 0, 100, 30 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1,
+						Siren = "pa300_1",
+						Templates = {
+							["Sound"] = { 
+								Tone = {
+									DSP = 0,
+									Pitch = 100
+								}
+							}
+						},
+						Inputs = { 
+							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
+						}
+					},
+				}
+			},
+		}
+	},
+    {
 		Category = "Additional Brake Lights",
 		Options = {
             {
@@ -79,36 +148,6 @@ VEHICLE.Equipment = {
 			{
 				Option = "None",
 			},
-		}
-	},
-	{
-		Category = "Siren",
-		Options = {
-			{
-				Option = "Scientific Prototypes Mark-VII",
-				Components = {
-					{
-						Name = "@siren_speaker",
-						Component = "siren_prototype",
-						Model = "models/gandhi/props/es100.mdl",
-						Position = Vector( 0, 100, 30 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 1,
-						Siren = "sp_mk7",
-						Templates = {
-							["Sound"] = { 
-								Tone = {
-									DSP = 0,
-									Pitch = 100
-								}
-							}
-						},
-						Inputs = { 
-							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
-						}
-					},
-				}
-			}
 		}
 	},
 	{
