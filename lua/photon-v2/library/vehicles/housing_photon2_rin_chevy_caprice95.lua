@@ -58,7 +58,18 @@ VEHICLE.Equipment = {
 						Scale = 0.85,
 					},
 				}
-			}
+			},
+			{
+				Option = "Code3 MX7000",
+				Components = {
+					{
+						Component = "photon_c3_mx7000_housing",
+						Position = Vector( 0, -19, 59.7 ),
+						Angles = Angle( 0, 180, 0 ),
+						Scale = 1.08,
+					},
+                }
+			},
 		}
 	},
 	{

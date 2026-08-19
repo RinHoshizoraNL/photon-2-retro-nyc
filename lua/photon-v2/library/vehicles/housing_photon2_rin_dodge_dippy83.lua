@@ -30,6 +30,15 @@ VEHICLE.Equipment = {
 					{ Id = 21, Material = "rin/housing/props/blue" },
 				},
 			},
+			{
+				Option = "Motor Transport Unit (91 Repaint)",
+				SubMaterials = {
+					{ Id = 23, Material = "rin/housing/diplomat83/motor_91" },
+					{ Id = 12, Material = "rin/nypd/diplomat83/dash_blue" },
+					{ Id = 13, Material = "rin/nypd/diplomat83/seats_blue" },
+					{ Id = 21, Material = "rin/nypd/props/white" },
+				},
+			},
 		}
 	},
 	{
