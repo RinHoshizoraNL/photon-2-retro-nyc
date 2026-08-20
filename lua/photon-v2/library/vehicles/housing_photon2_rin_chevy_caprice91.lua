@@ -21,6 +21,14 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
+				Option = "Supervisor",
+				SubMaterials = {
+					{ Id = 20, Material = "rin/housing/caprice91/supervisor_91" },
+					{ Id = 16, Material = "rin/nypd/caprice95/seats_blue" },
+					{ Id = 24, Material = "rin/nypd/caprice95/dash_blue" }
+				},
+			},
+			{
 				Option = "Recruitment Unit",
 				SubMaterials = {
 					{ Id = 20, Material = "rin/housing/caprice91/recruitment_91" },
@@ -125,7 +133,7 @@ VEHICLE.Equipment = {
 			{
 				Option = "Police Equipment",
 				BodyGroups = {
-					{ BodyGroup = "trim", Value = 1 },
+					{ BodyGroup = "trim", Value = 0 },
 				},
 				Props = {
 					{

@@ -106,7 +106,7 @@ VEHICLE.Equipment = {
 			{
 				Option = "Police Equipment",
 				BodyGroups = {
-					{ BodyGroup = "trim", Value = 1 },
+					{ BodyGroup = "trim", Value = 0 },
 				},
 				Props = {
 					{

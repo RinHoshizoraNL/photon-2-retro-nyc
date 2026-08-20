@@ -13,9 +13,21 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Patrol 1995",
+				Option = "Patrol",
 				SubMaterials = {
 					{ Id = 6, Material = "rin/transit/crownvic96/transit_96" }
+				},
+			},
+			{
+				Option = "Supervisor",
+				SubMaterials = {
+					{ Id = 6, Material = "rin/transit/crownvic96/supervisor_96" }
+				},
+			},
+			{
+				Option = "Ceremonial Unit",
+				SubMaterials = {
+					{ Id = 6, Material = "rin/transit/crownvic96/ceremonial_96" }
 				},
 			},
 		}

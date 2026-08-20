@@ -13,9 +13,17 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Patrol 1995",
+				Option = "Patrol",
 				SubMaterials = {
 					{ Id = 22, Material = "rin/housing/caprice95/housing_95" },
+					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
+					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
+				},
+			},
+			{
+				Option = "Supervisor",
+				SubMaterials = {
+					{ Id = 22, Material = "rin/housing/caprice95/supervisor_95" },
 					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
 					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
 				},
@@ -67,6 +75,15 @@ VEHICLE.Equipment = {
 						Position = Vector( 0, -19, 59.7 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.08,
+					},
+					{
+						Component = "photon_par46_left",
+						Position = Vector( -37.5, 30, 42 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[5] = "sentry/shared/env_cubemap_model"
+						}
 					},
                 }
 			},

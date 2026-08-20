@@ -21,6 +21,12 @@ VEHICLE.Equipment = {
 				},
 			},
 			{
+				Option = "Patrol (91 Repaint)",
+				SubMaterials = {
+					{ Id = 7, Material = "rin/housing/caprice89/housing_91" },
+				},
+			},
+			{
 				Option = "Supervisor",
 				SubMaterials = {
 					{ Id = 7, Material = "rin/housing/caprice89/supervisor_89" },
