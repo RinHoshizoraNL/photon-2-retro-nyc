@@ -407,6 +407,9 @@ VEHICLE.Equipment = {
 					},
 				}
 			},
+			{
+				Option = "None",
+			},
 		}
 	},
 }
