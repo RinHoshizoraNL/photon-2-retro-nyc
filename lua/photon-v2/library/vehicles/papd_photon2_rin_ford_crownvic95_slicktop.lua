@@ -15,7 +15,7 @@ VEHICLE.Equipment = {
 			{
 				Option = "Patrol 1996",
 				SubMaterials = {
-					{ Id = 6, Material = "rin/papd/crownvic96/patrol_96" }
+					{ Id = 6, Material = "rin/papd/crownvic96/slick_96" }
 				},
 			},
 		}

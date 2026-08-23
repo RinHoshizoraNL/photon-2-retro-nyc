@@ -80,18 +80,35 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Spotlight",
+		Category = "Spotlights",
 		Options = {
 			{
-				Option = "Spotlight",
+				Option = "Spotlights",
 				Components = {
 					{
 						Component = "photon_par46_left",
 						Position = Vector( -36, 28, 50 ),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1,
+						SubMaterials = {
+							[5] = "sentry/shared/env_cubemap_model"
+						}
 					},
+					{
+						Component = "photon_par46_right",
+						Position = Vector( 36, 28, 50 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[5] = "sentry/shared/env_cubemap_model"
+						},
+						Inputs = {
+							-- Clear the default illumination mode
+							["Emergency.SceneForward"] = { ["ON"] = {} },
+						}
+					}
 				}
+				
 			},
 		}
 	},

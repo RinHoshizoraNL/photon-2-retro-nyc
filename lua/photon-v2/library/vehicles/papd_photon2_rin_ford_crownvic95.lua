@@ -119,7 +119,7 @@ VEHICLE.Equipment = {
 					{ BodyGroup = "hubcaps_fr", Value = 1 },
 					{ BodyGroup = "hubcaps_rl", Value = 1 },
 					{ BodyGroup = "hubcaps_rr", Value = 1 },
-					{ BodyGroup = "trim_body", Value = 1 },
+					{ BodyGroup = "trim_body", Value = 0 },
 					{ BodyGroup = "trim_fdoor", Value = 1 },
 					{ BodyGroup = "trim_rdoor", Value = 1 },
 				},

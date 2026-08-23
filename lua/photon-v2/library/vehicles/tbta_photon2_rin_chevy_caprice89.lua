@@ -39,6 +39,38 @@ VEHICLE.Equipment = {
         }
 	},
 	{
+		Category = "Spotlights",
+		Options = {
+			{
+				Option = "Spotlights",
+				Components = {
+					{
+						Component = "photon_par46_left",
+						Position = Vector( -37, 31.5, 47 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[5] = "sentry/shared/env_cubemap_model"
+						}
+					},
+					{
+						Component = "photon_par46_right",
+						Position = Vector( 37, 31.5, 47 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[5] = "sentry/shared/env_cubemap_model"
+						},
+						Inputs = {
+							-- Clear the default illumination mode
+							["Emergency.SceneForward"] = { ["ON"] = {} },
+						}
+					}
+				}
+			},
+		}
+	},
+	{
 		Category = "Highriser",
 		Options = {
 			{
@@ -244,6 +276,12 @@ VEHICLE.Equipment = {
 						RenderGroup = RENDERGROUP_OPAQUE,
 					},
 					{
+						Model = "models/schmal/antenna_vhf_1.mdl",
+						Position = Vector( 39.5, 50, 38 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 1, 1, 0.7 ),
+					},
+					{
 						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
 						Position = Vector( 0, -113, 28.8 ),
 						Angles = Angle( 0, 270, 00 ),
@@ -265,52 +303,4 @@ VEHICLE.Equipment = {
 			}
 		}
 	},
-	{
-		Category = "Wheels",
-		Options = {
-			{
-				Option = "Hub Caps",
-				Bones = {
-					{ Bone = "fl_wheel", Scale = 0, Position = Vector(0, 0, 0), Angles = Angle(0, 0, 0) },
-					{ Bone = "fr_wheel", Scale = 0, Position = Vector(0, 0, 0), Angles = Angle(0, 0, 0) },
-					{ Bone = "bl_wheel", Scale = 0, Position = Vector(0, 0, 0), Angles = Angle(0, 0, 0) },
-					{ Bone = "br_wheel", Scale = 0, Position = Vector(0, 0, 0), Angles = Angle(0, 0, 0) },
-				},
-				Props = {
-					{
-						Model = "models/lilranbay/vehicle_wheels/caprice89_hubcaps.mdl",
-						Position = Vector( 0, 0, 0 ),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = 1,
-						Bones = {
-							["bone_wheel_front_left"] = { 
-								Position = Vector( WHEEL_X, 0, 0 ),
-								Angles = Angle( 0, 0, 0 ),
-								Scale = 1,
-								Follow = { Attachment = "wheel_fl" }
-							},
-							["bone_wheel_front_right"] = { 
-								Position = Vector( WHEEL_X, 0, 0 ),
-								Angles = Angle( 0, 0, 0 ),
-								Scale = 1,
-								Follow = { Attachment = "wheel_fr" }
-							},
-							["bone_wheel_rear_left"] = { 
-								Position = Vector( WHEEL_X, 0, 0 ),
-								Angles = Angle( 0, 0, 0 ),
-								Scale = 1,
-								Follow = { Attachment = "wheel_rl" }
-							},
-							["bone_wheel_rear_right"] = { 
-								Position = Vector( WHEEL_X, 0, 0 ),
-								Angles = Angle( 0, 0, 0 ),
-								Scale = 1,
-								Follow = { Attachment = "wheel_rr" }
-							}
-						}
-					}
-				}
-			},
-		}
-	}
 }

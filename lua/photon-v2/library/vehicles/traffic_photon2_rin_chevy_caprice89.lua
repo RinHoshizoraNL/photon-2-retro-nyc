@@ -167,6 +167,12 @@ VEHICLE.Equipment = {
 							[1] = "rin/traffic/props/plates/plate_traffic",
 						},
 					},
+					{
+						Model = "models/schmal/antenna_vhf_1.mdl",
+						Position = Vector( 39.5, 50, 38 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 1, 1, 0.7 ),
+					},
 				}
 			}
 		}

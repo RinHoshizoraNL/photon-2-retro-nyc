@@ -180,16 +180,6 @@ VEHICLE.Equipment = {
 							[0] = "rin/nypd/props/white",
 						},
 					},
-					{
-						Model = "models/sentry/props/c3pse550.mdl",
-						Position = Vector( 0, -31, 77.1 ),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = 1,
-						SubMaterials = {
-							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
-							[1] = "photon/common/blank",
-						},
-					},
 				},
 				Components = {
 					{
@@ -233,26 +223,60 @@ VEHICLE.Equipment = {
 						Scale = 1,
 					},
 					{
-						Component = "patlite_hkf",
-						Position = Vector( 1, -31, 77 ),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = 0.8,
+						Component = "fedsig_electraflash",
+						Position = Vector( 0, -31, 77.2 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1,
 						States = {
 							[1] = "A",
-							[2] = "A",
-							[3] = "A",
-							[4] = "A",
 						},
 						SubMaterials = {
-							[2] = "photon/common/blank",
-							[4] = "photon/common/blank",
-							[5] = "photon/common/blank",
-							[6] = "photon/common/blank",
-							[7] = "photon/common/blank",
+							[1] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},
 					},
 				}
 			}
+		}
+	},
+	{
+		Category = "Rear Deck Lights",
+		Options = {
+            {
+				Option = "Rear Deck Lights",
+				Components = {
+					{
+						Component = "photon_par46_flasher_nypd",
+						Position = Vector( -15, -77, 42 ),
+						Angles = Angle( 0, 180, 0 ),
+						Scale = 0.7,
+						Phase = 180,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Component = "photon_par46_flasher_nypd",
+						Position = Vector( 15, -77, 42 ),
+						Angles = Angle( 0, 180, 0 ),
+						Scale = 0.7,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+                },
+				Props = {
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( -15, -77, 39 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 0.7, 0.7, 1.5 ),
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( 15, -77, 39  ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 0.7, 0.7, 1.5 ),
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+				},
+			},
 		}
 	},
 	{
@@ -286,10 +310,10 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Spotlight",
+		Category = "Spotlights",
 		Options = {
 			{
-				Option = "Spotlight",
+				Option = "Spotlights",
 				Components = {
 					{
 						Component = "photon_par46_left",
@@ -300,7 +324,21 @@ VEHICLE.Equipment = {
 							[5] = "sentry/shared/env_cubemap_model"
 						}
 					},
+					{
+						Component = "photon_par46_right",
+						Position = Vector( 37.5, 30, 42 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[5] = "sentry/shared/env_cubemap_model"
+						},
+						Inputs = {
+							-- Clear the default illumination mode
+							["Emergency.SceneForward"] = { ["ON"] = {} },
+						}
+					}
 				}
+				
 			},
 		}
 	},
