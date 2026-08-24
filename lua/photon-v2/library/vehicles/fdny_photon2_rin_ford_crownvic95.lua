@@ -181,16 +181,6 @@ VEHICLE.Equipment = {
 						RenderGroup = RENDERGROUP_OPAQUE,
 					},
 					{
-						Model = "models/rob/oldpolicepack/motorola.mdl",
-						Position = Vector( 0, 21, 31.2 ),
-						Angles = Angle( 20, 270, 0 ),
-						Scale = 1,
-						SubMaterials = {
-							[0] = "rin/nypd/props/mdt/mdt",
-						},
-						RenderGroup = RENDERGROUP_OPAQUE,
-					},
-					{
 						Model = "models/schmal/antenna_motorola.mdl",
 						Position = Vector( -25, -105, 45.6 ),
 						Angles = Angle( -3, 0, 7 ),

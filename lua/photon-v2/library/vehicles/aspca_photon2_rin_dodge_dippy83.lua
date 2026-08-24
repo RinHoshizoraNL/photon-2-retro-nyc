@@ -1,38 +1,25 @@
 if (Photon2.ReloadVehicleFile()) then return end
 local VEHICLE = Photon2.LibraryVehicle()
 
-VEHICLE.Title 		= "1995 Chevrolet Caprice FDNY"
-VEHICLE.Vehicle		= "95caprice_sgm"
-VEHICLE.Category 	= "Photon 2 NYC: FDNY"
+VEHICLE.Title 		= "1983 Dodge Diplomat NYC ASPCA"
+VEHICLE.Vehicle		= "dippy_sgm"
+VEHICLE.Category 	= "Photon 2 NYC: Other"
 VEHICLE.Author		= "Rin Hoshizora"
 
 local sequence = Photon2.SequenceBuilder.New
 
 VEHICLE.Equipment = {
-	{
+    {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Fire 1995",
+				Option = "ASPCA",
 				SubMaterials = {
-					{ Id = 22, Material = "rin/fdny/caprice95/fire_95" },
-					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
-					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
+					{ Id = 23, Material = "rin/nyc_other/diplomat83/aspca" },
+					{ Id = 12, Material = "rin/nypd/diplomat83/dash_blue" },
+					{ Id = 13, Material = "rin/nypd/diplomat83/seats_blue" },
 				},
 			},
-		}
-	},
-	{
-		Category = "Lighting",
-		Options = {
-			{
-				Option = "Default",
-				Components = {
-					{
-						Component = "photon_standard_chevcap91_nypd",
-					}
-				}
-			}
 		}
 	},
 	{
@@ -42,9 +29,9 @@ VEHICLE.Equipment = {
 				Option = "Federal Signal Aerodynic",
 				Components = {
 					{
-                        Component = "photon_fedsig_aerodynic_fdny",
-                        Position = Vector( 0, -13, 58.6 ),
-                        Angles = Angle( 0, 180, 2 ),
+                        Component = "fedsig_aerodynic",
+                        Position = Vector( 0, -26, 62.1 ),
+                        Angles = Angle( 0, 180, 0 ),
                         Scale = 0.9,
 					},
 				}
@@ -52,19 +39,38 @@ VEHICLE.Equipment = {
         }
 	},
 	{
+		Category = "Spotlight",
+		Options = {
+			{
+				Option = "Spotlight",
+				Components = {
+					{
+						Component = "photon_par46_left",
+						Position = Vector( -35.2, 15, 45 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[5] = "sentry/shared/env_cubemap_model"
+						}
+					},
+				}
+			},
+		}
+	},
+	{
 		Category = "Siren",
 		Options = {
 			{
-				Option = "Federal Signal PA300",
+				Option = "Scientific Prototypes Mark-VII",
 				Components = {
 					{
 						Name = "@siren_speaker",
 						Component = "siren_prototype",
 						Model = "models/gandhi/props/es100.mdl",
-						Position = Vector( 0, 104, 24 ),
+						Position = Vector( 0, 97, 22.5 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1,
-						Siren = "pa300_1",
+						Siren = "sp_mk7",
 						Templates = {
 							["Sound"] = { 
 								Tone = {
@@ -82,78 +88,65 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Equipment",
+		Category = "Police Equipment",
 		Options = {
 			{
-				Option = "Equipment",
+				Option = "Police Equipment",
 				BodyGroups = {
-					{ BodyGroup = "trim", Value = 0 },
+					{ BodyGroup = "doorpanels", Value = 1 },
 				},
 				Props = {
 					{
-						Model = "models/sentry/props/procopper_cvpi.mdl",
-						Position = Vector( 0, 4.5, -4),
+						Model = "models/gandhi/props/mastercom.mdl",
+						Position = Vector( -6, 16, 30),
+						Angles = Angle( 90, 262, 0 ),
+						Scale = 1.15,
+						SubMaterials = {
+							[0] = "rin/nypd/props/sp_mk7/sp_mark7",
+						},
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Model = "models/sentry/props/setina_partition_cvpi.mdl",
+						Position = Vector( 0, -8, -5),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1,
 						RenderGroup = RENDERGROUP_OPAQUE,
 					},
 					{
-						Model = "models/gandhi/props/mastercom.mdl",
-						Position = Vector( 0, 4, 20.5),
-						Angles = Angle( 20, 270, 0 ),
-						Scale = 1.1,
-						SubMaterials = {
-							[0] = "rin/nypd/props/pa300/pa300",
-						},
-						RenderGroup = RENDERGROUP_OPAQUE,
-					},
-					{
-						Model = "models/gandhi/props/radio.mdl",
-						Position = Vector( 0, 12, 21.8 ),
-						Angles = Angle( 200, 270, 0 ),
-						Scale = 0.32,
-						RenderGroup = RENDERGROUP_OPAQUE,
-					},
-					{
-						Model = "models/schmal/antenna_absc.mdl",
-						Position = Vector( 36, -105, 38.2 ),
-						Angles = Angle( 4, 0, 6 ),
-						Scale = 1
-					},
-					{
-						Model = "models/schmal/antenna_absc.mdl",
-						Position = Vector( -36, -105, 38.2 ),
-						Angles = Angle( -4, 0, 6 ),
-						Scale = 1
-					},
-					{
-						Model = "models/schmal/antennas/antenna_2.mdl",
-						Position = Vector( 0, -115, 39.7 ),
-						Angles = Angle( 0, 0, 6 ),
-						Scale = 1
-					},
-					{
 						Model = "models/supermighty/photon/front_holder.mdl",
-						Position = Vector( 0, 114, 12 ),
+						Position = Vector( -31, 105, 15 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1
 					},
 					{
+						Model = "models/schmal/antenna_motorola.mdl",
+						Position = Vector( 0, -48, 62.6 ),
+						Angles = Angle( -2, 90, 0 ),
+						Scale = 1
+					},
+					{
+						Model = "models/schmal/antenna_motorola.mdl",
+						Position = Vector( 0, -95, 40 ),
+						Angles = Angle( -3, 90, 0 ),
+						Scale = 1
+					},
+					{
 						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, -123.2, 25.2 ),
-						Angles = Angle( 0, 270, 00 ),
+						Position = Vector( 0, -125.5, 26.7 ),
+						Angles = Angle( -16, 270, 0 ),
 						Scale = 1,
 						SubMaterials = {
-							[1] = "rin/fdny/props/plates/plate_red",
+							[1] = "rin/nypd/props/plates/plate_civ_2",
 						},
 					},
 					{
 						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, 114.7, 12 ),
+						Position = Vector( -31, 105.7, 15 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 0.99,
 						SubMaterials = {
-							[1] = "rin/fdny/props/plates/plate_red",
+							[1] = "rin/nypd/props/plates/plate_civ_2",
 						},
 					},
 				}
@@ -161,14 +154,14 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Bumper Guard Front",
+		Category = "Front Bumper Guard",
 		Options = {
 			{
-				Option = "Bumper Guard Front",
+				Option = "Front Bumper Guard",
 				Props = {
 					{
 						Model = "models/sprops/geometry/qhex_12.mdl",
-						Position = Vector( 15, 112, 21),
+						Position = Vector( 15, 105.5, 21),
 						Angles = Angle( 0, 270, 0 ),
 						Scale = Vector( 1, 0.8, 2),
 						SubMaterials = {
@@ -177,7 +170,7 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/sprops/geometry/qhex_12.mdl",
-						Position = Vector( 15, 112, 13.2),
+						Position = Vector( 15, 105.5, 13.2),
 						Angles = Angle( 180, 270, 0 ),
 						Scale = Vector( 1, 0.8, 1),
 						SubMaterials = {
@@ -186,7 +179,7 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
-						Position = Vector( 15, 115.2, 21),
+						Position = Vector( 15, 108.7, 21),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = Vector( 0.35, 0.1, 1.7),
 						SubMaterials = {
@@ -195,7 +188,7 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
-						Position = Vector( 15, 113.75, 13.5),
+						Position = Vector( 15, 107.25, 13.5),
 						Angles = Angle( 0, 0, -30 ),
 						Scale = Vector( 0.35, 0.1, 1),
 						SubMaterials = {
@@ -204,7 +197,7 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/sprops/geometry/qhex_12.mdl",
-						Position = Vector( -15, 112, 21),
+						Position = Vector( -15, 105.5, 21),
 						Angles = Angle( 0, 270, 0 ),
 						Scale = Vector( 1, 0.8, 2),
 						SubMaterials = {
@@ -213,7 +206,7 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/sprops/geometry/qhex_12.mdl",
-						Position = Vector( -15, 112, 13.2),
+						Position = Vector( -15, 105.5, 13.2),
 						Angles = Angle( 180, 270, 0 ),
 						Scale = Vector( 1, 0.8, 1),
 						SubMaterials = {
@@ -222,7 +215,7 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
-						Position = Vector( -15, 115.2, 21),
+						Position = Vector( -15, 108.7, 21),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = Vector( 0.35, 0.1, 1.7),
 						SubMaterials = {
@@ -231,7 +224,7 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
-						Position = Vector( -15, 113.75, 13.5),
+						Position = Vector( -15, 107.25, 13.5),
 						Angles = Angle( 0, 0, -30 ),
 						Scale = Vector( 0.35, 0.1, 1),
 						SubMaterials = {
@@ -239,7 +232,7 @@ VEHICLE.Equipment = {
 						},
 					},
 				}
-			}
+			},
 		}
 	},
 }

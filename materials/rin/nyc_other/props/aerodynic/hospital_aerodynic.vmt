@@ -1,0 +1,7 @@
+"DecalModulate"
+{
+	"$basetexture" "rin/nyc_other/props/aerodynic/hospital_aerodynic"
+	"$model" "1"
+	"$nocull" "1"
+}
+

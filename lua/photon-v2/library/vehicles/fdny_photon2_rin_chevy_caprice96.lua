@@ -1,7 +1,7 @@
 if (Photon2.ReloadVehicleFile()) then return end
 local VEHICLE = Photon2.LibraryVehicle()
 
-VEHICLE.Title 		= "1995 Chevrolet Caprice FDNY"
+VEHICLE.Title 		= "1996 Chevrolet Caprice FDNY"
 VEHICLE.Vehicle		= "95caprice_sgm"
 VEHICLE.Category 	= "Photon 2 NYC: FDNY"
 VEHICLE.Author		= "Rin Hoshizora"
@@ -15,7 +15,7 @@ VEHICLE.Equipment = {
 			{
 				Option = "Fire 1995",
 				SubMaterials = {
-					{ Id = 22, Material = "rin/fdny/caprice95/fire_95" },
+					{ Id = 22, Material = "rin/fdny/caprice95/fire_96" },
 					{ Id = 20, Material = "rin/nypd/caprice95/seats_blue" },
 					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
 				},
@@ -35,21 +35,63 @@ VEHICLE.Equipment = {
 			}
 		}
 	},
-	{
+{
 		Category = "Lightbar",
 		Options = {
             {
-				Option = "Federal Signal Aerodynic",
+				Option = "Code3 MX7000",
 				Components = {
 					{
-                        Component = "photon_fedsig_aerodynic_fdny",
-                        Position = Vector( 0, -13, 58.6 ),
-                        Angles = Angle( 0, 180, 2 ),
-                        Scale = 0.9,
+						Component = "photon_c3_mx7000_nycems",
+						Position = Vector( 0, -15, 59.6 ),
+						Angles = Angle( 0, 180, 1.5 ),
+						Scale = 1.08,
+					},
+                }
+			},
+		}
+	},
+	{
+		Category = "Grille Lights",
+		Options = {
+            {
+				Option = "Whelen 900",
+				Components = {
+					{
+						Component = "anemolis_whelen_900_halogen",
+						Position = Vector( -9, 108.3, 24 ),
+						Angles = Angle( 0, 6, -2 ),
+						Scale = 0.7,
+					},
+					{
+						Component = "anemolis_whelen_900_halogen",
+						Position = Vector( 9, 108.3, 24 ),
+						Angles = Angle( 0, -6, -2 ),
+						Scale = 0.7,
+						Phase = 90,
+					},
+                }
+			},
+		}
+	},
+	{
+		Category = "Spotlight",
+		Options = {
+			{
+				Option = "Spotlight",
+				Components = {
+					{
+						Component = "photon_par46_left",
+						Position = Vector( -37.5, 30, 42 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[5] = "sentry/shared/env_cubemap_model"
+						}
 					},
 				}
 			},
-        }
+		}
 	},
 	{
 		Category = "Siren",
@@ -79,6 +121,54 @@ VEHICLE.Equipment = {
 					},
 				}
 			}
+		}
+	},
+	{
+		Category = "Wheels",
+		Options = {
+			{
+				Option = "Steelies",
+				Bones = {
+					{ Bone = "fl_wheel", Scale = 0, Position = Vector(0, 0, 0), Angles = Angle(0, 0, 0) },
+					{ Bone = "fr_wheel", Scale = 0, Position = Vector(0, 0, 0), Angles = Angle(0, 0, 0) },
+					{ Bone = "bl_wheel", Scale = 0, Position = Vector(0, 0, 0), Angles = Angle(0, 0, 0) },
+					{ Bone = "br_wheel", Scale = 0, Position = Vector(0, 0, 0), Angles = Angle(0, 0, 0) },
+				},
+				Props = {
+					{
+						Model = "models/rin/95caprice/steelie/rin_steelies.mdl",
+						Position = Vector( 0, 0, 0 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						Bones = {
+							["wheel_fl"] = { 
+								Position = Vector( -2.7, 0, 0 ),
+								Angles = Angle( 0, 0, 0 ),
+								Scale = 1,
+								Follow = { Attachment = "wheel_fl" }
+							},
+							["wheel_fr"] = { 
+								Position = Vector( -2.7, 0, 0 ),
+								Angles = Angle( 0, 0, 0 ),
+								Scale = 1,
+								Follow = { Attachment = "wheel_fr" }
+							},
+							["wheel_rl"] = { 
+								Position = Vector( -2.7, 0, 0 ),
+								Angles = Angle( 0, 0, 0 ),
+								Scale = 1,
+								Follow = { Attachment = "wheel_rl" }
+							},
+							["wheel_rr"] = { 
+								Position = Vector( -2.7, 0, 0 ),
+								Angles = Angle( 0, 0, 0 ),
+								Scale = 1,
+								Follow = { Attachment = "wheel_rr" }
+							},
+						},
+					}	
+				},
+			},
 		}
 	},
 	{
@@ -144,7 +234,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 270, 00 ),
 						Scale = 1,
 						SubMaterials = {
-							[1] = "rin/fdny/props/plates/plate_red",
+							[1] = "rin/fdny/props/plates/plate_fdny",
 						},
 					},
 					{
@@ -153,7 +243,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 0.99,
 						SubMaterials = {
-							[1] = "rin/fdny/props/plates/plate_red",
+							[1] = "rin/fdny/props/plates/plate_fdny",
 						},
 					},
 				}
