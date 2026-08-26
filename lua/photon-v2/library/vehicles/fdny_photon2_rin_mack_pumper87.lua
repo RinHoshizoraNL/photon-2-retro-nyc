@@ -13,6 +13,27 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
+				Option = "Engine 5",
+				SubMaterials = {
+					{ Id = 3, Material = "rin/fdny/cf_pumper/engine_5" },
+					{ Id = 2, Material = "rin/fdny/cf_pumper/red" },
+				},
+				Components = {
+					{
+						Component = "code3_sd_mini",
+						Position = Vector( -30, 109, 104.6 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1
+					},
+					{
+						Component = "code3_sd_mini",
+						Position = Vector( 30, 109, 104.6 ),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1
+					}
+				}
+			},
+			{
 				Option = "Engine 9",
 				SubMaterials = {
 					{ Id = 3, Material = "rin/fdny/cf_pumper/engine_9" },
