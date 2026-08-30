@@ -219,6 +219,7 @@ VEHICLE.Equipment = {
 						Position = Vector( 19.7, -31, 70.7 ),
 						Angles = Angle( 90, 0, 0 ),
 						Scale = 1,
+						States = { "~R", "~R" }
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
@@ -247,6 +248,7 @@ VEHICLE.Equipment = {
 						Position = Vector( -18, -31, 67 ),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1,
+						States = { "~R", "~R" }
 					},
 					{
 						Component = "fedsig_electraflash",

@@ -278,6 +278,7 @@ VEHICLE.Equipment = {
 						Position = Vector( 22.8, -31, 74.75 ),
 						Angles = Angle( 90, 0, 0 ),
 						Scale = 1,
+						States = { "~R", "~R" }
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
@@ -285,6 +286,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( -90, 0, 0 ),
 						Scale = 1,
 						Phase = 180,
+						States = { "~R", "~R" }
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
@@ -292,12 +294,14 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1,
 						Phase = 180,
+						States = { "~R", "~R" }
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
 						Position = Vector( -20, -41, 70.45 ),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1,
+						States = { "~R", "~R" }
 					},
 					{
 						Component = "photon_highrise_spotlight_nypd",
