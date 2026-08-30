@@ -1,7 +1,0 @@
-"DecalModulate"
-{
-	"$basetexture" "rin/nypd/props/vision/vision"
-	"$nocull" "1"
-	"$model" "1"
-}
-

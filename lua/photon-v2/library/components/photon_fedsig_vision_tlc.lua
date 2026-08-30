@@ -22,7 +22,8 @@ COMPONENT.Preview = {
 }
 
 COMPONENT.SubMaterials = {
-	[1] = "rin/tlc/props/vision/vision",
+	[1] = "rin/tlc/props/vision/colored_glass",
+	[2] = "rin/tlc/props/vision/colored_glass_outer"
 }
 
 local softWhite = { r = 255, g = 225, b = 225 }
