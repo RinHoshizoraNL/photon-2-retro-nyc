@@ -228,13 +228,13 @@ VEHICLE.Equipment = {
 				Option = "Whelen 900",
 				Components = {
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( -40, -19.7, 115.5 ),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1.2,
 					},
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( 40, -19.7, 115.5 ),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1.2,
@@ -251,7 +251,7 @@ VEHICLE.Equipment = {
 				Option = "Whelen 900",
 				Components = {
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( -58, -120, 115.5 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1.2,
@@ -268,7 +268,7 @@ VEHICLE.Equipment = {
 				Option = "Whelen 900",
 				Components = {
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( 58, -120, 115.5 ),
 						Angles = Angle( 0, 270, 0 ),
 						Scale = 1.2,
@@ -284,35 +284,35 @@ VEHICLE.Equipment = {
 				Option = "Whelen 900",
 				Components = {
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( -43, -216.2, 115.5 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.2,
 					},
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( 43, -216.2, 115.5 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.2,
 						Phase = 90,
 					},
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( -43, -216.2, 68 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.2,
 						Phase = 90,
-						States = { "A" },
+						States = { "~A" },
 						SubMaterials = {
 							[3] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},
 					},
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( 43, -216.2, 68 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.2,
-						States = { "A" },
+						States = { "~A" },
 						SubMaterials = {
 							[3] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},

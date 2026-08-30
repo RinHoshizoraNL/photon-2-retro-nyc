@@ -137,13 +137,13 @@ VEHICLE.Equipment = {
 				Option = "Whelen 900",
 				Components = {
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( -17.5, 103, 44 ),
 						Angles = Angle( 0, 1, -4 ),
 						Scale = 0.9,
 					},
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( 17.5, 103, 44 ),
 						Angles = Angle( 0, -1, -4 ),
 						Scale = 0.9,
@@ -159,14 +159,14 @@ VEHICLE.Equipment = {
 				Option = "Whelen 900",
 				Components = {
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( -45, -19.7, 115 ),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1.2,
 						Phase = 90,
 					},
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( 45, -19.7, 115 ),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1.2,
@@ -194,13 +194,13 @@ VEHICLE.Equipment = {
 				Option = "Whelen 900",
 				Components = {
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( -58, -34, 117 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1.2,
 					},
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( -58, -202, 117 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1.2,
@@ -237,13 +237,13 @@ VEHICLE.Equipment = {
 				Option = "Whelen 900",
 				Components = {
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( 58, -34, 117 ),
 						Angles = Angle( 0, 270, 0 ),
 						Scale = 1.2,
 					},
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( 58, -202, 117 ),
 						Angles = Angle( 0, 270, 0 ),
 						Scale = 1.2,
@@ -280,13 +280,13 @@ VEHICLE.Equipment = {
 				Option = "Whelen 900",
 				Components = {
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( -42, -216.2, 93 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.2,
 					},
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( 42, -216.2, 93 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.2,

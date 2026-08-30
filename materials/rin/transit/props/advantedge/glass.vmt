@@ -1,0 +1,6 @@
+"DecalModulate"
+{
+	"$basetexture" "rin/transit/props/advantedge/glass"
+	"$nocull" "1"
+	"$model" "1"
+}

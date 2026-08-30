@@ -102,7 +102,7 @@ VEHICLE.Equipment = {
 						Position = Vector( 21.4, -20.2, 68.8 ),
 						Angles = Angle( 90, 0, 0 ),
 						Scale = 1,
-						States = { "A", "A" },
+						States = { "~A", "~A" },
 						SubMaterials = {
 							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},
@@ -113,7 +113,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( -90, 0, 0 ),
 						Scale = 1,
 						Phase = 180,
-						States = { "A", "A" },
+						States = { "~A", "~A" },
 						SubMaterials = {
 							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},
@@ -124,7 +124,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1,
 						Phase = 180,
-						States = { "A", "A" },
+						States = { "~A", "~A" },
 						SubMaterials = {
 							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},
@@ -134,7 +134,7 @@ VEHICLE.Equipment = {
 						Position = Vector( -20, -29.7, 64.5 ),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1,
-						States = { "A", "A" },
+						States = { "~A", "~A" },
 						SubMaterials = {
 							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},

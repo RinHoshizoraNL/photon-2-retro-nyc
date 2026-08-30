@@ -23,26 +23,57 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
+		Category = "Lightbar",
+		Options = {
+            {
+				Option = "Whelen Advantedge",
+				Components = {
+					{
+						Component = "photon_whe_advantedge_transit",
+						Position = Vector( 0, 2.6, 62.25 ),
+						Angles = Angle( -1.3, -90, 0 ),
+						Scale = 1.08,
+						BodyGroups = { 
+							["feet"] = 0,
+							["straps"] = 0,
+							["speaker"] = 0,
+							["rear_lights"] = 0
+						},
+						Bones = {
+							["foot_dr"] =	{ Vector( 0, 0, 0 ), Angle( 0, 0, 0 ), 1 },
+							["foot_pas"] =	{ Vector( 0, 0, 0 ), Angle( 0, 0, 0 ), 1 },
+							["strap_dr"] =	{ Vector( 0, -2.15, -0.1 ), Angle( 0, 0, 9 ), 1 },
+							["strap_pas"] =	{ Vector( 0, 2.15+.36, -0.1 ), Angle( 0, 0, -9 ), 1 },
+
+							["500_rear_dr"] =	{ Vector( 0, -2.95, 0 ), Angle( 0, 0, 0 ), 1 },
+							["500_rear_pas"] =	{ Vector( 0, 2.95, 0 ), Angle( 0, 0, 0 ), 1 },
+						}
+					}
+                }
+			}
+		}
+	},
+	{
 		Category = "Grille Lights",
 		Options = {
             {
 				Option = "Whelen 900",
 				Components = {
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( -12.4, 115, 29 ),
 						Angles = Angle( 0, 6.5, 0 ),
 						Scale = 0.6,
 					},
 					{
-						Component = "anemolis_whelen_900_halogen",
+						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( 12.4, 115, 29 ),
 						Angles = Angle( 0, -6.5, 0 ),
 						Scale = 0.6,
-						Phase = 90,
-					},
+						Phase = 90
+					}
                 }
-			},
+			}
 		}
 	},
 	{
@@ -70,7 +101,7 @@ VEHICLE.Equipment = {
 						Inputs = { 
 							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
 						}
-					},
+					}
 				}
 			}
 		}
@@ -89,9 +120,9 @@ VEHICLE.Equipment = {
 						SubMaterials = {
 							[5] = "sentry/shared/env_cubemap_model"
 						}
-					},
+					}
 				}
-			},
+			}
 		}
 	},
 	{
@@ -137,7 +168,7 @@ VEHICLE.Equipment = {
 						Scale = 1,
 						SubMaterials = {
 							[1] = "rin/transit/props/plates/plate_transit",
-						},
+						}
 					},
 					{
 						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
@@ -146,8 +177,8 @@ VEHICLE.Equipment = {
 						Scale = 0.99,
 						SubMaterials = {
 							[1] = "rin/transit/props/plates/plate_transit",
-						},
-					},
+						}
+					}
 				}
 			}
 		}
