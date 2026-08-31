@@ -415,7 +415,7 @@ COMPONENT.Inputs = {
 			TA = "ON"
 		},
 		["MODE2"] = {
-			--R1R2 = "ON",
+			R1R2 = "ON",
 			TA = "ON"
 		},
 		["MODE3"] = {

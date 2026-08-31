@@ -23,6 +23,37 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
+		Category = "Lightbar",
+		Options = {
+            {
+				Option = "Whelen Advantedge",
+				Components = {
+					{
+						Component = "photon_whe_advantedge_transit",
+						Position = Vector( 0, -15, 60.6 ),
+						Angles = Angle( -1.7, -90, 0 ),
+						Scale = 1.02,
+						BodyGroups = { 
+							["feet"] = 0,
+							["straps"] = 0,
+							["speaker"] = 0,
+							["rear_lights"] = 0
+						},
+						Bones = {
+							["foot_dr"] =	{ Vector( 0, 0, 0 ), Angle( 0, 0, 0 ), 1 },
+							["foot_pas"] =	{ Vector( 0, 0, 0 ), Angle( 0, 0, 0 ), 1 },
+							["strap_dr"] =	{ Vector( 0, -0.1, -0.1 ), Angle( 0, 0, 9 ), 1 },
+							["strap_pas"] =	{ Vector( 0, 0.1, -0.1 ), Angle( 0, 0, -9 ), 1 },
+
+							["500_rear_dr"] =	{ Vector( 0, -2.95, 0 ), Angle( 0, 0, 0 ), 1 },
+							["500_rear_pas"] =	{ Vector( 0, 2.95, 0 ), Angle( 0, 0, 0 ), 1 },
+						}
+					}
+                }
+			}
+		}
+	},
+	{
 		Category = "Lighting",
 		Options = {
 			{

@@ -30,14 +30,14 @@ VEHICLE.Equipment = {
 				Components = {
 					{
 						Component = "photon_whe_advantedge_transit",
-						Position = Vector( 0, 2.6, 62.25 ),
+						Position = Vector( 0, 1.6, 62.25 ),
 						Angles = Angle( -1.3, -90, 0 ),
 						Scale = 1.08,
 						BodyGroups = { 
 							["feet"] = 0,
 							["straps"] = 0,
 							["speaker"] = 0,
-							["rear_lights"] = 0
+							["rear_lights"] = 2
 						},
 						Bones = {
 							["foot_dr"] =	{ Vector( 0, 0, 0 ), Angle( 0, 0, 0 ), 1 },
