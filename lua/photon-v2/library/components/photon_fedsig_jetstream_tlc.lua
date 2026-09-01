@@ -116,10 +116,10 @@ COMPONENT.Elements = {
 	[6] = { "Mesh", Vector( 0, 0, 0 ), Angle( 0, -90, 0 ), "sentry/props/jetstream/lights/6", DrawMaterial = "sentry/props/jetstream/lights/lights_on", },
 
 	[7] = { "Rotator", BoneId = 2, Axis = "z", Speed = 560 },
-	[8] = { "Rotator", BoneId = 3, Axis = "z", Speed = 800 },
-	[9] = { "Rotator", BoneId = 5, Axis = "z", Speed = -416 },
+	[8] = { "Rotator", BoneId = 3, Axis = "z", Speed = -800 },
+	[9] = { "Rotator", BoneId = 5, Axis = "z", Speed = -616 },
 	[10] = { "Rotator", BoneId = 4, Axis = "z", Speed = -795 },
-	[11] = { "Rotator", BoneId = 1, Axis = "z", Speed = -557.5 },
+	[11] = { "Rotator", BoneId = 1, Axis = "z", Speed = 557.5 },
 
 	[12] = { "Mesh", Vector( 0, 0, 0 ), Angle( -90, 0, 0 ), "sentry/props/jetstream/lights/rot", DrawMaterial = "sentry/props/jetstream/lights/lights_on", BoneParent = 2,},
 	[13] = { "Mesh", Vector( 0, 0, 0 ), Angle( -90, 0, 0 ), "sentry/props/jetstream/lights/rot", DrawMaterial = "sentry/props/jetstream/lights/lights_on", BoneParent = 3,},
@@ -163,9 +163,9 @@ COMPONENT.Segments = {
 		},
 		Sequences = {
 			ON = sequence()
-			:Steady(1,7)
+			:Steady(1,5)
 			:Steady(0,2)
-			:Steady(2,7)
+			:Steady(2,5)
 			:Steady(0,2)
 		}
 	},

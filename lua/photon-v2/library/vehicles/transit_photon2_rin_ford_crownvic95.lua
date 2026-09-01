@@ -271,10 +271,10 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Bumper Guard Front",
+		Category = "Bumper Guards",
 		Options = {
 			{
-				Option = "Bumper Guard Front",
+				Option = "Chrome Bumper Guards",
 				Props = {
 					{
 						Model = "models/sprops/geometry/qhex_12.mdl",
@@ -348,16 +348,6 @@ VEHICLE.Equipment = {
 							[0] = "sentry/dippy/black",
 						},
 					},
-				}
-			}
-		}
-	},
-	{
-		Category = "Bumper Guard Rear",
-		Options = {
-			{
-				Option = "Bumper Guard Rear",
-				Props = {
 					{
 						Model = "models/sprops/geometry/qhex_12.mdl",
 						Position = Vector( 12, -133, 25.5),
@@ -429,6 +419,18 @@ VEHICLE.Equipment = {
 						SubMaterials = {
 							[0] = "sentry/dippy/black",
 						},
+					},
+				}
+			},
+			{
+				Option = "KGT Pushbar",
+				Props = {
+					{
+						Model = "models/gandhi/props/nypd.mdl",
+						Position = Vector( 0, 120, 23.3),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1,
+						Color = Color(0, 0, 0),
 					},
 				}
 			}

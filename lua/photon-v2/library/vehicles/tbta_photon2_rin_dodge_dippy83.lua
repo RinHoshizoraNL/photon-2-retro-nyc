@@ -302,4 +302,86 @@ VEHICLE.Equipment = {
 			}
 		}
 	},
+	{
+		Category = "Bumper Guard Front",
+		Options = {
+			{
+				Option = "Bumper Guard Front",
+				Props = {
+					{
+						Model = "models/sprops/geometry/qhex_12.mdl",
+						Position = Vector( 15, 105.5, 21),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = Vector( 1, 0.8, 2),
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+					{
+						Model = "models/sprops/geometry/qhex_12.mdl",
+						Position = Vector( 15, 105.5, 13.2),
+						Angles = Angle( 180, 270, 0 ),
+						Scale = Vector( 1, 0.8, 1),
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+					{
+						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
+						Position = Vector( 15, 108.7, 21),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 0.35, 0.1, 1.7),
+						SubMaterials = {
+							[0] = "sentry/dippy/black",
+						},
+					},
+					{
+						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
+						Position = Vector( 15, 107.25, 13.5),
+						Angles = Angle( 0, 0, -30 ),
+						Scale = Vector( 0.35, 0.1, 1),
+						SubMaterials = {
+							[0] = "sentry/dippy/black",
+						},
+					},
+					{
+						Model = "models/sprops/geometry/qhex_12.mdl",
+						Position = Vector( -15, 105.5, 21),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = Vector( 1, 0.8, 2),
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+					{
+						Model = "models/sprops/geometry/qhex_12.mdl",
+						Position = Vector( -15, 105.5, 13.2),
+						Angles = Angle( 180, 270, 0 ),
+						Scale = Vector( 1, 0.8, 1),
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+					{
+						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
+						Position = Vector( -15, 108.7, 21),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 0.35, 0.1, 1.7),
+						SubMaterials = {
+							[0] = "sentry/dippy/black",
+						},
+					},
+					{
+						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
+						Position = Vector( -15, 107.25, 13.5),
+						Angles = Angle( 0, 0, -30 ),
+						Scale = Vector( 0.35, 0.1, 1),
+						SubMaterials = {
+							[0] = "sentry/dippy/black",
+						},
+					},
+				}
+			}
+		}
+	},
 }

@@ -83,6 +83,32 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
+		Category = "Rear Flashers",
+		Options = {
+            {
+				Option = "None",
+			},
+			{
+				Option = "Federal Signal GH1",
+				Components = {
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( -20, -107.5, 101.3 ),
+						Angles = Angle( 18, 270, 0 ),
+						Scale = 1,
+					},
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( 20, -107.5, 101.3 ),
+						Angles = Angle( 18, 270, 0 ),
+						Scale = 1,
+						Phase = 180,
+					},
+                }
+			},
+		}
+	},
+	{
 		Category = "Siren",
 		Options = {
 			{
