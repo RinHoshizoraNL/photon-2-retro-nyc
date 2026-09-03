@@ -97,7 +97,7 @@ COMPONENT.Templates = {
 					Color = PhotonColor( 255, 48, 48 )
 				},
 				["~B"] = {
-					Color = PhotonColor( 64, 96, 255 )
+					Color = PhotonColor( 255, 48, 48 )
 				},
 				["~SW"] = {
 					Color = PhotonColor( 255, 225, 200)
@@ -154,8 +154,8 @@ COMPONENT.Elements = {
 	[1] = { "Rotator", BoneId = 2, Axis = "z", Speed = 700, AngleOutputMap = { { 0, "~SW" }, { 45, "OFF" }, { 135, "~SW" }, { 225, "OFF" }, { 315, "~SW" } } },
 	[2] = { "Rotator", BoneId = 3, Axis = "z", Speed = 710, AngleOutputMap = { { 0, "~R" }, { 45, "OFF" }, { 135, "~R" }, { 225, "OFF" }, { 315, "~R" } } },
 	[3] = { "Rotator", BoneId = 4, Axis = "z", Speed = 440, AngleOutputMap = { { 0, "~R" }, { 225, "OFF" }, { 315, "~R" } } },
-	[4] = { "Rotator", BoneId = 5, Axis = "z", Speed = 690, AngleOutputMap = { { 0, "~B" }, { 45, "OFF" }, { 135, "~B" }, { 225, "OFF" }, { 315, "~B" } } },
-	[5] = { "Rotator", BoneId = 6, Axis = "z", Speed = 450, AngleOutputMap = { { 0, "~B" }, { 45, "OFF" }, { 135, "~B" } } },
+	[4] = { "Rotator", BoneId = 5, Axis = "z", Speed = 690, AngleOutputMap = { { 0, "~R" }, { 45, "OFF" }, { 135, "~R" }, { 225, "OFF" }, { 315, "~R" } } },
+	[5] = { "Rotator", BoneId = 6, Axis = "z", Speed = 450, AngleOutputMap = { { 0, "~R" }, { 45, "OFF" }, { 135, "~R" } } },
 
 	[6] = { "Mesh", Vector( 0.3, 0, 0.1 ), Angle( 0, 90, 90 ), "photon/generic/rc", BoneParent = 2, DrawMaterial = "photon/common/glow_gradient_a" },
 	[7] = { "Mesh", Vector( 0.3, 0, 0.1 ), Angle( 0, 90, 90 ), "photon/generic/r1l", BoneParent = 3, DrawMaterial = "photon/common/glow_gradient_a" },
@@ -470,6 +470,7 @@ COMPONENT.Inputs = {
 			ArrowStik = "WARN",
 			RotatorLeftOuter = "ON",
 			RotatorRightOuter = "ON",
+			RotatorCenter = "ON",
 			RotatorLeftInner = "ON",
 			RotatorRightInner = "ON",
 			LowerFront = "WARN"

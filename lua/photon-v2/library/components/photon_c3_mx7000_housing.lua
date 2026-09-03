@@ -97,7 +97,7 @@ COMPONENT.Templates = {
 					Color = PhotonColor( 255, 48, 48 )
 				},
 				["~B"] = {
-					Color = PhotonColor( 64, 96, 255 )
+					Color = PhotonColor( 255, 48, 48 )
 				},
 				["~SW"] = {
 					Color = PhotonColor( 255, 225, 200)

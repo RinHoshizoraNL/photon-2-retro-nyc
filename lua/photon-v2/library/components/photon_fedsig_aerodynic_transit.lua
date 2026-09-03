@@ -78,10 +78,10 @@ local fov = 90
 
 COMPONENT.Elements = {
 	[1] = { "Rotator", BoneId = 3, Axis = "z", Speed = -280 },
-	[2] = { "Rotator", BoneId = 2, Axis = "z", Speed = 380 },
-	[3] = { "Rotator", BoneId = 1, Axis = "z", Speed = -280 },
-	[4] = { "Rotator", BoneId = 5, Axis = "z", Speed = -280 },
-	[5] = { "Rotator", BoneId = 6, Axis = "z", Speed = 380 }, -- 5
+	[2] = { "Rotator", BoneId = 2, Axis = "z", Speed = -580 },
+	[3] = { "Rotator", BoneId = 1, Axis = "z", Speed = 480 },
+	[4] = { "Rotator", BoneId = 5, Axis = "z", Speed = 480 },
+	[5] = { "Rotator", BoneId = 6, Axis = "z", Speed = -580 }, -- 5
 	[6] = { "Rotator", BoneId = 7, Axis = "z", Speed = -280 }, -- 3
 
 	[7] = { "Mesh", Vector( 0.0, 0.0, 0.0 ), Angle( 90, -90, 90 ), "sentry/props/aerodynic2/light", DrawMaterial = "sentry/props/c3xl/glow_gradient_a", BoneParent = 4 },
