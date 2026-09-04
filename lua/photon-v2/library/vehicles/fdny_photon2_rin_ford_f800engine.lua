@@ -22,6 +22,17 @@ VEHICLE.BodyGroups = {
 
 VEHICLE.Equipment = {
 	{
+		Category = "Livery",
+		Options = {
+			{
+				Option = "FDNY",
+				SubMaterials = {
+					{ Id = 15, Material = "rin/fdny/f800/engine" },
+				},
+			},
+		}
+	},
+	{
 		Category = "Lightbar",
 		Options = {
             {

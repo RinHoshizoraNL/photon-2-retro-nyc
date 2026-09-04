@@ -1,7 +1,7 @@
 if (Photon2.ReloadVehicleFile()) then return end
 local VEHICLE = Photon2.LibraryVehicle()
 
-VEHICLE.Title 		= "1982 Ford Econoline Volunteer Heart Ambulance"
+VEHICLE.Title 		= "1982 Ford Econoline Lady Of Mercy Ambulance"
 VEHICLE.Vehicle		= "82econoline_ambu_sgm"
 VEHICLE.Category 	= "Photon 2 NYC: NYC EMS (Private)"
 VEHICLE.Author		= "Rin Hoshizora"
@@ -15,8 +15,12 @@ VEHICLE.Equipment = {
 			{
 				Option = "Ambulance",
 				SubMaterials = {
-					{ Id = 18, Material = "rin/ems/econoline82/volunteer_heart" },
+					{ Id = 18, Material = "rin/ems/econoline82/lady_mercy" },
 					{ Id = 15, Material = "rin/nypd/props/white" },
+					{ Id = 3, Material = "rin/nypd/econoline82/cube_int_dark" },
+					{ Id = 6, Material = "rin/nypd/econoline82/plastic_dark" },
+					{ Id = 7, Material = "rin/nypd/econoline82/seat_dark" },
+					{ Id = 8, Material = "rin/nypd/econoline82/seat2_dark" },
 				},
 			},
 		}
@@ -25,13 +29,13 @@ VEHICLE.Equipment = {
 		Category = "Lightbar",
 		Options = {
             {
-				Option = "Federal Signal Aerodynic",
+				Option = "Code3 XL",
 				Components = {
 					{
-                        Component = "photon_fedsig_aerodynic_transit",
+                        Component = "code3_xl",
                         Position = Vector( 0, 60, 98 ),
-                        Angles = Angle( 0, 180, 2 ),
-                        Scale = 1.1,
+                        Angles = Angle( 0, 0, -1 ),
+                        Scale = 1.03,
 					},
 				}
 			},
@@ -48,10 +52,6 @@ VEHICLE.Equipment = {
 						Position = Vector( -17, 148.3, 44 ),
 						Angles = Angle( 0, 2, -4.5 ),
 						Scale = 1,
-						States = { "~B" },
-						SubMaterials = {
-							[3] = "schmal/photon/fedsig_visionslr/lens_pod_3",
-						},
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
@@ -82,10 +82,6 @@ VEHICLE.Equipment = {
 						Position = Vector( 44, 43.8, 113.5 ),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1.1,
-						States = { "~B" },
-						SubMaterials = {
-							[3] = "schmal/photon/fedsig_visionslr/lens_pod_3",
-						},
 					},
                 }
 			},
@@ -102,10 +98,6 @@ VEHICLE.Equipment = {
 						Position = Vector( -58, 30, 113.5 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1.1,
-						States = { "~B" },
-						SubMaterials = {
-							[3] = "schmal/photon/fedsig_visionslr/lens_pod_3",
-						},
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
@@ -150,10 +142,6 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 270, 0 ),
 						Scale = 1.1,
 						Phase = 90,
-						States = { "~B" },
-						SubMaterials = {
-							[3] = "schmal/photon/fedsig_visionslr/lens_pod_3",
-						},
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
@@ -196,17 +184,17 @@ VEHICLE.Equipment = {
 						Position = Vector( -42.5, -152.5, 112.5 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.1,
-						States = { "~B" },
-						SubMaterials = {
-							[3] = "schmal/photon/fedsig_visionslr/lens_pod_3",
-						},
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
-						Position = Vector( -42.5, -152.5, 86 ),
+						Position = Vector( -42.5, -152.5, 90 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.1,
 						Phase = 90,
+						States = { "~A" },
+						SubMaterials = {
+							[3] = "schmal/photon/fedsig_visionslr/lens_pod_4",
+						},
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
@@ -217,12 +205,12 @@ VEHICLE.Equipment = {
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
-						Position = Vector( 42.5, -152.5, 86 ),
+						Position = Vector( 42.5, -152.5, 90 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.1,
-						States = { "~B" },
+						States = { "~A" },
 						SubMaterials = {
-							[3] = "schmal/photon/fedsig_visionslr/lens_pod_3",
+							[3] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},
 					},
 				},
@@ -302,39 +290,6 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Spotlights",
-		Options = {
-			{
-				Option = "Spotlights",
-				Components = {
-					{
-						Component = "photon_par46_left",
-						Position = Vector( -44, 93.5, 75 ),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = 1,
-						SubMaterials = {
-							[5] = "sentry/shared/env_cubemap_model"
-						}
-					},
-					{
-						Component = "photon_par46_right",
-						Position = Vector( 44, 93.5, 75 ),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = 1,
-						SubMaterials = {
-							[5] = "sentry/shared/env_cubemap_model"
-						},
-						Inputs = {
-							-- Clear the default illumination mode
-							["Emergency.SceneForward"] = { ["ON"] = {} },
-						}
-					}
-				}
-				
-			},
-		}
-	},
-	{
 		Category = "Side Steps",
 		Options = {
 			{
@@ -345,22 +300,6 @@ VEHICLE.Equipment = {
 						Position = Vector( 0, 106, -7 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = Vector(0.72, 1, 1),
-					},
-				}
-			}
-		}
-	},
-	{
-		Category = "Antenna",
-		Options = {
-			{
-				Option = "Antenna",
-				Props = {
-					{
-						Model = "models/schmal/antenna_vhf_2.mdl",
-						Position = Vector( -45, 110, 61 ),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = 1,
 					},
 				}
 			}

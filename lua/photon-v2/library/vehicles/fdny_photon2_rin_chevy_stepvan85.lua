@@ -1,9 +1,9 @@
 if (Photon2.ReloadVehicleFile()) then return end
 local VEHICLE = Photon2.LibraryVehicle()
 
-VEHICLE.Title 		= "1985 Chevrolet Stepvan Housing Police"
+VEHICLE.Title 		= "1985 Chevrolet Stepvan FDNY"
 VEHICLE.Vehicle		= "perryn_chevrolet_stepvan"
-VEHICLE.Category 	= "Photon 2 NYC: Housing Police"
+VEHICLE.Category 	= "Photon 2 NYC: FDNY"
 VEHICLE.Author		= "Rin Hoshizora"
 
 local sequence = Photon2.SequenceBuilder.New
@@ -22,10 +22,9 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Communications",
+				Option = "Special Operations Command",
 				SubMaterials = {
-					{ Id = 28, Material = "rin/housing/stepvan/communications" },
-					{ Id = 30, Material = "sentry/dippy/black" },
+					{ Id = 28, Material = "rin/fdny/stepvan/spl_ops" },
 				},
 			},
 		}
@@ -34,16 +33,16 @@ VEHICLE.Equipment = {
 		Category = "Lightbars",
 		Options = {
             {
-				Option = "Federal Signal Aerotwin",
+				Option = "Federal Signal Aerodynic",
 				Components = {
 					{
-                        Component = "fedsig_aerodynicny",
+                        Component = "photon_fedsig_aerodynic_fdny",
                         Position = Vector( 0, 55, 108.7 ),
                         Angles = Angle( 0, 180, 1 ),
                         Scale = 0.95,
 					},
 					{
-                        Component = "fedsig_aerodynicny",
+                        Component = "photon_fedsig_aerodynic_fdny",
                         Position = Vector( 0, -122, 112.4 ),
                         Angles = Angle( 0, 180, 1 ),
                         Scale = 0.95,
@@ -53,10 +52,77 @@ VEHICLE.Equipment = {
         }
 	},
 	{
+		Category = "Front Flashers",
+		Options = {
+            {
+				Option = "Whelen 900",
+				Components = {
+					{
+						Component = "photon_whelen_900_halogen_retronyc",
+						Position = Vector( -22, 101.9, 41.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 0.65,
+					},
+					{
+						Component = "photon_whelen_900_halogen_retronyc",
+						Position = Vector( 22, 101.9, 41.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 0.65,
+						Phase = 90,
+					},
+					{
+						Component = "photon_whelen_900_halogen_retronyc",
+						Position = Vector( -45.5, 92, 47.2 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.65,
+						Phase = 90,
+					},
+					{
+						Component = "photon_whelen_900_halogen_retronyc",
+						Position = Vector( 45.5, 92, 47.2 ),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 0.65,
+					},
+                }
+			},
+		}
+	},
+	{
+		Category = "Rear Flashers",
+		Options = {
+            {
+				Option = "Whelen 900",
+				Components = {
+					{
+						Component = "photon_whelen_900_halogen_retronyc",
+						Position = Vector( -35, -133.7, 101 ),
+						Angles = Angle( 0, 180, 1.5 ),
+						Scale = 1,
+						Phase = 90,
+						States = { "~A" },
+						SubMaterials = {
+							[3] = "schmal/photon/fedsig_visionslr/lens_pod_4",
+						},
+					},
+					{
+						Component = "photon_whelen_900_halogen_retronyc",
+						Position = Vector( 35, -133.7, 101 ),
+						Angles = Angle( 0, 180, 1.5 ),
+						Scale = 1,
+						States = { "~A" },
+						SubMaterials = {
+							[3] = "schmal/photon/fedsig_visionslr/lens_pod_4",
+						},
+					},
+				},
+			},
+		}
+	},
+	{
 		Category = "Siren",
 		Options = {
 			{
-				Option = "Scientific Prototypes Mark-VII",
+				Option = "Federal Signal PA300",
 				Components = {
 					{
 						Name = "@siren_speaker",
@@ -65,7 +131,7 @@ VEHICLE.Equipment = {
 						Position = Vector( 0, 95, 30 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1,
-						Siren = "sp_mk7",
+						Siren = "pa300_1",
 						Templates = {
 							["Sound"] = { 
 								Tone = {
@@ -109,7 +175,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 270, 0 ),
 						Scale = 0.93,
 						SubMaterials = {
-							[1] = "rin/housing/props/plates/plate_patrol89",
+							[1] = "rin/fdny/props/plates/plate_fdny",
 						},
 					},
 					{
@@ -118,7 +184,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 0.95,
 						SubMaterials = {
-							[1] = "rin/housing/props/plates/plate_patrol89",
+							[1] = "rin/fdny/props/plates/plate_fdny",
 						},
 					},
 				}
