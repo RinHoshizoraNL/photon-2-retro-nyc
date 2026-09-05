@@ -415,9 +415,18 @@ COMPONENT.Elements = {
 	[49] = { "Lights_low", },
 	[50] = { "Gear", },
 	[51] = { "Turnsig", },
+
+	[52] = { "Mesh_static_fast", Vector( -0.1, 0.1, 0.0 ), Angle( 0, 90, 0 ), "sentry/cvpi_hd/lights/marker_l", DrawMaterial = "sentry/cvpi_hd/lights/lights", BoneParent = -1},
+	[53] = { "Mesh_static_fast", Vector( 0.1, 0.1, 0.0 ), Angle( 0, 90, 0 ), "sentry/cvpi_hd/lights/marker_r", DrawMaterial = "sentry/cvpi_hd/lights/lights", BoneParent = -1},
+
+	[54] = { "Mesh_static_fast", Vector( -0.1, 0.1, 0.0 ), Angle( 0, 90, 0 ), "sentry/cvpi_hd/lights/marker_l_bulb", DrawMaterial = "sentry/cvpi_hd/lights/lights", BoneParent = -1},
+	[55] = { "Mesh_static_fast", Vector( 0.1, 0.1, 0.0 ), Angle( 0, 90, 0 ), "sentry/cvpi_hd/lights/marker_r_bulb", DrawMaterial = "sentry/cvpi_hd/lights/lights", BoneParent = -1},
+
+	[56] = { "Light_invis", Vector( -34.606, 102.45, 29.633 ), Angle( 0, 45, 90 ), Scale = 0.3, BoneParent = -1 },
+	[57] = { "Light_invis", Vector( 34.606, 102.45, 29.633 ), Angle( 0, -45, 90 ), Scale = 0.3, BoneParent = -1 },
 }
 
-COMPONENT.StateMap = "[HL] 49 [ON] 32 33 48 50 51 [~ON] 30 31 42 43 [~SW] 1 2 9 10 17 18 [~W] 3 4 21 22 [~W2] 19 20 [~R] 5 6 13 14 [~PR] 25 36 37 [~PRI] 38 39 [~RI] 15 16 [~A] 7 8 26 27 28 29 40 41 [~DW] 11 12 34 [~BW] 23 24 [W] 35 47 [~SW] 46 [~G] 44 45"
+COMPONENT.StateMap = "[HL] 49 [ON] 32 33 48 50 51 [~ON] 30 31 42 43 [~SW] 1 2 9 10 17 18 [~W] 3 4 21 22 52 53 54 55 56 57 [~W2] 19 20 [~R] 5 6 13 14 [~PR] 25 36 37 [~PRI] 38 39 [~RI] 15 16 [~A] 7 8 26 27 28 29 40 41 [~DW] 11 12 34 [~BW] 23 24 [W] 35 47 [~SW] 46 [~G] 44 45"
 
 local sequence = Photon2.SequenceBuilder.New
 
@@ -451,6 +460,22 @@ COMPONENT.Segments = {
 				ON = {
 					1
 				},
+		}
+	},
+	["Markers_flashers_strobe"] = {
+		Frames = {
+			[0] = "[OFF] 52 53 54 55 56 57",
+			[1] = "52 54 56",
+			[2] = "53 55 57",
+		},
+		Sequences = {
+			-- FLASH = { 
+			-- 		1, 1, 1, 1, 1, 1,
+			-- 		0,
+			-- 		2, 2, 2, 2, 2, 2,
+			-- 		0,
+			-- 	},
+			FLASH = sequence():QuadFlash( 1, 2 )
 		}
 	},
 	["LightSwitch"] = {
@@ -667,6 +692,7 @@ COMPONENT.Inputs = {
 		["MODE3"] = {
 			Headlight_flashers = "FLASH2",
 			Taillight_flashers = "FLASH",
+			Markers_flashers_strobe = "FLASH",
 			--Taillight_flashers_strobe = "FLASH",
 		}
 	},
