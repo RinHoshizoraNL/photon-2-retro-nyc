@@ -129,9 +129,13 @@ COMPONENT.Elements = {
 	[27] = { "HighBeams", Vector( 17.5, 111, 31.9 ), Angle( 20, 0, 0 ) },
 
 	[28] = { "LicensePlateLight", Vector( 0, -127, 34 ), Angle( 0, 0, 0 ) },
+
+	[29] = { "Model", Vector(0, 0, 0), Angle( 0, 0, 0 ), "photon/vehicle/sig_fl", DrawMaterial = "photon/common/glow_gradient_f" },
+	[30] = { "Model", Vector(0, 0, 0), Angle( 0, 0, 0 ), "photon/vehicle/sig_fr", DrawMaterial = "photon/common/glow_gradient_f" },
+
 }
 
-COMPONENT.StateMap = "[Glow] 1 2 7 8 9 10 [Amber] 3 4 5 6 [~R] 17 18 21 22 23 25 27 [~SW] 11 12 19 20 24 25 [~A] 13 14 15 16 [~W] 26 27 [SW] 28"
+COMPONENT.StateMap = "[Glow] 1 2 7 8 9 10 [Amber] 3 4 5 6 [~R] 17 18 21 22 23 25 27 [~SW] 11 12 19 20 24 25 [~A] 13 14 15 16 [~W] 26 27 29 30 [SW] 28"
 
 COMPONENT.ElementGroups = {
 	["TailL"] = { 17, 21 },
@@ -200,11 +204,16 @@ COMPONENT.Segments = {
 			[0] = "[~OFF] 15",
 			[1] = "15",
 			[2] = "[~RD]",
-			[3] = "[PASS] 15"
+			[3] = "[PASS] 15",
+			[4] = "29",
+			[5] = "[OFF] 29",
 		},
 		Sequences = {
 			ON = { 1 },
 			SIGNAL = sequence():Alternate( 1, 3, 12 ),
+			["STROBE"] = {
+				5,4,5,4,5,5,5,5,5,5,5
+			},
 			DIM = { 2 }
 		}
 	},
@@ -214,10 +223,15 @@ COMPONENT.Segments = {
 			[1] = "16",
 			[2] = "[~RD]",
 			[3] = "[PASS] 16",
+			[4] = "30",
+			[5] = "[OFF] 30",
 		},
 		Sequences = {
 			ON = { 1 },
 			SIGNAL = sequence():Alternate( 1, 3, 12 ),
+			["STROBE"] = {
+				5,5,5,5,5,5,5,4,5,4,5
+			},
 			DIM = { 2 }
 		}
 	},
@@ -351,6 +365,8 @@ COMPONENT.Inputs = {
 			TailR = "FLASH",
 			Reverse_L = "FLASH",
 			Reverse_R = "FLASH",
+			Signal_L = "STROBE",
+			Signal_R = "STROBE"
 		}
 	}
 }

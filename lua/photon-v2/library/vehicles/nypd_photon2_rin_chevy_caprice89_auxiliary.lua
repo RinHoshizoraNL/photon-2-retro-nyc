@@ -69,59 +69,6 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Siren",
-		Options = {
-			{
-				Option = "Scientific Prototypes Mark-VII",
-				Components = {
-					{
-						Component = "siren_prototype",
-						Model = "models/gandhi/props/es100.mdl",
-						Position = Vector( 0, 100, 30 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 1,
-						Siren = "sp_mk7",
-						Templates = {
-							["Sound"] = { 
-								Tone = {
-									DSP = 0,
-									Pitch = 100
-								}
-							}
-						},
-						Inputs = { 
-							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
-						}
-					},
-				}
-			},
-			{
-				Option = "Federal Signal PA300",
-				Components = {
-					{
-						Component = "siren_prototype",
-						Model = "models/gandhi/props/es100.mdl",
-						Position = Vector( 0, 100, 30 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 1,
-						Siren = "pa300_1",
-						Templates = {
-							["Sound"] = { 
-								Tone = {
-									DSP = 0,
-									Pitch = 100
-								}
-							}
-						},
-						Inputs = { 
-							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
-						}
-					},
-				}
-			},
-		}
-	},
-	{
 		Category = "Lightbar",
 		Options = {
             {

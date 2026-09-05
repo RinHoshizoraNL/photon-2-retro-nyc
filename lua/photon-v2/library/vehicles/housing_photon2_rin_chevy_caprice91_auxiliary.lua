@@ -52,36 +52,6 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Siren",
-		Options = {
-			{
-				Option = "Federal Signal PA300",
-				Components = {
-					{
-						Name = "@siren_speaker",
-						Component = "siren_prototype",
-						Model = "models/gandhi/props/es100.mdl",
-						Position = Vector( 0, 104, 24 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 1,
-						Siren = "pa300_1",
-						Templates = {
-							["Sound"] = { 
-								Tone = {
-									DSP = 0,
-									Pitch = 100
-								}
-							}
-						},
-						Inputs = { 
-							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
-						}
-					},
-				}
-			}
-		}
-	},
-	{
 		Category = "Spotlight",
 		Options = {
 			{
@@ -114,16 +84,6 @@ VEHICLE.Equipment = {
 						Position = Vector( 7.5, 15, 51),
 						Angles = Angle( 0, 270, 0 ),
 						Scale = 1,
-						RenderGroup = RENDERGROUP_OPAQUE,
-					},
-					{
-						Model = "models/gandhi/props/mastercom.mdl",
-						Position = Vector( 0.2, 27, 30.2),
-						Angles = Angle( 90, 270, 0 ),
-						Scale = 1.35,
-						SubMaterials = {
-							[0] = "rin/nypd/props/pa300/pa300",
-						},
 						RenderGroup = RENDERGROUP_OPAQUE,
 					},
 					{

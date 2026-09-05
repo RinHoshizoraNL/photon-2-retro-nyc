@@ -70,7 +70,7 @@ VEHICLE.Equipment = {
 				Option = "Default",
 				Components = {
 					{
-						Component = "photon_standard_sgmcvpi96",
+						Component = "photon_standard_cvpi96_nypd",
 					}
 				}
 			}

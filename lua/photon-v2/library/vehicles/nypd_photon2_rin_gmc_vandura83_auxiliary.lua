@@ -37,25 +37,6 @@ VEHICLE.Equipment = {
                         Angles = Angle( 0, 180, 0 ),
                         Scale = 1.02,
 					},
-					{
-						Component = "siren_prototype",
-						Model = "models/gandhi/props/es100.mdl",
-						Position = Vector( 0, 95, 50 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 1,
-						Siren = "sp_mk7",
-						Templates = {
-							["Sound"] = { 
-								Tone = {
-									DSP = 0,
-									Pitch = 100
-								}
-							}
-						},
-						Inputs = { 
-							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
-						}
-					},
 				}
 			},
 		}
@@ -92,16 +73,6 @@ VEHICLE.Equipment = {
 			{
 				Option = "Police Equipment",
 				Props = {
-					{
-						Model = "models/gandhi/props/mastercom.mdl",
-						Position = Vector( 2.5, 48.5, 63.5),
-						Angles = Angle( 48, 270, 0 ),
-						Scale = 1.35,
-						SubMaterials = {
-							[0] = "rin/nypd/props/sp_mk7/sp_mark7",
-						},
-						RenderGroup = RENDERGROUP_OPAQUE,
-					},
 					{
 						Model = "models/gandhi/props/radio.mdl",
 						Position = Vector( 2.5, 63.5, 77.6 ),

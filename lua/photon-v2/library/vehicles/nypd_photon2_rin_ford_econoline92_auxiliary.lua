@@ -116,36 +116,6 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Siren",
-		Options = {
-			{
-				Option = "Federal Signal Smart Siren",
-				Components = {
-					{
-						Name = "@siren_speaker",
-						Component = "siren_prototype",
-						Model = "models/gandhi/props/es100.mdl",
-						Position = Vector( 0, 90, 35 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 1,
-						Siren = "fedsig_smartsiren",
-						Templates = {
-							["Sound"] = { 
-								Tone = {
-									DSP = 0,
-									Pitch = 100
-								}
-							}
-						},
-						Inputs = { 
-							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
-						}
-					},
-				}
-			}
-		}
-	},
-    {
 		Category = "Equipment",
 		Options = {
 			{
