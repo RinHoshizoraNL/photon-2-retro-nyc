@@ -40,9 +40,9 @@ VEHICLE.Equipment = {
 				Components = {
 					{
 						Component = "photon_whe_advantedge_transit",
-						Position = Vector( 0, -15, 68.6 ),
-						Angles = Angle( -1.7, -90, 0 ),
-						Scale = 1.02,
+						Position = Vector( 0, -17.5, 68.45 ),
+						Angles = Angle( -0.5, -90, 0 ),
+						Scale = 1.035,
 						BodyGroups = { 
 							["feet"] = 0,
 							["straps"] = 0,
@@ -50,10 +50,10 @@ VEHICLE.Equipment = {
 							["rear_lights"] = 1
 						},
 						Bones = {
-							["foot_dr"] =	{ Vector( 0, 0, 0 ), Angle( 0, 0, 0 ), 1 },
-							["foot_pas"] =	{ Vector( 0, 0, 0 ), Angle( 0, 0, 0 ), 1 },
-							["strap_dr"] =	{ Vector( 0, 0.2, -0.1 ), Angle( 0, 0, 9 ), 1 },
-							["strap_pas"] =	{ Vector( 0, -0.2, -0.1 ), Angle( 0, 0, -9 ), 1 },
+							["foot_dr"] =	{ Vector( 0, 1, 0 ), Angle( 0, 0, 0 ), 1 },
+							["foot_pas"] =	{ Vector( 0, -1, 0 ), Angle( 0, 0, 0 ), 1 },
+							["strap_dr"] =	{ Vector( 0, 0.85, -0.25 ), Angle( 0, 0, 0 ), 1 },
+							["strap_pas"] =	{ Vector( 0, -0.85, -0.25 ), Angle( 0, 0, 0 ), 1 },
 
 							["500_rear_dr"] =	{ Vector( 0, -2.95, 0 ), Angle( 0, 0, 0 ), 1 },
 							["500_rear_pas"] =	{ Vector( 0, 2.95, 0 ), Angle( 0, 0, 0 ), 1 },
