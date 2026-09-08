@@ -15,20 +15,12 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Patrol",
+				Option = "Chief",
 				SubMaterials = {
 					{ Id = 23, Material = "rin/fdny/diplomat83/fire_83" },
 					{ Id = 12, Material = "rin/nypd/diplomat83/dash_blue" },
 					{ Id = 13, Material = "rin/nypd/diplomat83/seats_blue" },
 				},
-			},
-		}
-	},
-	{
-		Category = "Lightbar",
-		Options = {
-            {
-				Option = "Federal Signal Aerodynic",
 				Components = {
 					{
                         Component = "fedsig_aerodynicny",
@@ -36,9 +28,74 @@ VEHICLE.Equipment = {
                         Angles = Angle( 0, 180, 0 ),
                         Scale = 1.02,
 					},
+				},
+				Props = {
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -125.5, 26.7 ),
+						Angles = Angle( -16, 270, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[1] = "rin/fdny/props/plates/plate_red",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( -31, 105.7, 15 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/fdny/props/plates/plate_red",
+						},
+					},
 				}
 			},
-        }
+			{
+				Option = "Communications",
+				SubMaterials = {
+					{ Id = 23, Material = "rin/fdny/diplomat83/communications_83" },
+					{ Id = 12, Material = "rin/nypd/diplomat83/dash_blue" },
+					{ Id = 13, Material = "rin/nypd/diplomat83/seats_blue" },
+				},
+				Components = {
+					{
+                        Component = "photon_fedsig_aerodynic_fdny",
+                        Position = Vector( 0, -26, 62.1 ),
+                        Angles = Angle( 0, 180, 0 ),
+                        Scale = 0.9,
+					},
+					{
+						Component = "photon_par46_left",
+						Position = Vector( -35.2, 15, 45 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[5] = "sentry/shared/env_cubemap_model"
+						}
+					},
+				},
+				Props = {
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -125.5, 26.7 ),
+						Angles = Angle( -16, 270, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[1] = "rin/fdny/props/plates/plate_fdny",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( -31, 105.7, 15 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/fdny/props/plates/plate_fdny",
+						},
+					},
+				}
+			},
+		}
 	},
 	{
 		Category = "Additional Brake Lights",
@@ -137,24 +194,6 @@ VEHICLE.Equipment = {
 						Position = Vector( -31, 105, 15 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, -125.5, 26.7 ),
-						Angles = Angle( -16, 270, 0 ),
-						Scale = 1,
-						SubMaterials = {
-							[1] = "rin/fdny/props/plates/plate_red",
-						},
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( -31, 105.7, 15 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 0.99,
-						SubMaterials = {
-							[1] = "rin/fdny/props/plates/plate_red",
-						},
 					},
 				}
 			}

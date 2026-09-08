@@ -13,7 +13,7 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Bomb Squad",
+				Option = "Bed Stuy",
 				SubMaterials = {
 					{ Id = 18, Material = "rin/ems/econoline82/bed_stuy" },
 					{ Id = 15, Material = "sentry/dippy/black" },

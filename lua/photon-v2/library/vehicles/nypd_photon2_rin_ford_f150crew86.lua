@@ -88,6 +88,49 @@ VEHICLE.Equipment = {
 					},
 				}
 			},
+			{
+				Option = "ESU 95",
+				SubMaterials = {
+					{ Id = 22, Material = "rin/nypd/f150crew86/esu_95" },
+				},
+				Components = {
+					{
+						Component = "photon_fedsig_vision_nypd",
+						Position = Vector( 0, 0, 83.3 ),
+						Angles = Angle( 0, 180, 0 ),
+						Scale = 1.15,
+						BodyGroups = {
+							["rear_ta"] = 1,
+							["straps"] = 1,
+						},
+					},
+					{
+						Component = "photon_whe_500_nypd",
+						Position = Vector( 0, -160.5, 115.25 ),
+						Angles = Angle( 0, -90, 0 ),
+						Scale = 0.85,
+					},
+					{
+						Component = "siren_prototype",
+						Model = "models/gandhi/props/es100.mdl",
+						Position = Vector( 0, 96, 45 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1,
+						Siren = "fedsig_smartsiren",
+						Templates = {
+							["Sound"] = { 
+								Tone = {
+									DSP = 0,
+									Pitch = 100
+								}
+							}
+						},
+						Inputs = { 
+							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
+						}
+					},
+				}
+			},
 		}
 	},
 	{
