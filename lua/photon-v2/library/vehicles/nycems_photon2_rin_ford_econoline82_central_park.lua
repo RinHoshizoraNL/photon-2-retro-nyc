@@ -1,7 +1,7 @@
 if (Photon2.ReloadVehicleFile()) then return end
 local VEHICLE = Photon2.LibraryVehicle()
 
-VEHICLE.Title 		= "1982 Ford Econoline Cabrini Ambulance"
+VEHICLE.Title 		= "1982 Ford Econoline Central Park Ambulance"
 VEHICLE.Vehicle		= "82econoline_ambu_sgm"
 VEHICLE.Category 	= "Photon 2 NYC: NYC EMS (Private)"
 VEHICLE.Author		= "Rin Hoshizora"
@@ -15,7 +15,7 @@ VEHICLE.Equipment = {
 			{
 				Option = "Cabrini",
 				SubMaterials = {
-					{ Id = 18, Material = "rin/ems/econoline82/cabrini" },
+					{ Id = 18, Material = "rin/ems/econoline82/central_park" },
 					{ Id = 15, Material = "sentry/shared/env_cubemap_model" },
 					{ Id = 3, Material = "rin/nypd/econoline82/cube_int_dark" },
 					{ Id = 6, Material = "rin/nypd/econoline82/plastic_dark" },
@@ -26,33 +26,20 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Lightbar Front",
+		Category = "Lightbar",
 		Options = {
             {
-				Option = "Federal Signal Twinsonic",
+				Option = "Code3 MX7000",
 				Components = {
 					{
-                        Component = "fedsig_twinsonic",
-                        Position = Vector( 0, 60, 100.5 ),
-                        Angles = Angle( 0, 0, -1.5 ),
-                        Scale = 1,
-						States = { [1] = "~R",
-						           [2] = "~R",
-								   [3] = "~R",
-								   [4] = "~R",
-								   [5] = "~R",
-								   [6] = "~R",
-								   [7] = "~R",
-								   [8] = "~R",
-					    },
-						SubMaterials = {
-							[7] = "sentry/props/c3xl/glass_outer",
-							[13] = "schmal/photon/fedsig_visionslr/lens_pod_2",
-						},
+						Component = "photon_c3_mx7000_nycems",
+						Position = Vector( 0, 60, 99 ),
+						Angles = Angle( 0, 180, 1.5 ),
+						Scale = 1.2,
 					},
-				}
+                }
 			},
-        }
+		}
 	},
 	{
 		Category = "Grille Flashers",
@@ -77,6 +64,36 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
+		Category = "Front Flashers",
+		Options = {
+            {
+				Option = "Whelen 900",
+				Components = {
+					{
+						Component = "photon_whelen_900_halogen_retronyc",
+						Position = Vector( -44, 43.8, 113.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1.1,
+						Phase = 90,
+					},
+					{
+						Component = "photon_whelen_900_halogen_retronyc",
+						Position = Vector( 0, 43.8, 113.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1.1,
+					},
+					{
+						Component = "photon_whelen_900_halogen_retronyc",
+						Position = Vector( 44, 43.8, 113.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1.1,
+						Phase = 90,
+					},
+                }
+			},
+		}
+	},
+	{
 		Category = "Left Flashers",
 		Options = {
             {
@@ -84,22 +101,22 @@ VEHICLE.Equipment = {
 				Components = {
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
-						Position = Vector( -58, 30, 113.5 ),
+						Position = Vector( -58, 28, 113.5 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1.1,
-						Phase = 90,
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( -58, -139, 113.5 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1.1,
+						Phase = 90,
 					},
 				},
 				Props = {
 					{
 						Model = "models/sentry/props/whelen900.mdl",
-						Position = Vector( -58, 8, 113.5 ),
+						Position = Vector( -58, 28, 98 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1.1,
 						SubMaterials = {
@@ -108,7 +125,7 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/sentry/props/whelen900.mdl",
-						Position = Vector( -58, -112, 113.5 ),
+						Position = Vector( -58, -139, 98 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1.1,
 						SubMaterials = {
@@ -127,22 +144,22 @@ VEHICLE.Equipment = {
 				Components = {
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
-						Position = Vector( 58, 30, 113.5 ),
+						Position = Vector( 58, 28, 113.5 ),
 						Angles = Angle( 0, 270, 0 ),
 						Scale = 1.1,
-						Phase = 90,
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( 58, -139, 113.5 ),
 						Angles = Angle( 0, 270, 0 ),
 						Scale = 1.1,
+						Phase = 90,
 					},
 				},
 				Props = {
 					{
 						Model = "models/sentry/props/whelen900.mdl",
-						Position = Vector( 58, 8, 113.5 ),
+						Position = Vector( 58, 28, 98 ),
 						Angles = Angle( 0, 270, 0 ),
 						Scale = 1.1,
 						SubMaterials = {
@@ -151,7 +168,7 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/sentry/props/whelen900.mdl",
-						Position = Vector( 58, -112, 113.5 ),
+						Position = Vector( 58, -139, 98 ),
 						Angles = Angle( 0, 270, 0 ),
 						Scale = 1.1,
 						SubMaterials = {
@@ -173,32 +190,47 @@ VEHICLE.Equipment = {
 						Position = Vector( -42.5, -152.5, 112.5 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.1,
-						Phase = 90,
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( 42.5, -152.5, 112.5 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.1,
+					},
+					{
+						Component = "photon_whelen_900_halogen_retronyc",
+						Position = Vector( 0, -152.5, 112.5 ),
+						Angles = Angle( 0, 180, 0 ),
+						Scale = 1.1,
 						Phase = 90,
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
-						Position = Vector( -17.5, -152.5, 112.5 ),
+						Position = Vector( -42.5, -152.5, 90 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.1,
+						Phase = 90,
+						States = { "~A" },
+						SubMaterials = {
+							[3] = "schmal/photon/fedsig_visionslr/lens_pod_4",
+						},
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
-						Position = Vector( 17.5, -152.5, 112.5 ),
+						Position = Vector( 42.5, -152.5, 90 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.1,
+						Phase = 90,
+						States = { "~A" },
+						SubMaterials = {
+							[3] = "schmal/photon/fedsig_visionslr/lens_pod_4",
+						},
 					},
 				},
 				Props = {
 					{
 						Model = "models/sentry/props/whelen900.mdl",
-						Position = Vector( -30, -152.5, 112.5 ),
+						Position = Vector( -21.25, -152.5, 112.5 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.1,
 						SubMaterials = {
@@ -207,7 +239,7 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/sentry/props/whelen900.mdl",
-						Position = Vector( 30, -152.5, 112.5 ),
+						Position = Vector( 21.25, -152.5, 112.5 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.1,
 						SubMaterials = {
@@ -215,39 +247,6 @@ VEHICLE.Equipment = {
 						},
 					},
 				},
-			},
-		}
-	},
-	{
-		Category = "Spotlights",
-		Options = {
-			{
-				Option = "Spotlights",
-				Components = {
-					{
-						Component = "photon_par46_left",
-						Position = Vector( -44, 93.5, 75 ),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = 1,
-						SubMaterials = {
-							[5] = "sentry/shared/env_cubemap_model"
-						}
-					},
-					{
-						Component = "photon_par46_right",
-						Position = Vector( 44, 93.5, 75 ),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = 1,
-						SubMaterials = {
-							[5] = "sentry/shared/env_cubemap_model"
-						},
-						Inputs = {
-							-- Clear the default illumination mode
-							["Emergency.SceneForward"] = { ["ON"] = {} },
-						}
-					}
-				}
-				
 			},
 		}
 	},

@@ -17,6 +17,7 @@ VEHICLE.Equipment = {
 				Option = "Ambulance 1986",
 				SubMaterials = {
 					{ Id = 22, Material = "rin/ems/f150ambo86/ems_86" },
+					{ Id = 27, Material = "rin/nypd/props/white" },
 				},
 			},
 		}

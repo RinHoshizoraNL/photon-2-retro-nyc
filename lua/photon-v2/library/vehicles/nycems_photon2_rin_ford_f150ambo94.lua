@@ -17,7 +17,43 @@ VEHICLE.Equipment = {
 				Option = "Ambulance 1994",
 				SubMaterials = {
 					{ Id = 22, Material = "rin/ems/f150ambo86/ems_94" },
+					{ Id = 27, Material = "rin/nypd/props/white" },
 				},
+			},
+		}
+	},
+	{
+		Category = "Dash light",
+		Options = {
+            {
+				Option = "None",
+			},
+			{
+				Option = "Beacon",
+				Components = {
+					{
+						Component = "patlite_hkf",
+						Position = Vector( 0, 35, 62.9 ),
+						Angles = Angle( -5, 270, -2 ),
+						Scale = .75,
+						BodyGroups = {
+							["trim"] = 0,
+						},
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+				},
+				Props = {
+					{
+						Model = "models/sprops/misc/tubes_thin/size_2/t_h_tube_24x12.mdl",
+						Position = Vector( 0, 33.5, 65.7),
+						Angles = Angle( 2, 0, 84.5 ),
+						Scale = Vector( 0.3, 0.35, 0.5),
+						SubMaterials = {
+							[0] = "sentry/shared/black"
+						},
+					    RenderGroup = RENDERGROUP_OPAQUE,
+					},
+				}
 			},
 		}
 	},
@@ -62,6 +98,62 @@ VEHICLE.Equipment = {
 					},
 				}
 			}
+		}
+	},
+	{
+		Category = "Lightbar",
+		Options = {
+            {
+				Option = "Whelen Advantedge",
+				Components = {
+					{
+						Component = "photon_whe_advantedge_transit",
+						Position = Vector( 0, 0, 85 ),
+						Angles = Angle( -1, -90, 0 ),
+						Scale = 1.05,
+						BodyGroups = { 
+							["feet"] = 0,
+							["straps"] = 1,
+							["speaker"] = 1,
+							["rear_lights"] = 2
+						},
+						Bones = {
+							["foot_dr"] =	{ Vector( 0, 0, 0 ), Angle( 0, 0, 0 ), 1 },
+							["foot_pas"] =	{ Vector( 0, 0, 0 ), Angle( 0, 0, 0 ), 1 },
+							["strap_dr"] =	{ Vector( 0, -0.1, -0.1 ), Angle( 0, 0, 9 ), 1 },
+							["strap_pas"] =	{ Vector( 0, 0.1, -0.1 ), Angle( 0, 0, -9 ), 1 },
+
+							["500_rear_dr"] =	{ Vector( 0, -2.95, 0 ), Angle( 0, 0, 0 ), 1 },
+							["500_rear_pas"] =	{ Vector( 0, 2.95, 0 ), Angle( 0, 0, 0 ), 1 },
+						},
+						SubMaterials = {
+							[2] = "sentry/shared/glass",
+						},
+					}
+                }
+			}
+		}
+	},
+	{
+		Category = "Grille Flashers",
+		Options = {
+            {
+				Option = "Federal Signal GH1",
+				Components = {
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( -22.5, 101.4, 49 ),
+						Angles = Angle( 2, 91, 180 ),
+						Scale = 0.9,
+					},
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( 22.5, 101.4, 49 ),
+						Angles = Angle( 2, 89, 180 ),
+						Scale = 0.9,
+					},
+                }
+			},
 		}
 	},
 	{
@@ -205,25 +297,35 @@ VEHICLE.Equipment = {
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
-						Position = Vector( -30, -216.2, 117 ),
+						Position = Vector( 0, -216.2, 117 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.2,
 						States = { "~A" },
 						SubMaterials = {
 							[3] = "schmal/photon/fedsig_visionslr/lens_pod_4",
+						},
+					},
+                },
+				Props = {
+					{
+						Model = "models/sentry/props/whelen900.mdl",
+						Position = Vector( -22.5, -216.2, 117 ),
+						Angles = Angle( 0, 180, 0 ),
+						Scale = 1.2,
+						SubMaterials = {
+							[3] = "sentry/shared/glass",
 						},
 					},
 					{
-						Component = "photon_whelen_900_halogen_retronyc",
-						Position = Vector( 30, -216.2, 117 ),
+						Model = "models/sentry/props/whelen900.mdl",
+						Position = Vector( 22.5, -216.2, 117 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.2,
-						States = { "~A" },
 						SubMaterials = {
-							[3] = "schmal/photon/fedsig_visionslr/lens_pod_4",
+							[3] = "sentry/shared/glass",
 						},
 					},
-                }
+				},
 			},
 		}
 	},
@@ -309,16 +411,16 @@ VEHICLE.Equipment = {
 				Props = {
 					{
 						Model = "models/sprops/geometry/qhex_12.mdl",
-						Position = Vector( 18.5, 110, 33),
+						Position = Vector( 17.5, 108, 37.1),
 						Angles = Angle( 0, 270, 0 ),
-						Scale = Vector( 1, 0.8, 3),
+						Scale = Vector( 1, 0.8, 4.5),
 						SubMaterials = {
 							[0] = "rin/nypd/props/white",
 						},
 					},
 					{
 						Model = "models/sprops/geometry/hdisc_12.mdl",
-						Position = Vector( 18.5, 111.5, 42.5),
+						Position = Vector( 17.5, 109.5, 50.5),
 						Angles = Angle( 0, 270, 0 ),
 						Scale = Vector( 0.25, 0.8, 0.6),
 						SubMaterials = {
@@ -327,7 +429,7 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/sprops/geometry/qdisc_12.mdl",
-						Position = Vector( 18.5, 110, 22.5),
+						Position = Vector( 17.5, 108, 22.5),
 						Angles = Angle( 90, 90, 0 ),
 						Scale = Vector( 1, 0.8, 0.99),
 						SubMaterials = {
@@ -336,7 +438,7 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
-						Position = Vector( 18.5, 101.5, 19.7),
+						Position = Vector( 17.5, 99.5, 19.7),
 						Angles = Angle( 90, 90, 0 ),
 						Scale = Vector( 0.1, 0.8, 4),
 						SubMaterials = {
@@ -345,52 +447,7 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
-						Position = Vector( 18.5, 106, 33.9),
-						Angles = Angle( 90, 90, 0 ),
-						Scale = Vector( 0.1, 0.8, 4),
-						SubMaterials = {
-							[0] = "rin/nypd/props/white",
-						},
-					},
-					{
-						Model = "models/sprops/geometry/qhex_12.mdl",
-						Position = Vector( -18.5, 110, 33),
-						Angles = Angle( 0, 270, 0 ),
-						Scale = Vector( 1, 0.8, 3),
-						SubMaterials = {
-							[0] = "rin/nypd/props/white",
-						},
-					},
-					{
-						Model = "models/sprops/geometry/hdisc_12.mdl",
-						Position = Vector( -18.5, 111.5, 42.5),
-						Angles = Angle( 0, 270, 0 ),
-						Scale = Vector( 0.25, 0.8, 0.6),
-						SubMaterials = {
-							[0] = "rin/nypd/props/white",
-						},
-					},
-					{
-						Model = "models/sprops/geometry/qdisc_12.mdl",
-						Position = Vector( -18.5, 110, 22.5),
-						Angles = Angle( 90, 90, 0 ),
-						Scale = Vector( 1, 0.8, 0.99),
-						SubMaterials = {
-							[0] = "rin/nypd/props/white",
-						},
-					},
-					{
-						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
-						Position = Vector( -18.5, 101.5, 19.7),
-						Angles = Angle( 90, 90, 0 ),
-						Scale = Vector( 0.1, 0.8, 4),
-						SubMaterials = {
-							[0] = "rin/nypd/props/white",
-						},
-					},
-					{
-						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
-						Position = Vector( -18.5, 106, 33.9),
+						Position = Vector( 17.5, 104, 33.9),
 						Angles = Angle( 90, 90, 0 ),
 						Scale = Vector( 0.1, 0.8, 4),
 						SubMaterials = {
@@ -399,7 +456,52 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/sprops/cylinders/size_2/cylinder_3x3.mdl",
-						Position = Vector( 0, 111.5, 43),
+						Position = Vector( 19.5, 109.5, 50.5),
+						Angles = Angle( 0, 90, 90 ),
+						Scale = Vector( 0.45, 0.45, 4),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/cylinders/size_2/cylinder_3x3.mdl",
+						Position = Vector( 19.5, 108.5, 33),
+						Angles = Angle( 0, 90, 90 ),
+						Scale = Vector( 0.45, 0.45, 4),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/misc/fittings/bend_short_90_3.mdl",
+						Position = Vector( 26.5, 109.5, 50.15),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 0.45, 0.45, 0.45),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/cylinders/size_2/cylinder_3x3.mdl",
+						Position = Vector( 26.85, 109, 41.8),
+						Angles = Angle( 0, 0, -4 ),
+						Scale = Vector( 0.45, 0.45, 5),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/misc/fittings/bend_short_90_3.mdl",
+						Position = Vector( 26.5, 108.5, 33.33),
+						Angles = Angle( 0, 0, 180 ),
+						Scale = Vector( 0.45, 0.45, 0.45),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/cylinders/size_2/cylinder_3x3.mdl",
+						Position = Vector( 0, 109.5, 50.5),
 						Angles = Angle( 0, 90, 90 ),
 						Scale = Vector( 0.65, 0.65, 12),
 						SubMaterials = {
@@ -408,15 +510,108 @@ VEHICLE.Equipment = {
 					},
 					{
 						Model = "models/sprops/cylinders/size_2/cylinder_3x3.mdl",
-						Position = Vector( 0, 110.5, 29),
+						Position = Vector( 0, 108.5, 33),
 						Angles = Angle( 0, 90, 90 ),
 						Scale = Vector( 1, 1, 12),
 						SubMaterials = {
 							[0] = "rin/nypd/props/white",
 						},
 					},
+					{
+						Model = "models/sprops/geometry/qhex_12.mdl",
+						Position = Vector( -17.5, 108, 37.1),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = Vector( 1, 0.8, 4.5),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/geometry/hdisc_12.mdl",
+						Position = Vector( -17.5, 109.5, 50.5),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = Vector( 0.25, 0.8, 0.6),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/geometry/qdisc_12.mdl",
+						Position = Vector( -17.5, 108, 22.5),
+						Angles = Angle( 90, 90, 0 ),
+						Scale = Vector( 1, 0.8, 0.99),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
+						Position = Vector( -17.5, 99.5, 19.7),
+						Angles = Angle( 90, 90, 0 ),
+						Scale = Vector( 0.1, 0.8, 4),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/rectangles/size_1/rect_3x3x3.mdl",
+						Position = Vector( -17.5, 104, 33.9),
+						Angles = Angle( 90, 90, 0 ),
+						Scale = Vector( 0.1, 0.8, 4),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/cylinders/size_2/cylinder_3x3.mdl",
+						Position = Vector( -19.5, 109.5, 50.5),
+						Angles = Angle( 0, 90, 90 ),
+						Scale = Vector( 0.45, 0.45, 4),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/cylinders/size_2/cylinder_3x3.mdl",
+						Position = Vector( -19.5, 108.5, 33),
+						Angles = Angle( 0, 90, 90 ),
+						Scale = Vector( 0.45, 0.45, 4),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/misc/fittings/bend_short_90_3.mdl",
+						Position = Vector( -26.5, 109.5, 50.15),
+						Angles = Angle( 0, 180, 0 ),
+						Scale = Vector( 0.45, 0.45, 0.45),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/cylinders/size_2/cylinder_3x3.mdl",
+						Position = Vector( -26.85, 109, 41.8),
+						Angles = Angle( 0, 0, -4 ),
+						Scale = Vector( 0.45, 0.45, 5),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/misc/fittings/bend_short_90_3.mdl",
+						Position = Vector( -26.5, 108.5, 33.33),
+						Angles = Angle( 0, 180, 180 ),
+						Scale = Vector( 0.45, 0.45, 0.45),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
 				}
-			}
+			},
+			{
+				Option = "None",
+			},
 		}
 	},
 }
