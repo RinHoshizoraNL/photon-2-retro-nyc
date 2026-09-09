@@ -26,7 +26,7 @@ VEHICLE.Equipment = {
 		Category = "Taxi Sign",
 		Options = {
 			{
-				Option = "Taxi Sign",
+				Option = "No Advert",
 				Props = {
 					{
 						Model = "models/sentry/props/taxisign.mdl",
@@ -37,7 +37,21 @@ VEHICLE.Equipment = {
 				}
 			},
 			{
-				Option = "Taxi Sign With Advert",
+				Option = "Advert 1",
+				Props = {
+					{
+						Model = "models/sentry/props/taxiadsign.mdl",
+						Position = Vector( 0, -21, 60.5 ),
+						Angles = Angle( -0.5, 90, 0 ),
+						Scale = 0.8,
+						SubMaterials = {
+							[0] = "rin/taxi/props/signs/sign_01",
+						},
+					},
+				}
+			},
+			{
+				Option = "Advert 2",
 				Props = {
 					{
 						Model = "models/sentry/props/taxiadsign.mdl",
@@ -49,7 +63,35 @@ VEHICLE.Equipment = {
 						},
 					},
 				}
-			}
+			},
+			{
+				Option = "Advert 3",
+				Props = {
+					{
+						Model = "models/sentry/props/taxiadsign.mdl",
+						Position = Vector( 0, -21, 60.5 ),
+						Angles = Angle( -0.5, 90, 0 ),
+						Scale = 0.8,
+						SubMaterials = {
+							[0] = "rin/taxi/props/signs/sign_03",
+						},
+					},
+				}
+			},
+			{
+				Option = "Advert 4",
+				Props = {
+					{
+						Model = "models/sentry/props/taxiadsign.mdl",
+						Position = Vector( 0, -21, 60.5 ),
+						Angles = Angle( -0.5, 90, 0 ),
+						Scale = 0.8,
+						SubMaterials = {
+							[0] = "rin/taxi/props/signs/sign_04",
+						},
+					},
+				}
+			},
 		}
 	},
 	{
@@ -147,9 +189,6 @@ VEHICLE.Equipment = {
 	{
 		Category = "Front Bumper Guard",
 		Options = {
-			{
-				Option = "None",
-			},
 			{
 				Option = "Front Bumper Guard",
 				Props = {
@@ -370,7 +409,10 @@ VEHICLE.Equipment = {
 						},
 					},
 				}
-			}
+			},
+			{
+				Option = "None",
+			},
 		}
 	},
 }
