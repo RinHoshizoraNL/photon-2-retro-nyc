@@ -1,0 +1,119 @@
+if (Photon2.ReloadVehicleFile()) then return end
+local VEHICLE = Photon2.LibraryVehicle()
+
+VEHICLE.Title 		= "1986 Ford F150 FDNY"
+VEHICLE.Vehicle		= "86f150_sgm"
+VEHICLE.Category 	= "Photon 2 NYC: FDNY"
+VEHICLE.Author		= "Rin Hoshizora"
+
+local sequence = Photon2.SequenceBuilder.New
+
+local WHEEL_X		= -1
+
+VEHICLE.Equipment = {
+	{
+		Category = "Livery",
+		Options = {
+			{
+				Option = "Patrol",
+				SubMaterials = {
+					{ Id = 15, Material = "rin/fdny/f150/fdny" },
+					{ Id = 8, Material = "rin/nypd/props/white" },
+					{ Id = 29, Material = "rin/nypd/props/white" },
+					{ Id = 30, Material = "rin/nypd/props/white" },
+				},
+			},
+		}
+	},
+	{
+		Category = "Lightbar",
+		Options = {
+            {
+				Option = "Federal Signal Aerodynic",
+				Components = {
+					{
+                        Component = "fedsig_aerodynicny",
+                        Position = Vector( 0, 2, 83.8 ),
+                        Angles = Angle( 0, 180, 1.5 ),
+                        Scale = 1.05,
+					},
+				}
+			},
+        }
+	},
+	{
+		Category = "Siren",
+		Options = {
+			{
+				Option = "Federal Signal PA300",
+				Components = {
+					{
+						Name = "@siren_speaker",
+						Component = "siren_prototype",
+						Model = "models/gandhi/props/es100.mdl",
+						Position = Vector( 0, 90, 30 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1,
+						Siren = "pa300_1",
+						Templates = {
+							["Sound"] = { 
+								Tone = {
+									DSP = 0,
+									Pitch = 100
+								}
+							}
+						},
+						Inputs = { 
+							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
+						}
+					},
+				}
+			}
+		}
+	},
+	{
+		Category = "Police Equipment",
+		Options = {
+			{
+				Option = "Police Equipment",
+				BodyGroups = {
+					{ BodyGroup = "ftrim", Value = 0 },
+					{ BodyGroup = "doortrim", Value = 1 },
+					{ BodyGroup = "rtrim", Value = 1 },
+					{ BodyGroup = "fbumper", Value = 1 },
+					{ BodyGroup = "rbumper", Value = 1 },
+				},
+				Props = {
+					{
+						Model = "models/gandhi/props/mastercom.mdl",
+						Position = Vector( -0.7, 27, 51),
+						Angles = Angle( 72, 260, 0 ),
+						Scale = 1.17,
+						SubMaterials = {
+							[0] = "rin/nypd/props/pa300/pa300",
+						},
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -123.7, 26.5 ),
+						Angles = Angle( 0, 270, 00 ),
+						Scale = 1,
+						SubMaterials = {
+							[1] = "rin/fdny/props/plates/plate_fdny",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, 102.6, 23 ),
+						Angles = Angle( 2, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/fdny/props/plates/plate_fdny",
+						},
+					},
+				}
+			}
+		}
+	},
+}
