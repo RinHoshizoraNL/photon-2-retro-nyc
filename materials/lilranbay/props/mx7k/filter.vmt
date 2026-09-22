@@ -1,0 +1,7 @@
+"DecalModulate"
+{
+	"$basetexture" "lilranbay/props/mx7k/filter"
+	"$nocull" "1"
+	"$model" "1"
+}
+
