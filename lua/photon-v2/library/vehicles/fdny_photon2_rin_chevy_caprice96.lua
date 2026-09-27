@@ -23,6 +23,272 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
+		Category = "Setup",
+		Options = {
+			{
+				Option = "Standard",
+				Props = {
+					{
+						Model = "models/sprops/geometry/qhex_12.mdl",
+						Position = Vector( 15, 112, 21),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = Vector( 1, 0.8, 2),
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+					{
+						Model = "models/sprops/geometry/qhex_12.mdl",
+						Position = Vector( 15, 112, 13.2),
+						Angles = Angle( 180, 270, 0 ),
+						Scale = Vector( 1, 0.8, 1),
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+					{
+						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
+						Position = Vector( 15, 115.2, 21),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 0.35, 0.1, 1.7),
+						SubMaterials = {
+							[0] = "sentry/dippy/black",
+						},
+					},
+					{
+						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
+						Position = Vector( 15, 113.75, 13.5),
+						Angles = Angle( 0, 0, -30 ),
+						Scale = Vector( 0.35, 0.1, 1),
+						SubMaterials = {
+							[0] = "sentry/dippy/black",
+						},
+					},
+					{
+						Model = "models/sprops/geometry/qhex_12.mdl",
+						Position = Vector( -15, 112, 21),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = Vector( 1, 0.8, 2),
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+					{
+						Model = "models/sprops/geometry/qhex_12.mdl",
+						Position = Vector( -15, 112, 13.2),
+						Angles = Angle( 180, 270, 0 ),
+						Scale = Vector( 1, 0.8, 1),
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+					{
+						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
+						Position = Vector( -15, 115.2, 21),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 0.35, 0.1, 1.7),
+						SubMaterials = {
+							[0] = "sentry/dippy/black",
+						},
+					},
+					{
+						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
+						Position = Vector( -15, 113.75, 13.5),
+						Angles = Angle( 0, 0, -30 ),
+						Scale = Vector( 0.35, 0.1, 1),
+						SubMaterials = {
+							[0] = "sentry/dippy/black",
+						},
+					},
+				}
+			},
+			{
+				Option = "Highriser",
+				Props = {
+					{
+						Model = "models/gandhi/props/nypd.mdl",
+						Position = Vector( 0, 112.2, 15.1),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = Vector( 1, 1.15, 1.2),
+						Color = Color(255, 255, 255),
+					},
+					{
+						Model = "models/tdmcars/emergency/equipment/mcdermott_riser.mdl",
+						Position = Vector( 0, -38, 61.5 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.95,
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( -24, -47.3, 57.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( 24, -47.3, 57.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( -24, -28.6, 57.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( 24, -28.6, 57.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
+						Position = Vector( -2.5, -44, 67 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 8.2, 0.2, 0.44 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
+						Position = Vector( 2.5, -32, 67 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 8.2, 0.2, 0.44 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( -8, -33, 68 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 1, 1, 1 ),
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( 8, -43, 68 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 1, 1, 1 ),
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+					{
+						Model = "models/sprops/misc/tubes_thin/size_2/t_h_tube_24x12.mdl",
+						Position = Vector( 0, 34.5, 40),
+						Angles = Angle( 0, 0, 98 ),
+						Scale = Vector( 0.3, 0.5, 0.5),
+						SubMaterials = {
+							[0] = "sentry/shared/black"
+						},
+					    RenderGroup = RENDERGROUP_OPAQUE,
+					},
+				},
+				Components = {
+					{
+						Component = "photon_whe_500_nypd",
+						Position = Vector( 0, -48, 64.3 ),
+						Angles = Angle( 0, -90, 0 ),
+						Scale = 0.92,
+					},
+					{
+						Component = "photon_mars_flasher_nypd",
+						Position = Vector( 21.4, -33, 66.9 ),
+						Angles = Angle( 90, 0, 0 ),
+						Scale = 1,
+						States = { "~R", "~R" }
+					},
+					{
+						Component = "photon_mars_flasher_nypd",
+						Position = Vector( -21.4, -43, 66.9 ),
+						Angles = Angle( -90, 0, 0 ),
+						Scale = 1,
+						Phase = 180,
+						States = { "~R", "~R" }
+					},
+					{
+						Component = "photon_mars_flasher_nypd",
+						Position = Vector( 20, -33, 62.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						Phase = 180,
+						States = { "~A", "~A" },
+						SubMaterials = {
+							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
+						},
+					},
+					{
+						Component = "photon_mars_flasher_nypd",
+						Position = Vector( -20, -43, 62.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						States = { "~A", "~A" },
+						SubMaterials = {
+							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
+						},
+					},
+					{
+						Component = "photon_highrise_spotlight_nypd",
+						Position = Vector( -8, -33, 70 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+					},
+					{
+						Component = "photon_highrise_spotlight_nypd",
+						Position = Vector( 8, -43, 70 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+					},
+					{
+						Component = "patlite_hkf",
+						Position = Vector( 0, 36, 38.5 ),
+						Angles = Angle( 8, 270, 0 ),
+						Scale = .75,
+						BodyGroups = {
+							["trim"] = 0,
+						},
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( -20, -78, 40 ),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1,
+						Phase = 180,
+						SubMaterials = {
+							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4"
+						},
+						States = {
+							[1] = "A",
+						},
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( 20, -78, 40 ),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4"
+						},
+						States = {
+							[1] = "A",
+						},
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+				}
+			},
+		}
+	},
+	{
 		Category = "Lighting",
 		Options = {
 			{
@@ -35,7 +301,7 @@ VEHICLE.Equipment = {
 			}
 		}
 	},
-{
+    {
 		Category = "Lightbar",
 		Options = {
             {
@@ -244,88 +510,6 @@ VEHICLE.Equipment = {
 						Scale = 0.99,
 						SubMaterials = {
 							[1] = "rin/fdny/props/plates/plate_fdny",
-						},
-					},
-				}
-			}
-		}
-	},
-	{
-		Category = "Bumper Guard Front",
-		Options = {
-			{
-				Option = "Bumper Guard Front",
-				Props = {
-					{
-						Model = "models/sprops/geometry/qhex_12.mdl",
-						Position = Vector( 15, 112, 21),
-						Angles = Angle( 0, 270, 0 ),
-						Scale = Vector( 1, 0.8, 2),
-						SubMaterials = {
-							[0] = "sentry/shared/env_cubemap_model",
-						},
-					},
-					{
-						Model = "models/sprops/geometry/qhex_12.mdl",
-						Position = Vector( 15, 112, 13.2),
-						Angles = Angle( 180, 270, 0 ),
-						Scale = Vector( 1, 0.8, 1),
-						SubMaterials = {
-							[0] = "sentry/shared/env_cubemap_model",
-						},
-					},
-					{
-						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
-						Position = Vector( 15, 115.2, 21),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = Vector( 0.35, 0.1, 1.7),
-						SubMaterials = {
-							[0] = "sentry/dippy/black",
-						},
-					},
-					{
-						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
-						Position = Vector( 15, 113.75, 13.5),
-						Angles = Angle( 0, 0, -30 ),
-						Scale = Vector( 0.35, 0.1, 1),
-						SubMaterials = {
-							[0] = "sentry/dippy/black",
-						},
-					},
-					{
-						Model = "models/sprops/geometry/qhex_12.mdl",
-						Position = Vector( -15, 112, 21),
-						Angles = Angle( 0, 270, 0 ),
-						Scale = Vector( 1, 0.8, 2),
-						SubMaterials = {
-							[0] = "sentry/shared/env_cubemap_model",
-						},
-					},
-					{
-						Model = "models/sprops/geometry/qhex_12.mdl",
-						Position = Vector( -15, 112, 13.2),
-						Angles = Angle( 180, 270, 0 ),
-						Scale = Vector( 1, 0.8, 1),
-						SubMaterials = {
-							[0] = "sentry/shared/env_cubemap_model",
-						},
-					},
-					{
-						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
-						Position = Vector( -15, 115.2, 21),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = Vector( 0.35, 0.1, 1.7),
-						SubMaterials = {
-							[0] = "sentry/dippy/black",
-						},
-					},
-					{
-						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
-						Position = Vector( -15, 113.75, 13.5),
-						Angles = Angle( 0, 0, -30 ),
-						Scale = Vector( 0.35, 0.1, 1),
-						SubMaterials = {
-							[0] = "sentry/dippy/black",
 						},
 					},
 				}

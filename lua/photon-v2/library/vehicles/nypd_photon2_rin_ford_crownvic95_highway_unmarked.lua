@@ -147,6 +147,34 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
+		Category = "Grille Lights",
+		Options = {
+            {
+				Option = "Federal Signal GH1",
+				Components = {
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( -9, 110, 29.6 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.8,
+						Phase = 90,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( 9, 110, 29.6 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.8,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+                }
+			},
+			{
+				Option = "None",
+			},
+		}
+	},
+	{
 		Category = "Dash light",
 		Options = {
             {
