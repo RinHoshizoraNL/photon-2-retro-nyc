@@ -26,9 +26,10 @@ VEHICLE.Equipment = {
 		Category = "Lightbar",
 		Options = {
             {
-				Option = "Whelen Advantedge",
+				Option = "Whelen Advantedge (No Takedowns, Dual Rear 500s)",
 				Components = {
 					{
+						Name = "@advantedge",
 						Component = "photon_whe_advantedge_transit",
 						Position = Vector( 0, -15, 60.6 ),
 						Angles = Angle( -1.7, -90, 0 ),
@@ -36,8 +37,10 @@ VEHICLE.Equipment = {
 						BodyGroups = { 
 							["feet"] = 0,
 							["straps"] = 0,
-							["speaker"] = 0,
-							["rear_lights"] = 0
+							["center"] = 0,
+							["rear500ta"] = 1,
+							["rear500_dr"] = 0,
+							["rear500_pas"] = 0
 						},
 						Bones = {
 							["foot_dr"] =	{ Vector( 0, 0, 0 ), Angle( 0, 0, 0 ), 1 },
@@ -48,6 +51,91 @@ VEHICLE.Equipment = {
 							["500_rear_dr"] =	{ Vector( 0, -2.95, 0 ), Angle( 0, 0, 0 ), 1 },
 							["500_rear_pas"] =	{ Vector( 0, 2.95, 0 ), Angle( 0, 0, 0 ), 1 },
 						}
+					},
+					{
+						Name = "@siren_speaker",
+						Component = "siren_prototype",
+						Model = "models/gandhi/props/es100.mdl",
+						Position = Vector( 0, -15+5.1, 60.6+7 ),
+						Angles = Angle( -1.7, 90, 0 ),
+						Scale = 0,
+						Siren = "sp_mk7_digi",
+						Templates = {
+							["Sound"] = { 
+								Tone = {
+									DSP = 0,
+									Pitch = 100
+								}
+							}
+						},
+						Inputs = { 
+							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
+						}
+					}
+                }
+			},
+			{
+				Option = "Whelen Advantedge (No Takedowns, Traffic Advisor)",
+				Components = {
+					{
+						Inherit = "@advantedge",
+						BodyGroups = { 
+							["feet"] = 0,
+							["straps"] = 0,
+							["center"] = 0,
+							["rear500ta"] = 0,
+							["rear500_dr"] = 1,
+							["rear500_pas"] = 1
+						}
+					},
+					{
+						Inherit = "@siren_speaker"
+					}
+                }
+			},
+			{
+				Option = "Whelen Advantedge (Takedowns, Dual Rear 500s)",
+				Components = {
+					{
+						Inherit = "@advantedge",
+						BodyGroups = { 
+							["feet"] = 0,
+							["straps"] = 0,
+							["center"] = 1,
+							["rear500ta"] = 1,
+							["rear500_dr"] = 0,
+							["rear500_pas"] = 0
+						},
+						SubMaterials = {
+							[2] = "rin/transit/props/advantedge/glass_takedown",
+							[3] = "rin/transit/props/advantedge/outerglass_takedown"
+						}
+					},
+					{
+						Inherit = "@siren_speaker"
+					}
+                }
+			},
+			{
+				Option = "Whelen Advantedge (Takedowns, Traffic Advisor)",
+				Components = {
+					{
+						Inherit = "@advantedge",
+						BodyGroups = { 
+							["feet"] = 0,
+							["straps"] = 0,
+							["center"] = 1,
+							["rear500ta"] = 0,
+							["rear500_dr"] = 1,
+							["rear500_pas"] = 1
+						},
+						SubMaterials = {
+							[2] = "rin/transit/props/advantedge/glass_takedown",
+							[3] = "rin/transit/props/advantedge/outerglass_takedown"
+						}
+					},
+					{
+						Inherit = "@siren_speaker"
 					}
                 }
 			}
@@ -131,36 +219,6 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Siren",
-		Options = {
-			{
-				Option = "SP Mark 7",
-				Components = {
-					{
-						Name = "@siren_speaker",
-						Component = "siren_prototype",
-						Model = "models/gandhi/props/es100.mdl",
-						Position = Vector( 0, 104, 24 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 1,
-						Siren = "sp_mk7_digi",
-						Templates = {
-							["Sound"] = { 
-								Tone = {
-									DSP = 0,
-									Pitch = 100
-								}
-							}
-						},
-						Inputs = { 
-							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
-						}
-					},
-				}
-			}
-		}
-	},
-	{
 		Category = "Spotlight",
 		Options = {
 			{
@@ -174,9 +232,9 @@ VEHICLE.Equipment = {
 						SubMaterials = {
 							[5] = "sentry/shared/env_cubemap_model"
 						}
-					},
+					}
 				}
-			},
+			}
 		}
 	},
 	{

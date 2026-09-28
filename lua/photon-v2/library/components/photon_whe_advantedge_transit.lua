@@ -223,9 +223,29 @@ COMPONENT.Templates = {
 			Height	= 3.45,
 			Detail = PhotonMaterial.GenerateLightQuad("photon/lights/edge_halogen_detail.png").MaterialName,
 			Shape = PhotonMaterial.GenerateLightQuad("photon/lights/edge_halogen_shape.png").MaterialName,
-			Scale = 0.85,
+			Scale = 1,
 			IntensityGainFactor = 7,
 			IntensityLossFactor = 3,
+			DeactivationState = "~OFF"
+		},
+		Takedown = {
+			Width = 3.4,
+			Height = 5.2,
+			Scale = 1,
+			Detail = PhotonMaterial.GenerateLightQuad("photon/lights/edge_halogen_detail.png").MaterialName,
+			Shape = PhotonMaterial.GenerateLightQuad("photon/lights/edge_halogen_shape.png").MaterialName,
+			IntensityGainFactor = 8,
+			IntensityLossFactor = 4,
+			DeactivationState = "~OFF"
+		},
+		Alley = {
+			Width = 3.3,
+			Height = 2.45,
+			Scale = 1,
+			Detail = PhotonMaterial.GenerateLightQuad("photon/lights/edge_alley_detail.png").MaterialName,
+			Shape = PhotonMaterial.GenerateLightQuad("photon/lights/edge_alley_shape.png").MaterialName,
+			IntensityGainFactor = 8,
+			IntensityLossFactor = 4,
 			DeactivationState = "~OFF"
 		}
 	},
@@ -241,13 +261,27 @@ COMPONENT.Templates = {
 			IntensityLossFactor = rot_ilf,
 			DeactivationState = "~OFF",
 			Intensity = 0
+		},
+		ForwardIllumination = {
+			HorizontalFOV = 90,
+			VerticalFOV = 60,
+			NearZ = 10,
+			FarZ = 800,
+			Brightness = 2,
+			IntensityGainFactor = 8,
+			IntensityLossFactor = 4,
+			DeactivationState = "~OFF",
+			-- TODO:
+			-- This is required to prevent the lights from starting ON then fading off..?
+			Intensity = 0,
+			States = {
+				["~SW"] = {
+					Inherit = "SW",
+					IntensityTransitions = true,
+					Intensity = 1
+				}
+			}
 		}
-	},
-	["Sound"] = { 
-		Tone = {
-			DSP = 118,
-			Pitch = 100
-		} 
 	}
 }
 
@@ -261,9 +295,10 @@ COMPONENT.States = {
 	[7] = "~R",		-- 7
 	[8] = "~R",		-- 8
 	[9] = "~A",		-- TA
+	[10] = "~SW"	-- TAKEDOWNS/ALLEYS
 }
 
-COMPONENT.StateMap = "[ROT] 1 2 3 4 5 6 7 8 [1] 9 17 25 [2] 10 18 26 [3] 11 19 27 [4] 12 20 28 [5] 13 21 29 [6] 14 22 30 [7] 15 23 31 [8] 16 24 32 [9] 33 34 35 36 37 38 39 40 41 42" -- Siren [ON] 1 2 3 4 5 6 7 8 9 10
+COMPONENT.StateMap = "[ROT] 1 2 3 4 5 6 7 8 [1] 9 17 25 [2] 10 18 26 [3] 11 19 27 [4] 12 20 28 [5] 13 21 29 [6] 14 22 30 [7] 15 23 31 [8] 16 24 32 [9] 33 34 35 36 37 38 39 40 41 42 [10] 43 44 45 46"
 
 local fov = 180
 
@@ -316,30 +351,32 @@ COMPONENT.Elements = {
 	[32] = { "RotatorLight", Vector( ofx, ofy, ofz ), Angle( 0, 90, 0 ), BoneParent = 8 },
 
 	-- 500s TA
-	[33] = { "Rear500", Vector( 6.96, -3.30205, 1.6387 ), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear_lights"] = 1 } },
-	[34] = { "Rear500", Vector( 6.96, 3.30205, 1.6387), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear_lights"] = 1 } },
-	[35] = { "Rear500", Vector( 6.96, -9.90614, 1.6387 ), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear_lights"] = 1 } },
-	[36] = { "Rear500", Vector( 6.96, 9.90614, 1.6387 ), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear_lights"] = 1 } },
-	[37] = { "Rear500", Vector( 6.96, -16.5102, 1.6387 ), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear_lights"] = 1 } },
-	[38] = { "Rear500", Vector( 6.96, 16.5102, 1.6387 ), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear_lights"] = 1 } },
-	[39] = { "Rear500", Vector( 6.96, -23.1192, 1.6387 ), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear_lights"] = 1 } },
-	[40] = { "Rear500", Vector( 6.96, 23.1192, 1.6387 ), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear_lights"] = 1 } },
+	[33] = { "Rear500", Vector( 6.96, -23.1192, 1.6387 ), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear500ta"] = 0 } },
+	[34] = { "Rear500", Vector( 6.96, 23.1192, 1.6387 ), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear500ta"] = 0 } },
+	[35] = { "Rear500", Vector( 6.96, -16.5102, 1.6387 ), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear500ta"] = 0 } },
+	[36] = { "Rear500", Vector( 6.96, 16.5102, 1.6387 ), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear500ta"] = 0 } },
+	[37] = { "Rear500", Vector( 6.96, -9.90614, 1.6387 ), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear500ta"] = 0 } },
+	[38] = { "Rear500", Vector( 6.96, 9.90614, 1.6387 ), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear500ta"] = 0 } },
+	[39] = { "Rear500", Vector( 6.96, -3.30205, 1.6387 ), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear500ta"] = 0 } },
+	[40] = { "Rear500", Vector( 6.96, 3.30205, 1.6387), Angle( 0, -90, 0 ), RequiredBodyGroups = { ["rear500ta"] = 0 } },
 
 	-- 500s
-	[41] = { "Rear500", Vector( 0.18, 0, 0.1 ), Angle( 0, -90, 0 ), BoneParent = 14, RequiredBodyGroups = { ["rear_lights"] = 0 } },
-	[42] = { "Rear500", Vector( 0.18, 0, 0.1 ), Angle( 0, -90, 0 ), BoneParent = 13, RequiredBodyGroups = { ["rear_lights"] = 0 } },
+	[41] = { "Rear500", Vector( 0.18, 0, 0.1 ), Angle( 0, -90, 0 ), BoneParent = 14, RequiredBodyGroups = { ["rear500_dr"] = 0 } },
+	[42] = { "Rear500", Vector( 0.18, 0, 0.1 ), Angle( 0, -90, 0 ), BoneParent = 13, RequiredBodyGroups = { ["rear500_pas"] = 0 } },
 
-	-- Siren -- add last!!
-	--[1] = { "Tone", Tone = "T1" },
-	--[2] = { "Tone", Tone = "T2" },
-	--[3] = { "Tone", Tone = "T3" },
-	--[4] = { "Tone", Tone = "T4" },
-	--[5] = { "Tone", Tone = "T5" },
-	--[6] = { "Tone", Tone = "T6" },
-	--[7] = { "Tone", Tone = "T7" },
-	--[8] = { "Tone", Tone = "T8" },
-	--[9] = { "Tone", Tone = "AIR" },
-	--[10] = { "Tone", Tone = "MAN" },
+	-- Takedowns
+	[43] = { "Takedown", Vector( -6.68893+0.05, -1.68878, 4.67524 ), Angle( 0, 90, 0 ), RequiredBodyGroups = { ["center"] = 1 } },
+	[44] = { "Takedown", Vector( -6.68893+0.05, 1.68878, 4.67524 ), Angle( 0, 90, 0 ), RequiredBodyGroups = { ["center"] = 1 } },
+	-- Alleys
+	[45] = { "Alley", Vector( -0.028449, -28.3566-0.1, 2.36432 ), Angle( 0, 180, 0 ) },
+	[46] = { "Alley", Vector( -0.028449, 28.3566+0.1, 2.36432 ), Angle( 0, 0, 0 ) },
+
+	-- Takedowns
+	[47] = { "ForwardIllumination", Vector( -6.68893+0.05, -1.68878, 4.67524 ), Angle( 0, 90, 0 ), RequiredBodyGroups = { ["center"] = 1 } },
+	[48] = { "ForwardIllumination", Vector( -6.68893+0.05, 1.68878, 4.67524 ), Angle( 0, 90, 0 ), RequiredBodyGroups = { ["center"] = 1 } },
+	-- Alleys
+	[49] = { "ForwardIllumination", Vector( -0.028449, -28.3566-0.1, 2.36432 ), Angle( 0, 180, 0 ) },
+	[50] = { "ForwardIllumination", Vector( -0.028449, 28.3566+0.1, 2.36432 ), Angle( 0, 0, 0 ) }
 
 }
 
@@ -352,13 +389,18 @@ COMPONENT.ElementGroups = {
 	["R5"] = { 5, 13, 21, 29 },		-- 5
 	["R6"] = { 6, 14, 22, 30 },		-- 6
 	["R7"] = { 7, 15, 23, 31 },		-- 7
-	["R8"] = { 8, 16, 24, 32 }		-- 8
+	["R8"] = { 8, 16, 24, 32 },		-- 8
+	["@43"] = { 43, 47 },
+	["@44"] = { 44, 48 },
+	["@45"] = { 45, 49 },
+	["@46"] = { 46, 50 }
 }
 
 local sequence = Photon2.SequenceBuilder.New
 
 COMPONENT.Segments = {
-	R1R2 = {
+	Rotators = {
+		Off = "~OFF",
 		Frames = {
 			[1] = "R1 R2 R3 R4 R5 R6 R7 R8"
 		},
@@ -366,91 +408,112 @@ COMPONENT.Segments = {
 			ON = { 1 }
 		}
 	},
-	TA = {
+	TA500 = {
+		Off = "~OFF",
 		Frames = {
-			[1] = "33 34 35 36 37 38 39 40 41 42"
+			[1] = "33 35 37 39 40 38 36 34",
+
+			-- Right
+			[2] = "35",
+			[3] = "35 37",
+			[4] = "35 37 39",
+			[5] = "35 37 39 40",
+			[6] = "35 37 39 40 38",
+			[7] = "35 37 39 40 38 36",
+			[8] = "35 37 39 40 38 36 34",
+
+			-- Left
+			[9] = "36",
+			[10] = "38 36",
+			[11] = "40 38 36",
+			[12] = "39 40 38 36",
+			[13] = "37 39 40 38 36",
+			[14] = "35 37 39 40 38 36",
+			[15] = "33 35 37 39 40 38 36",
+
+			-- CENOUT
+			[16] = "39 40",
+			[17] = "37 39 40 38",
+			[18] = "35 37 39 40 38 36",
+			[19] = "33 35 37 39 40 38 36 34",
+
+			-- Stage3
+			[20] = "39 40",
+			[21] = "35 37 38 36",
+		},
+		Sequences = {
+			ON = { 1 },
+
+			Stage3 = sequence():Add(20,0,20,0):Stretch(4):Add(21,0,21,0):Stretch(4),
+
+			RIGHT = sequence():Sequential( 2, 8 ):Stretch( 3 ):Hold( 8 ):Add( 0 ):Hold( 6 ),
+			LEFT = sequence():Sequential( 9, 15 ):Stretch( 3 ):Hold( 8 ):Add( 0 ):Hold( 6 ),
+			CENOUT = sequence():Sequential( 16, 19 ):Stretch( 6 ):Hold( 6 ):Add( 0 ):Hold( 6 )
+		}
+	},
+	Rear500 = {
+		Off = "~OFF",
+		Frames = {
+			[1] = "41 42",
+			[2] = "41",
+			[3] = "42"
+		},
+		Sequences = {
+			ON = { 1 },
+
+			Stage3 = sequence():Alternate(2,3,5)
+		}
+	},
+	Takedown = {
+		Off = "~OFF",
+		Frames = {
+			[1] = "@43 @44"
 		},
 		Sequences = {
 			ON = { 1 }
 		}
 	},
-	--Siren = {
-	--	Frames = { [0] = "", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" },
-	--	Sequences = {
-	--		["KILL"] = { 0 },
-	--		["T1"] = { 1 },
-	--		["T2"] = { 2 },
-	--		["T3"] = { 3 },
-	--		["T4"] = { 4 },
-	--		["T5"] = { 5 },
-	--		["T6"] = { 6 },
-	--		["T7"] = { 7 },
-	--		["T8"] = { 8 },
-	--		["AIR"] = { 9 },
-	--		["MAN"] = { 10 },
-	--	}
-	--}
+	AlleyLeft = {
+		Off = "~OFF",
+		Frames = {
+			[1] = "@45"
+		},
+		Sequences = {
+			ON = { 1 }
+		}
+	},
+	AlleyRight = {
+		Off = "~OFF",
+		Frames = {
+			[1] = "@46"
+		},
+		Sequences = {
+			ON = { 1 }
+		}
+	}
 }
-
---COMPONENT.InputPriorities = {
---	["Virtual.SirenOverride"] = 62
---}
---
---COMPONENT.VirtualOutputs = {
---	["Virtual.SirenOverride"] = {
---		{
---			Mode = "MANOVRD",
---			Conditions = {
---				["Emergency.Siren"] = { "T1", "T2", "T4" },
---				["Emergency.SirenOverride"] = { "MAN" }
---			}
---		}
---	}
---}
 
 COMPONENT.Inputs = {
 	["Emergency.Warning"] = {
-		["MODE1"] = {
-			R1R2 = "ON",
-			TA = "ON"
-		},
-		["MODE2"] = {
-			R1R2 = "ON",
-			TA = "ON"
-		},
 		["MODE3"] = {
-			R1R2 = "ON",
-			TA = "ON"
+			Rotators = "ON",
+			TA500 = "Stage3",
+			Rear500 = "Stage3"
 		}
 	},
-	--["Emergency.SceneLeft"] = {
-	--	["ON"] = { AlleyLeft = "ON" }
-	--},
-	--["Emergency.SceneRight"] = {
-	--	["ON"] = { AlleyRight = "ON" }
-	--},
-	--["Emergency.SceneForward"] = {
-	--	["ON"] = { Takedown = "ON" },
-	--	["FLOOD"] = { Takedown = "ON" },
-	--},
-	--["Emergency.Siren"] = {
-	--	["T1"] = { Siren = "T1" },
-	--	["T2"] = { Siren = "T2" },
-	--	["T3"] = { Siren = "T3" },
-	--	["T4"] = { Siren = "T4" },
-	--	["T5"] = { Siren = "T5" },
-	--	["T6"] = { Siren = "T6" },
-	--	["T7"] = { Siren = "T7" },
-	--	["T8"] = { Siren = "T8" },
-	--},
-	--["Emergency.SirenOverride"] = {
-	--	["AIR"] = { Siren = "AIR" },
-	--	["MAN"] = { Siren = "MAN" },
-	--},
-	--["Virtual.SirenOverride"] = {
-	--	["MANOVRD"] = { Siren = "T3" }
-	--},
-	--["Emergency.SirenParkKill"] = {
-	--	["PARK"] = { Siren = "KILL" }
-	--}
+	["Emergency.Directional"] = {
+		["LEFT"] = { TA500 = "LEFT" },
+		["RIGHT"] = { TA500 = "RIGHT" },
+		["CENOUT"] = { TA500 = "CENOUT" }
+	},
+	["Emergency.SceneLeft"] = {
+		["ON"] = { AlleyLeft = "ON" }
+	},
+	["Emergency.SceneRight"] = {
+		["ON"] = { AlleyRight = "ON" }
+	},
+	["Emergency.SceneForward"] = {
+		["ON"] = { Takedown = "ON" },
+		["FLOOD"] = { Takedown = "ON" }
+	}
 }
