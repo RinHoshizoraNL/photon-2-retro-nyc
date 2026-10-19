@@ -495,6 +495,16 @@ COMPONENT.Segments = {
 
 COMPONENT.Inputs = {
 	["Emergency.Warning"] = {
+		["MODE1"] = {
+			Rotators = "ON",
+			TA500 = "Stage3",
+			Rear500 = "Stage3"
+		},
+		["MODE2"] = {
+			Rotators = "ON",
+			TA500 = "Stage3",
+			Rear500 = "Stage3"
+		},
 		["MODE3"] = {
 			Rotators = "ON",
 			TA500 = "Stage3",
