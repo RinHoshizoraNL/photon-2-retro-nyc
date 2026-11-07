@@ -149,8 +149,6 @@ COMPONENT.Segments = {
 COMPONENT.Inputs = {
 	["Emergency.Warning"] = {
 		["MODE1"] = {
-			Rotators = "ON",
-			Mesh = "ON",
 			Flashers = "ON",
 		},
 		["MODE2"] = {

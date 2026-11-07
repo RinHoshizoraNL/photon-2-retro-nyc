@@ -46,6 +46,11 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, -13, 58.6 ),
                         Angles = Angle( 0, 180, 2 ),
                         Scale = 0.9,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				}
 			},
@@ -187,13 +192,23 @@ VEHICLE.Equipment = {
 						Position = Vector( 0, -44.2, 63.2 ),
 						Angles = Angle( 0, -90, 0 ),
 						Scale = 0.92,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
 						Position = Vector( 19.7, -31, 70.7 ),
 						Angles = Angle( 90, 0, 0 ),
 						Scale = 1,
-						States = { "~R", "~R" }
+						States = { "~R", "~R" },
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
@@ -205,6 +220,11 @@ VEHICLE.Equipment = {
 						SubMaterials = {
 							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
@@ -216,13 +236,23 @@ VEHICLE.Equipment = {
 						SubMaterials = {
 							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
 						Position = Vector( -18, -31, 67 ),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1,
-						States = { "~R", "~R" }
+						States = { "~R", "~R" },
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "fedsig_electraflash",
@@ -235,6 +265,11 @@ VEHICLE.Equipment = {
 						SubMaterials = {
 							[1] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				}
 			}

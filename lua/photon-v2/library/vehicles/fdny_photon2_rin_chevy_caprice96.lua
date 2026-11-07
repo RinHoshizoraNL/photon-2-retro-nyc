@@ -255,6 +255,11 @@ VEHICLE.Equipment = {
 						BodyGroups = {
 							["trim"] = 0,
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						},
 						RenderGroup = RENDERGROUP_OPAQUE,
 					},
 					{
@@ -328,6 +333,11 @@ VEHICLE.Equipment = {
 						Position = Vector( -9, 108.3, 24 ),
 						Angles = Angle( 0, 6, -2 ),
 						Scale = 0.7,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
@@ -335,6 +345,11 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, -6, -2 ),
 						Scale = 0.7,
 						Phase = 90,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
                 }
 			},

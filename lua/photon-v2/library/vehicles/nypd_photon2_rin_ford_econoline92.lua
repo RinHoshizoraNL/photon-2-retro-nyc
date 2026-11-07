@@ -44,6 +44,11 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, 10, 88.4 ),
                         Angles = Angle( 0, 180, 1 ),
                         Scale = 1.15,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				}
 			},
@@ -79,6 +84,11 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, 10, 88.4 ),
                         Angles = Angle( 0, 180, 1 ),
                         Scale = 1.15,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				}
 			},
@@ -141,6 +151,11 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, 10, 88.4 ),
                         Angles = Angle( 0, 180, 1 ),
                         Scale = 1.15,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				}
 			},
@@ -176,6 +191,11 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, 10, 88.4 ),
                         Angles = Angle( 0, 180, 1 ),
                         Scale = 1.15,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				}
 			},
@@ -269,6 +289,11 @@ VEHICLE.Equipment = {
 						Position = Vector( 0, -130, 88.7 ),
 						Angles = Angle( 0, 0, 5.5 ),
 						Scale = 0.85,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				}
 			}

@@ -65,6 +65,11 @@ VEHICLE.Equipment = {
 						BodyGroups = {
 							["trim"] = 0,
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						},
 						RenderGroup = RENDERGROUP_OPAQUE,
 					},
 				},

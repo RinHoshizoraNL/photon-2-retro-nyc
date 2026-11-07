@@ -184,7 +184,6 @@ COMPONENT.Inputs = {
 	["Emergency.Warning"] = {
 		["MODE1"] = {
 			Lights = "ON",
-			Rotators = "ON",
 		},
 		["MODE2"] = {
 			Lights = "ON",

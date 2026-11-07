@@ -52,8 +52,10 @@ VEHICLE.Equipment = {
 						BodyGroups = { 
 							["feet"] = 0,
 							["straps"] = 0,
-							["speaker"] = 0,
-							["rear_lights"] = 0
+							["center"] = 0,
+							["rear500ta"] = 1,
+							["rear500_dr"] = 0,
+							["rear500_pas"] = 0
 						},
 						Bones = {
 							["foot_dr"] =	{ Vector( 0, 0, 0 ), Angle( 0, 0, 0 ), 1 },
@@ -93,6 +95,11 @@ VEHICLE.Equipment = {
 						Position = Vector( -9, 108.3, 24 ),
 						Angles = Angle( 0, 6, -2 ),
 						Scale = 0.7,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
@@ -100,6 +107,11 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, -6, -2 ),
 						Scale = 0.7,
 						Phase = 90,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
                 }
 			},

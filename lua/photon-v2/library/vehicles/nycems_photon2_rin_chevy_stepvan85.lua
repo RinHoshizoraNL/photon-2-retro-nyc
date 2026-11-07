@@ -32,6 +32,11 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, 74, 103 ),
                         Angles = Angle( 0, 0, 0 ),
                         Scale = 1,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_par46_flasher_nypd",
@@ -95,6 +100,11 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, 47, 110.5 ),
                         Angles = Angle( 0, 0, -1 ),
                         Scale = 1,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				},
 				Props = {

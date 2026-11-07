@@ -41,6 +41,11 @@ VEHICLE.Equipment = {
                         Position = Vector( -1.5, 17, 87.9 ),
                         Angles = Angle( 0, 180, 2 ),
                         Scale = 1.05,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				}
 			},
@@ -111,6 +116,11 @@ VEHICLE.Equipment = {
 						SubMaterials = {
 							[3] = "sentry/shared/glass",
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
@@ -121,6 +131,11 @@ VEHICLE.Equipment = {
 						SubMaterials = {
 							[3] = "sentry/shared/glass",
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				}
 			},
@@ -190,7 +205,12 @@ VEHICLE.Equipment = {
 						Position = Vector( 21.1, -77.2, 96.8),
 						Angles = Angle( 90, 0, 0 ),
 						Scale = 1,
-						States = { "~R", "~R" }
+						States = { "~R", "~R" },
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
@@ -198,7 +218,12 @@ VEHICLE.Equipment = {
 						Angles = Angle( -90, 0, 0 ),
 						Scale = 1,
 						Phase = 180,
-						States = { "~R", "~R" }
+						States = { "~R", "~R" },
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
@@ -206,21 +231,36 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1,
 						Phase = 180,
-						States = { "~R", "~R" }
+						States = { "~R", "~R" },
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
 						Position = Vector( -21.7, -86.9, 92.4 ),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1,
-						States = { "~R", "~R" }
+						States = { "~R", "~R" },
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
 						Position = Vector( 3.3, -77.2, 92.4 ),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1,
-						States = { "~R", "~R" }
+						States = { "~R", "~R" },
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
@@ -228,7 +268,12 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1,
 						Phase = 180,
-						States = { "~R", "~R" }
+						States = { "~R", "~R" },
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				}
 			}

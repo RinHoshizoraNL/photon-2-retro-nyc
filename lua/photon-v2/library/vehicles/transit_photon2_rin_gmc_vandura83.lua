@@ -42,8 +42,14 @@ VEHICLE.Equipment = {
 						BodyGroups = { 
 							["feet"] = 0,
 							["straps"] = 0,
-							["speaker"] = 0,
-							["rear_lights"] = 2
+							["center"] = 1,
+							["rear500ta"] = 1,
+							["rear500_dr"] = 1,
+							["rear500_pas"] = 1
+						},
+						SubMaterials = {
+							[2] = "rin/transit/props/advantedge/glass_takedown",
+							[3] = "rin/transit/props/advantedge/outerglass_takedown"
 						},
 						Bones = {
 							["foot_dr"] =	{ Vector( 0, 0, 0 ), Angle( 0, 0, 0 ), 1 },
@@ -53,6 +59,11 @@ VEHICLE.Equipment = {
 
 							["500_rear_dr"] =	{ Vector( 0, -2.95, 0 ), Angle( 0, 0, 0 ), 1 },
 							["500_rear_pas"] =	{ Vector( 0, 2.95, 0 ), Angle( 0, 0, 0 ), 1 },
+						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
 						}
 					}
                 }

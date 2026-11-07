@@ -46,6 +46,11 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, -13, 58.6 ),
                         Angles = Angle( 0, 180, 2 ),
                         Scale = 0.9,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				}
 			},

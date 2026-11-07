@@ -26,8 +26,14 @@ VEHICLE.Equipment = {
 						BodyGroups = { 
 							["feet"] = 0,
 							["straps"] = 0,
-							["speaker"] = 0,
-							["rear_lights"] = 2
+							["center"] = 1,
+							["rear500ta"] = 1,
+							["rear500_dr"] = 1,
+							["rear500_pas"] = 1
+						},
+						SubMaterials = {
+							[2] = "rin/transit/props/advantedge/glass_takedown",
+							[3] = "rin/transit/props/advantedge/outerglass_takedown"
 						},
 						Bones = {
 							["foot_dr"] =	{ Vector( 0, 0, 0 ), Angle( 0, 0, 0 ), 1 },
@@ -37,6 +43,11 @@ VEHICLE.Equipment = {
 
 							["500_rear_dr"] =	{ Vector( 0, -2.95, 0 ), Angle( 0, 0, 0 ), 1 },
 							["500_rear_pas"] =	{ Vector( 0, 2.95, 0 ), Angle( 0, 0, 0 ), 1 },
+						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
 						}
 					},
 					{
@@ -57,6 +68,11 @@ VEHICLE.Equipment = {
 						Position = Vector( -43.6, -32, 104 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1.2,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
@@ -64,6 +80,11 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1.2,
 						Phase = 90,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
@@ -71,18 +92,33 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 270, 0 ),
 						Scale = 1.2,
 						Phase = 90,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( 43.6, -150, 104 ),
 						Angles = Angle( 0, 270, 0 ),
 						Scale = 1.2,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
 						Position = Vector( -35.5, -163.2, 95 ),
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.2,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
@@ -94,6 +130,11 @@ VEHICLE.Equipment = {
 						SubMaterials = {
 							[3] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
@@ -101,6 +142,11 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 180, 0 ),
 						Scale = 1.2,
 						Phase = 90,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
@@ -111,12 +157,22 @@ VEHICLE.Equipment = {
 						SubMaterials = {
 							[3] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "code3_xl_mini",
 						Position = Vector( 0, -152, 115.25 ),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 0.85,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
                 },
 				Props = {
@@ -160,6 +216,11 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, 3, 83.5 ),
                         Angles = Angle( 0, 180, 2 ),
                         Scale = 1,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_par46_flasher_nypd",

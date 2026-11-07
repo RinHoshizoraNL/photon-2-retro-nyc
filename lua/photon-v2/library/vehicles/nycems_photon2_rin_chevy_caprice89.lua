@@ -33,6 +33,11 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, -2, 61.3 ),
                         Angles = Angle( 0, 0, -0.7 ),
                         Scale = 0.89,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				}
 			},
@@ -54,6 +59,11 @@ VEHICLE.Equipment = {
 						Scale = .75,
 						BodyGroups = {
 							["trim"] = 0,
+						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
 						},
 						RenderGroup = RENDERGROUP_OPAQUE,
 					},

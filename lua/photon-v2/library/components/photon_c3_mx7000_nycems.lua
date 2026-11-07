@@ -370,7 +370,6 @@ COMPONENT.Segments = {
 COMPONENT.Inputs = {
 	["Emergency.Warning"] = {
 		["MODE1"] = {
-			Rotators = "ON",
 			ArrowStik = "WARN"
 		},
 		["MODE2"] = {

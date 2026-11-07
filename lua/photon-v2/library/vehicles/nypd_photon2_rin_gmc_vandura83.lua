@@ -35,6 +35,11 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, 27, 102.5 ),
                         Angles = Angle( 0, 180, 0 ),
                         Scale = 1.02,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "siren_prototype",

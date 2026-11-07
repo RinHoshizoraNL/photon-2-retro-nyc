@@ -43,6 +43,11 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, 36, 99.5 ),
                         Angles = Angle( 0, 180, 0 ),
                         Scale = 0.83,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				}
 			},
@@ -75,6 +80,11 @@ VEHICLE.Equipment = {
 						Position = Vector( -13, 129.2, 58 ),
 						Angles = Angle( 0, 1.5, 4.5 ),
 						Scale = 1,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
@@ -82,6 +92,11 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, -1.5, 4.5 ),
 						Scale = 1,
 						Phase = 90,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
                 }
 			},

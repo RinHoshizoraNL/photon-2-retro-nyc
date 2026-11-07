@@ -41,12 +41,22 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, 55, 108.7 ),
                         Angles = Angle( 0, 180, 1 ),
                         Scale = 0.95,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
                         Component = "fedsig_aerodynicny",
                         Position = Vector( 0, -122, 112.4 ),
                         Angles = Angle( 0, 180, 1 ),
                         Scale = 0.95,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				}
 			},

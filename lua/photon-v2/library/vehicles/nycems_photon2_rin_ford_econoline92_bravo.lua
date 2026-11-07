@@ -52,6 +52,11 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, 7, 88.9 ),
                         Angles = Angle( 0, 0, -1.5 ),
                         Scale = 1,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_whe_500_nypd",

@@ -26,7 +26,7 @@ VEHICLE.Equipment = {
 		Category = "Lightbar",
 		Options = {
             {
-				Option = "Whelen Advantedge (No Takedowns, Dual Rear 500s)",
+				Option = "Whelen Advantedge",
 				Components = {
 					{
 						Name = "@advantedge",
@@ -37,10 +37,14 @@ VEHICLE.Equipment = {
 						BodyGroups = { 
 							["feet"] = 0,
 							["straps"] = 0,
-							["center"] = 0,
+							["center"] = 1,
 							["rear500ta"] = 1,
 							["rear500_dr"] = 0,
 							["rear500_pas"] = 0
+						},
+						SubMaterials = {
+							[2] = "rin/transit/props/advantedge/glass_takedown",
+							[3] = "rin/transit/props/advantedge/outerglass_takedown"
 						},
 						Bones = {
 							["foot_dr"] =	{ Vector( 0, 0, 0 ), Angle( 0, 0, 0 ), 1 },
@@ -74,71 +78,6 @@ VEHICLE.Equipment = {
 					}
                 }
 			},
-			{
-				Option = "Whelen Advantedge (No Takedowns, Traffic Advisor)",
-				Components = {
-					{
-						Inherit = "@advantedge",
-						BodyGroups = { 
-							["feet"] = 0,
-							["straps"] = 0,
-							["center"] = 0,
-							["rear500ta"] = 0,
-							["rear500_dr"] = 1,
-							["rear500_pas"] = 1
-						}
-					},
-					{
-						Inherit = "@siren_speaker"
-					}
-                }
-			},
-			{
-				Option = "Whelen Advantedge (Takedowns, Dual Rear 500s)",
-				Components = {
-					{
-						Inherit = "@advantedge",
-						BodyGroups = { 
-							["feet"] = 0,
-							["straps"] = 0,
-							["center"] = 1,
-							["rear500ta"] = 1,
-							["rear500_dr"] = 0,
-							["rear500_pas"] = 0
-						},
-						SubMaterials = {
-							[2] = "rin/transit/props/advantedge/glass_takedown",
-							[3] = "rin/transit/props/advantedge/outerglass_takedown"
-						}
-					},
-					{
-						Inherit = "@siren_speaker"
-					}
-                }
-			},
-			{
-				Option = "Whelen Advantedge (Takedowns, Traffic Advisor)",
-				Components = {
-					{
-						Inherit = "@advantedge",
-						BodyGroups = { 
-							["feet"] = 0,
-							["straps"] = 0,
-							["center"] = 1,
-							["rear500ta"] = 0,
-							["rear500_dr"] = 1,
-							["rear500_pas"] = 1
-						},
-						SubMaterials = {
-							[2] = "rin/transit/props/advantedge/glass_takedown",
-							[3] = "rin/transit/props/advantedge/outerglass_takedown"
-						}
-					},
-					{
-						Inherit = "@siren_speaker"
-					}
-                }
-			}
 		}
 	},
 	{
@@ -165,6 +104,11 @@ VEHICLE.Equipment = {
 						Position = Vector( -9, 108.3, 24 ),
 						Angles = Angle( 0, 6, -2 ),
 						Scale = 0.7,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_whelen_900_halogen_retronyc",
@@ -172,6 +116,11 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, -6, -2 ),
 						Scale = 0.7,
 						Phase = 90,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
                 }
 			},

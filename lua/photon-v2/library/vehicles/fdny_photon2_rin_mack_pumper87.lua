@@ -23,13 +23,23 @@ VEHICLE.Equipment = {
 						Component = "code3_sd_mini",
 						Position = Vector( -30, 109, 104.6 ),
 						Angles = Angle( 0, 90, 0 ),
-						Scale = 1
+						Scale = 1,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "code3_sd_mini",
 						Position = Vector( 30, 109, 104.6 ),
 						Angles = Angle( 0, 270, 0 ),
-						Scale = 1
+						Scale = 1,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					}
 				}
 			},
@@ -44,7 +54,12 @@ VEHICLE.Equipment = {
 						Component = "fedsig_twinsonic",
 						Position = Vector( 0, 111, 106.2 ),
 						Angles = Angle( 0, 0, 0 ),
-						Scale = 1
+						Scale = 1,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					}
 				}
 			},
@@ -59,7 +74,12 @@ VEHICLE.Equipment = {
 						Component = "photon_fedsig_aerodynic_transit",
 						Position = Vector( 0, 114, 105 ),
 						Angles = Angle( 0, 0, 0 ),
-						Scale = 1
+						Scale = 1,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					}
 				}
 			},
@@ -79,6 +99,11 @@ VEHICLE.Equipment = {
 						BodyGroups = {
 							["trim"] = 1,
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "patlite_hkf",
@@ -88,6 +113,11 @@ VEHICLE.Equipment = {
 						BodyGroups = {
 							["trim"] = 1,
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				}
 			}

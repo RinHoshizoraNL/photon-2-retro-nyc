@@ -27,6 +27,11 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, -26, 62.2 ),
                         Angles = Angle( 0, 180, 0 ),
                         Scale = 1.02,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				},
 				Props = {
@@ -63,6 +68,11 @@ VEHICLE.Equipment = {
                         Position = Vector( 0, -26, 62.1 ),
                         Angles = Angle( 0, 180, 0 ),
                         Scale = 0.9,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_par46_left",

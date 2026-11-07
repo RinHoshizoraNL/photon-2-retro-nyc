@@ -61,6 +61,12 @@ VEHICLE.Equipment = {
                         Position = Vector( -1.5, 17, 87 ),
                         Angles = Angle( 0, 180, 2 ),
                         Scale = 1,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+								["MODE2"] = {},
+							}
+						}
 					},
 				}
 			},
@@ -134,6 +140,12 @@ VEHICLE.Equipment = {
 						SubMaterials = {
 							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+								["MODE2"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
@@ -145,6 +157,12 @@ VEHICLE.Equipment = {
 						SubMaterials = {
 							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+								["MODE2"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
@@ -156,6 +174,12 @@ VEHICLE.Equipment = {
 						SubMaterials = {
 							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+								["MODE2"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_mars_flasher_nypd",
@@ -166,6 +190,12 @@ VEHICLE.Equipment = {
 						SubMaterials = {
 							[2] = "schmal/photon/fedsig_visionslr/lens_pod_4",
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+								["MODE2"] = {},
+							}
+						}
 					},
 					{
 						Component = "photon_whe_500_nypd",

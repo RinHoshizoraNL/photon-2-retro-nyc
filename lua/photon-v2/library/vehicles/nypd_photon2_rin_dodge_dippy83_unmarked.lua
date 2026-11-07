@@ -118,6 +118,11 @@ VEHICLE.Equipment = {
 						BodyGroups = {
 							["trim"] = 1,
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				},
 			},
@@ -132,6 +137,11 @@ VEHICLE.Equipment = {
 						BodyGroups = {
 							["trim"] = 1,
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
 					},
 				},
 			},
