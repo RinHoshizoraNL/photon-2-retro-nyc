@@ -1,7 +1,7 @@
 if (Photon2.ReloadVehicleFile()) then return end
 local VEHICLE = Photon2.LibraryVehicle()
 
-VEHICLE.Title 		= "1995 Ford Crown Victoria NYPD"
+VEHICLE.Title 		= "1996 Ford Crown Victoria NYPD"
 VEHICLE.Vehicle		= "96cvpi_sgm"
 VEHICLE.Category 	= "Photon 2 NYC: NYPD"
 VEHICLE.Author		= "Rin Hoshizora"
@@ -12,72 +12,6 @@ VEHICLE.Equipment = {
     	{
 		Category = "Livery",
 		Options = {
-			{
-				Option = "Patrol 95 A",
-				SubMaterials = {
-					{ Id = 6, Material = "rin/nypd/crownvic96/patrol_95a" }
-				},
-				Props = {
-					{
-						Model = "models/gandhi/props/nypd.mdl",
-						Position = Vector( 0, 120, 23.3),
-						Angles = Angle( 0, 270, 0 ),
-						Scale = 1,
-						Color = Color(1, 123, 208),
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, -125.4, 31.8 ),
-						Angles = Angle( 0, 270, 00 ),
-						Scale = 0.95,
-						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_patrol95",
-						},
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, 122.7, 19 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 0.99,
-						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_patrol95",
-						},
-					},
-				},
-			},
-			{
-				Option = "Patrol 95 B",
-				SubMaterials = {
-					{ Id = 6, Material = "rin/nypd/crownvic96/patrol_95b" }
-				},
-				Props = {
-					{
-						Model = "models/gandhi/props/nypd.mdl",
-						Position = Vector( 0, 120, 23.3),
-						Angles = Angle( 0, 270, 0 ),
-						Scale = 1,
-						Color = Color(1, 123, 208),
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, -125.4, 31.8 ),
-						Angles = Angle( 0, 270, 00 ),
-						Scale = 0.95,
-						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_patrol95",
-						},
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, 122.7, 19 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 0.99,
-						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_patrol95",
-						},
-					},
-				},
-			},
 			{
 				Option = "Patrol 96",
 				SubMaterials = {
@@ -107,83 +41,6 @@ VEHICLE.Equipment = {
 						Scale = 0.99,
 						SubMaterials = {
 							[1] = "rin/nypd/props/plates/plate_patrol96",
-						},
-					},
-				},
-				Components = {
-					{
-						Component = "photon_fedsig_gh1_nypd",
-						Position = Vector( -22.4, -74.5, 47.5 ),
-						Angles = Angle( 0, 270, 0 ),
-						Scale = 1,
-						RenderGroup = RENDERGROUP_OPAQUE,
-					},
-					{
-						Component = "photon_fedsig_gh1_nypd",
-						Position = Vector( 22.4, -74.5, 47.5 ),
-						Angles = Angle( 0, 270, 0 ),
-						Scale = 1,
-						Phase = 180,
-						RenderGroup = RENDERGROUP_OPAQUE,
-					},
-					{
-						Component = "photon_fedsig_gh1_nypd",
-						Position = Vector( -17.15, -74.5, 47.5 ),
-						Angles = Angle( 0, 270, 0 ),
-						Scale = 1,
-						Phase = 180,
-						SubMaterials = {
-							[2] = "sentry/shared/glass"
-						},
-						States = {
-							[1] = "SW",
-						},
-						RenderGroup = RENDERGROUP_OPAQUE,
-					},
-					{
-						Component = "photon_fedsig_gh1_nypd",
-						Position = Vector( 17.15, -74.5, 47.5 ),
-						Angles = Angle( 0, 270, 0 ),
-						Scale = 1,
-						SubMaterials = {
-							[2] = "sentry/shared/glass"
-						},
-						States = {
-							[1] = "SW",
-						},
-						RenderGroup = RENDERGROUP_OPAQUE,
-					},
-                }
-			},
-			{
-				Option = "Supervisor 95",
-				SubMaterials = {
-					{ Id = 6, Material = "rin/nypd/crownvic96/supervisor_95" }
-				},
-				Props = {
-					{
-						Model = "models/gandhi/props/nypd.mdl",
-						Position = Vector( 0, 120, 23.3),
-						Angles = Angle( 0, 270, 0 ),
-						Scale = 1,
-						Color = Color(1, 123, 208),
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, -125.4, 31.8 ),
-						Angles = Angle( 0, 270, 00 ),
-						Scale = 0.95,
-						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_patrol95",
-						},
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, 122.7, 19 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 0.99,
-						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_patrol95",
 						},
 					},
 				},
@@ -220,6 +77,75 @@ VEHICLE.Equipment = {
 						},
 					},
 				},
+			},
+			{
+				Option = "New Livery Prototype 95",
+				SubMaterials = {
+					{ Id = 6, Material = "rin/nypd/crownvic96/prototype_95" }
+				},
+				Props = {
+					{
+						Model = "models/gandhi/props/nypd.mdl",
+						Position = Vector( 0, 120, 23.3),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = 1,
+						Color = Color(0, 0, 0),
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -125.4, 31.8 ),
+						Angles = Angle( 0, 270, 00 ),
+						Scale = 0.95,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol96",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, 122.7, 19 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/nypd/props/plates/plate_patrol96",
+						},
+					},
+				},
+			},
+		}
+	},
+	{
+		Category = "Grille Lights",
+		Options = {
+			{
+				Option = "None",
+			},
+			{
+				Option = "Federal Signal GH1",
+				Components = {
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( -9, 110, 29.6 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.8,
+						Phase = 90,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+					{
+						Component = "photon_fedsig_gh1_nypd",
+						Position = Vector( 9, 110, 29.6 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.8,
+						RenderGroup = RENDERGROUP_OPAQUE,
+					},
+				}
+			}
+		}
+	},
+	{
+		Category = "Rear Deck Lights",
+		Options = {
+            {
+				Option = "Rear Deck Lights",
 				Components = {
 					{
 						Component = "photon_fedsig_gh1_nypd",
@@ -263,40 +189,10 @@ VEHICLE.Equipment = {
 						},
 						RenderGroup = RENDERGROUP_OPAQUE,
 					},
-                }
+                },
 			},
 			{
-				Option = "New Livery Prototype 95",
-				SubMaterials = {
-					{ Id = 6, Material = "rin/nypd/crownvic96/prototype_95" }
-				},
-				Props = {
-					{
-						Model = "models/gandhi/props/nypd.mdl",
-						Position = Vector( 0, 120, 23.3),
-						Angles = Angle( 0, 270, 0 ),
-						Scale = 1,
-						Color = Color(0, 0, 0),
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, -125.4, 31.8 ),
-						Angles = Angle( 0, 270, 00 ),
-						Scale = 0.95,
-						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_patrol96",
-						},
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, 122.7, 19 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 0.99,
-						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_patrol96",
-						},
-					},
-				},
+				Option = "None",
 			},
 		}
 	},

@@ -21,6 +21,25 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
+		Category = "Lighting",
+		Options = {
+			{
+				Option = "Default",
+				Components = {
+					{
+						Name = "@standard",
+						Component = "photon_standard_sgmcvpi96",
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE3"] = {},
+							}
+						}
+					},
+				}
+			}
+		}
+	},
+	{
 		Category = "Taxi Sign",
 		Options = {
 			{

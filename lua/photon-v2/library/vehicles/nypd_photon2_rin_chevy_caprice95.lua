@@ -154,6 +154,13 @@ VEHICLE.Equipment = {
 				},
 				Props = {
 					{
+						Model = "models/gandhi/props/nypd.mdl",
+						Position = Vector( 0, 112.2, 15.1),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = Vector( 1, 1.15, 1.2),
+						Color = Color(1, 123, 208),
+					},
+					{
 						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
 						Position = Vector( 0, -123.2, 25.2 ),
 						Angles = Angle( 0, 270, 00 ),
@@ -182,6 +189,13 @@ VEHICLE.Equipment = {
 				},
 				Props = {
 					{
+						Model = "models/gandhi/props/nypd.mdl",
+						Position = Vector( 0, 112.2, 15.1),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = Vector( 1, 1.15, 1.2),
+						Color = Color(1, 123, 208),
+					},
+					{
 						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
 						Position = Vector( 0, -123.2, 25.2 ),
 						Angles = Angle( 0, 270, 00 ),
@@ -209,6 +223,13 @@ VEHICLE.Equipment = {
 					{ Id = 21, Material = "rin/nypd/caprice95/dash_blue" }
 				},
 				Props = {
+					{
+						Model = "models/gandhi/props/nypd.mdl",
+						Position = Vector( 0, 112.2, 15.1),
+						Angles = Angle( 0, 270, 0 ),
+						Scale = Vector( 1, 1.15, 1.2),
+						Color = Color(1, 123, 208),
+					},
 					{
 						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
 						Position = Vector( 0, -123.2, 25.2 ),
