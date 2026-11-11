@@ -29,7 +29,7 @@ VEHICLE.Equipment = {
 					{ BodyGroup = "bumpers", Value = 0 },
 					{ BodyGroup = "grille", Value = 1 },
 					{ BodyGroup = "mirrors", Value = 0 },
-					{ BodyGroup = "wheels", Value = 0 },
+					{ BodyGroup = "wheels", Value = 2 },
 					{ BodyGroup = "brushguard", Value = 0 },
 				},
 				Components = {
@@ -38,33 +38,6 @@ VEHICLE.Equipment = {
                         Position = Vector( -1.6, 17, 87.6 ),
                         Angles = Angle( 0, 180, 1.5 ),
                         Scale = 1.06,
-						Inputs = {
-							["Emergency.Warning"] = {
-								["MODE1"] = {},
-							}
-						}
-					},
-				}
-			},
-			{
-				Option = "k9 Unit 95",
-				SubMaterials = {
-					{ Id = 1, Material = "rin/nypd/suburban89/k9_95" },
-					{ Id = 0, Material = "rin/nypd/suburban89/k9_95" },
-				},
-				BodyGroups = {
-					{ BodyGroup = "bumpers", Value = 0 },
-					{ BodyGroup = "grille", Value = 0 },
-					{ BodyGroup = "mirrors", Value = 1 },
-					{ BodyGroup = "wheels", Value = 2 },
-					{ BodyGroup = "brushguard", Value = 3 },
-				},
-				Components = {
-					{
-                        Component = "fedsig_jetstream",
-                        Position = Vector( -1.6, 22, 86.5 ),
-                        Angles = Angle( 0, 180, 1.5 ),
-                        Scale = 1.1,
 						Inputs = {
 							["Emergency.Warning"] = {
 								["MODE1"] = {},

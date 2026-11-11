@@ -27,14 +27,6 @@ VEHICLE.Equipment = {
 				BodyGroups = {
 					{ BodyGroup = "wheels", Value = 2 },
 				},
-			},
-		}
-	},
-	{
-		Category = "Lightbar",
-		Options = {
-            {
-				Option = "Federal Signal Aerodynic",
 				Components = {
 					{
                         Component = "fedsig_aerodynicny",
@@ -47,159 +39,6 @@ VEHICLE.Equipment = {
 							}
 						}
 					},
-				}
-			},
-        }
-	},
-	{
-		Category = "Pushbar Lights",
-		Options = {
-            {
-				Option = "Pushbar Lights",
-				Components = {
-					{
-						Component = "photon_par46_flasher_nypd",
-						Position = Vector( -17, 127, 45.5 ),
-						Angles = Angle( 270, 0, 0 ),
-						Scale = 0.9,
-						Phase = 180,
-						SubMaterials = {
-							[0] = "sentry/shared/env_cubemap_model",
-						},
-					},
-					{
-						Component = "photon_par46_flasher_nypd",
-						Position = Vector( 14.3, 127, 45.5 ),
-						Angles = Angle( 90, 0, 0 ),
-						Scale = 0.9,
-						SubMaterials = {
-							[0] = "sentry/shared/env_cubemap_model",
-						},
-					},
-                },
-				Props = {
-					{
-						Model = "models/schmal/antenna_data.mdl",
-						Position = Vector( -14.5, 127, 45.5 ),
-						Angles = Angle( 270, 0, 0 ),
-						Scale = Vector( 0.7, 0.7, 1.5 ),
-						SubMaterials = {
-							[0] = "sentry/shared/env_cubemap_model",
-						},
-					},
-					{
-						Model = "models/schmal/antenna_data.mdl",
-						Position = Vector( 11.8, 127, 45.5 ),
-						Angles = Angle( 90, 0, 0 ),
-						Scale = Vector( 0.7, 0.7, 1.5 ),
-						SubMaterials = {
-							[0] = "sentry/shared/env_cubemap_model",
-						},
-					},
-				},
-			},
-		}
-	},
-	{
-		Category = "Side Flashers",
-		Options = {
-            {
-				Option = "Whelen 900",
-				Components = {
-					{
-						Component = "photon_whelen_900_halogen_retronyc",
-						Position = Vector( -44.55, 113, 48 ),
-						Angles = Angle( 0, 80, 1.5 ),
-						Scale = 0.7,
-						Phase = 90,
-						States = { "SW" },
-						SubMaterials = {
-							[3] = "sentry/shared/glass",
-						},
-						Inputs = {
-							["Emergency.Warning"] = {
-								["MODE1"] = {},
-							}
-						}
-					},
-					{
-						Component = "photon_whelen_900_halogen_retronyc",
-						Position = Vector( 41.57, 113, 48 ),
-						Angles = Angle( 0, -80, 1.5 ),
-						Scale = 0.7,
-						States = { "SW" },
-						SubMaterials = {
-							[3] = "sentry/shared/glass",
-						},
-						Inputs = {
-							["Emergency.Warning"] = {
-								["MODE1"] = {},
-							}
-						}
-					},
-				}
-			},
-		}
-	},
-	{
-		Category = "Highriser",
-		Options = {
-			{
-				Option = "Highriser",
-				Props = {
-					{
-						Model = "models/tdmcars/emergency/equipment/mcdermott_riser.mdl",
-						Position = Vector( -1.7, -82, 91 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 1,
-						SubMaterials = {
-							[0] = "rin/nypd/props/white",
-						},
-					},
-					{
-						Model = "models/schmal/antenna_data.mdl",
-						Position = Vector( -27.1, -72.2, 87 ),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = Vector( 3, 3, 1.5 ),
-					},
-					{
-						Model = "models/schmal/antenna_data.mdl",
-						Position = Vector( 23.7, -72.2, 87 ),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = Vector( 3, 3, 1.5 ),
-					},
-					{
-						Model = "models/schmal/antenna_data.mdl",
-						Position = Vector( -27.1, -91.8, 87 ),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = Vector( 3, 3, 1.5 ),
-					},
-					{
-						Model = "models/schmal/antenna_data.mdl",
-						Position = Vector( 23.7, -91.8, 87 ),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = Vector( 3, 3, 1.5 ),
-					},
-					{
-						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
-						Position = Vector( 0.5, -75.8, 96.7 ),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = Vector( 8.7, 0.2, 0.48 ),
-						SubMaterials = {
-							[0] = "rin/nypd/props/white",
-						},
-					},
-					{
-						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
-						Position = Vector( -4, -88, 96.7 ),
-						Angles = Angle( 0, 0, 0 ),
-						Scale = Vector( 8.7, 0.2, 0.48 ),
-						SubMaterials = {
-							[0] = "rin/nypd/props/white",
-						},
-					},
-				},
-				Components = {
 					{
 						Component = "photon_mars_flasher_nypd",
 						Position = Vector( 21.1, -77.2, 96.8),
@@ -275,8 +114,156 @@ VEHICLE.Equipment = {
 							}
 						}
 					},
+				},
+				Props = {
+					{
+						Model = "models/tdmcars/emergency/equipment/mcdermott_riser.mdl",
+						Position = Vector( -1.7, -82, 91 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( -27.1, -72.2, 87 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( 23.7, -72.2, 87 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( -27.1, -91.8, 87 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( 23.7, -91.8, 87 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
+						Position = Vector( 0.5, -75.8, 96.7 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 8.7, 0.2, 0.48 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
+						Position = Vector( -4, -88, 96.7 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 8.7, 0.2, 0.48 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+				},
+			},
+			{
+				Option = "Hazmat Battalion",
+				SubMaterials = {
+					{ Id = 1, Material = "rin/fdny/suburban89/hazmat" },
+					{ Id = 0, Material = "rin/fdny/suburban89/hazmat" },
+				},
+				BodyGroups = {
+					{ BodyGroup = "wheels", Value = 2 },
+				},
+				Components = {
+					{
+                        Component = "fedsig_aerodynicny",
+                        Position = Vector( -1.6, 17, 87.6 ),
+                        Angles = Angle( 0, 180, 1.5 ),
+                        Scale = 1.06,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
+					},
 				}
-			}
+			},
+			{
+				Option = "Rescue Operations",
+				SubMaterials = {
+					{ Id = 1, Material = "rin/fdny/suburban89/rescue" },
+					{ Id = 0, Material = "rin/fdny/suburban89/rescue" },
+				},
+				BodyGroups = {
+					{ BodyGroup = "wheels", Value = 2 },
+				},
+				Components = {
+					{
+                        Component = "photon_fedsig_aerodynic_fdny",
+                        Position = Vector( -1.5, 17, 87 ),
+                        Angles = Angle( 0, 180, 2 ),
+                        Scale = 1,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {},
+							}
+						}
+					},
+				}
+			},
+		}
+	},
+	{
+		Category = "Pushbar Lights",
+		Options = {
+            {
+				Option = "Pushbar Lights",
+				Components = {
+					{
+						Component = "photon_par46_flasher_nypd",
+						Position = Vector( -17, 127, 45.5 ),
+						Angles = Angle( 270, 0, 0 ),
+						Scale = 0.9,
+						Phase = 180,
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+					{
+						Component = "photon_par46_flasher_nypd",
+						Position = Vector( 14.3, 127, 45.5 ),
+						Angles = Angle( 90, 0, 0 ),
+						Scale = 0.9,
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+                },
+				Props = {
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( -14.5, 127, 45.5 ),
+						Angles = Angle( 270, 0, 0 ),
+						Scale = Vector( 0.7, 0.7, 1.5 ),
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( 11.8, 127, 45.5 ),
+						Angles = Angle( 90, 0, 0 ),
+						Scale = Vector( 0.7, 0.7, 1.5 ),
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+				},
+			},
 		}
 	},
 	{

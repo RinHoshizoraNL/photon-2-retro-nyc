@@ -21,9 +21,15 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
-				Option = "Patrol",
+				Option = "EMS",
 				SubMaterials = {
 					{ Id = 11, Material = "rin/ems/vandura83/ems_83" },
+				},
+			},
+			{
+				Option = "Mass Casualty Incident Response",
+				SubMaterials = {
+					{ Id = 11, Material = "rin/ems/vandura83/mci_83" },
 				},
 			},
 		}

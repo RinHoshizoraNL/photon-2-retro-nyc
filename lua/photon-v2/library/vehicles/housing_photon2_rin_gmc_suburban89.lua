@@ -28,17 +28,9 @@ VEHICLE.Equipment = {
 					{ BodyGroup = "bumpers", Value = 0 },
 					{ BodyGroup = "grille", Value = 1 },
 					{ BodyGroup = "mirrors", Value = 0 },
-					{ BodyGroup = "wheels", Value = 0 },
+					{ BodyGroup = "wheels", Value = 2 },
 					{ BodyGroup = "brushguard", Value = 0 },
 				},
-			},
-		}
-	},
-	{
-		Category = "Lightbar",
-		Options = {
-            {
-				Option = "Federal Signal Aerodynic",
 				Components = {
 					{
                         Component = "fedsig_aerodynic",
@@ -51,18 +43,7 @@ VEHICLE.Equipment = {
 							}
 						}
 					},
-				}
-			},
-        }
-	},
-	{
-		Category = "Siren",
-		Options = {
-			{
-				Option = "SP Mark 7",
-				Components = {
 					{
-						Name = "@siren_speaker",
 						Component = "siren_prototype",
 						Model = "models/gandhi/props/es100.mdl",
 						Position = Vector( -1.5, 115.5, 41 ),
@@ -82,7 +63,42 @@ VEHICLE.Equipment = {
 						}
 					},
 				}
-			}
+			},
+			{
+				Option = "Patrol 1991",
+				SubMaterials = {
+					{ Id = 1, Material = "rin/housing/suburban89/housing_91" },
+					{ Id = 0, Material = "rin/housing/suburban89/housing_91" },
+				},
+				BodyGroups = {
+					{ BodyGroup = "bumpers", Value = 0 },
+					{ BodyGroup = "grille", Value = 1 },
+					{ BodyGroup = "mirrors", Value = 1 },
+					{ BodyGroup = "wheels", Value = 2 },
+					{ BodyGroup = "brushguard", Value = 0 },
+				},
+				Components = {
+					{
+						Component = "siren_prototype",
+						Model = "models/gandhi/props/es100.mdl",
+						Position = Vector( -1.5, 115.5, 41 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1,
+						Siren = "pa300_1",
+						Templates = {
+							["Sound"] = { 
+								Tone = {
+									DSP = 0,
+									Pitch = 100
+								}
+							}
+						},
+						Inputs = { 
+							["Emergency.SirenParkKill"] = { ["PARK"] = {} }
+						}
+					},
+				}
+			},
 		}
 	},
 	{

@@ -13,6 +13,15 @@ VEHICLE.Equipment = {
 		Category = "Livery",
 		Options = {
 			{
+				Option = "Patrol 89",
+				SubMaterials = {
+					{ Id = 23, Material = "rin/papd/diplomat83/patrol_89" },
+					{ Id = 12, Material = "rin/nypd/diplomat83/dash_blue" },
+					{ Id = 13, Material = "rin/nypd/diplomat83/seats_blue" },
+					{ Id = 21, Material = "rin/papd/props/blue" },
+				},
+			},
+			{
 				Option = "Patrol 83",
 				SubMaterials = {
 					{ Id = 23, Material = "rin/papd/diplomat83/patrol_83" },

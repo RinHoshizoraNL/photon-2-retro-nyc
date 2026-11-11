@@ -34,6 +34,44 @@ VEHICLE.Equipment = {
 				}
 			},
 			{
+				Option = "Special Operations Division",
+				SubMaterials = {
+					{ Id = 7, Material = "rin/nypd/caprice89/sod_89" },
+				},
+				Components = {
+					{
+                        Component = "fedsig_aerodynicny",
+                        Position = Vector( 0, -4, 61.4 ),
+                        Angles = Angle( 0, 180, 0 ),
+                        Scale = 1.06,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {Flashers = "ON"},
+							}
+						}
+					},
+				}
+			},
+			{
+				Option = "Harbor Unit",
+				SubMaterials = {
+					{ Id = 7, Material = "rin/nypd/caprice89/harbor_89" },
+				},
+				Components = {
+					{
+                        Component = "fedsig_aerodynicny",
+                        Position = Vector( 0, -4, 61.4 ),
+                        Angles = Angle( 0, 180, 0 ),
+                        Scale = 1.06,
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE1"] = {Flashers = "ON"},
+							}
+						}
+					},
+				}
+			},
+			{
 				Option = "Office Of The Chief Of Department",
 				SubMaterials = {
 					{ Id = 7, Material = "rin/nypd/caprice89/ocd_89" },
