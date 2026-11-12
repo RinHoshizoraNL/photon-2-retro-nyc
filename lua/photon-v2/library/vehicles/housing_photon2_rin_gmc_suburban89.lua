@@ -33,17 +33,6 @@ VEHICLE.Equipment = {
 				},
 				Components = {
 					{
-                        Component = "fedsig_aerodynic",
-                        Position = Vector( -1.5, 17, 87 ),
-                        Angles = Angle( 0, 180, 2 ),
-                        Scale = 1,
-						Inputs = {
-							["Emergency.Warning"] = {
-								["MODE1"] = {},
-							}
-						}
-					},
-					{
 						Component = "siren_prototype",
 						Model = "models/gandhi/props/es100.mdl",
 						Position = Vector( -1.5, 115.5, 41 ),
@@ -99,6 +88,25 @@ VEHICLE.Equipment = {
 					},
 				}
 			},
+		}
+	},
+	{
+		Category = "Dummy Lightbar",
+		Options = {
+			{
+				Option = "Federal Signal Streethawk",
+				Props = {
+					{
+						Model = "models/sentry/props/streethawk_speaker.mdl",
+						Position = Vector( -1.5, 20, 87.7 ),
+						Angles = Angle( 0, 0, -1 ),
+						Scale = 1.07,
+						SubMaterials = {
+							[2] = "rin/housing/props/streethawk/streethawk",
+						},
+					},
+				}
+			}
 		}
 	},
 	{

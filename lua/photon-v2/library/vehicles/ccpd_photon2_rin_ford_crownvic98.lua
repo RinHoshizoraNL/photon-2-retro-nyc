@@ -321,20 +321,6 @@ VEHICLE.Equipment = {
 					{ BodyGroup = "4bulb_tails", Value = 1 },
 				},
 			},
-			{
-				Option = "2001",
-				BodyGroups = {
-					{ BodyGroup = "doortrim", Value = 0 },
-					{ BodyGroup = "grille", Value = 0 },
-					{ BodyGroup = "reartrim", Value = 0 },
-					{ BodyGroup = "handles", Value = 1 },
-					{ BodyGroup = "trunkmodel", Value = 0 },
-					{ BodyGroup = "mirrors", Value = 0 },
-					{ BodyGroup = "bumperf_chrome", Value = 0 },
-					{ BodyGroup = "bumperr_chrome", Value = 0 },
-					{ BodyGroup = "4bulb_tails", Value = 1 },
-				},
-			},
 		}
 	},
 	{

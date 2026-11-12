@@ -21,6 +21,41 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
+		Category = "Lighting",
+		Options = {
+			{
+				Option = "Default",
+				Components = {
+					{
+						Name = "@standard",
+						Component = "photon_standard_chevcap91",
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE3"] = {},
+							}
+						}
+					},
+				}
+			}
+		}
+	},
+	{
+		Category = "Beacon",
+		Options = {
+            {
+				Option = "Mars Beacon",
+				Components = {
+					{
+                        Component = "photon_mars_beacon_pa",
+                        Position = Vector( 0, -19, 60.2 ),
+                        Angles = Angle( 0, 180, 1 ),
+                        Scale = 1,
+					},
+				}
+			},
+        }
+	},
+	{
 		Category = "Spotlights",
 		Options = {
 			{

@@ -20,6 +20,26 @@ VEHICLE.Equipment = {
 					{ Id = 13, Material = "rin/nypd/diplomat83/seats_blue" },
 					{ Id = 21, Material = "rin/papd/props/blue" },
 				},
+				Props = {
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -125.5, 26.7 ),
+						Angles = Angle( -16, 270, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[1] = "rin/papd/props/plates/plate_port_a",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( -31, 105.7, 15 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/papd/props/plates/plate_port_a",
+						},
+					},
+				}
 			},
 			{
 				Option = "Patrol 83",
@@ -28,6 +48,26 @@ VEHICLE.Equipment = {
 					{ Id = 12, Material = "rin/nypd/diplomat83/dash_blue" },
 					{ Id = 13, Material = "rin/nypd/diplomat83/seats_blue" },
 				},
+				Props = {
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( 0, -125.5, 26.7 ),
+						Angles = Angle( -16, 270, 0 ),
+						Scale = 1,
+						SubMaterials = {
+							[1] = "rin/papd/props/plates/plate_port_b",
+						},
+					},
+					{
+						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
+						Position = Vector( -31, 105.7, 15 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.99,
+						SubMaterials = {
+							[1] = "rin/papd/props/plates/plate_port_b",
+						},
+					},
+				}
 			},
 		}
 	},
@@ -150,24 +190,6 @@ VEHICLE.Equipment = {
 						Position = Vector( -31, 105, 15 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( 0, -125.5, 26.7 ),
-						Angles = Angle( -16, 270, 0 ),
-						Scale = 1,
-						SubMaterials = {
-							[1] = "rin/papd/props/plates/plate_port_a",
-						},
-					},
-					{
-						Model = "models/xenosprops/na_plate/na_plate_gov.mdl",
-						Position = Vector( -31, 105.7, 15 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 0.99,
-						SubMaterials = {
-							[1] = "rin/papd/props/plates/plate_port_a",
-						},
 					},
 				}
 			}

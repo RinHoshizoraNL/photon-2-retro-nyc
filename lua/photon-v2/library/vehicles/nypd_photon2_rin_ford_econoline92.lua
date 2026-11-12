@@ -117,6 +117,15 @@ VEHICLE.Equipment = {
 							[1] = "rin/nypd/props/plates/plate_patrol96",
 						},
 					},
+					{
+						Model = "models/sentry/props/streethawk.mdl",
+						Position = Vector( 0, 10, 89.3 ),
+						Angles = Angle( 0, 0, -1.5 ),
+						Scale = 1.15,
+						SubMaterials = {
+							[1] = "rin/nypd/props/streethawk/streethawk",
+						},
+					},
 				},
 			},
 			{

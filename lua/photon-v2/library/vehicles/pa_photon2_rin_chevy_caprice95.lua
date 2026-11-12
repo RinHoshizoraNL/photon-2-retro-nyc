@@ -21,6 +21,25 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
+		Category = "Lighting",
+		Options = {
+			{
+				Option = "Default",
+				Components = {
+					{
+						Name = "@standard",
+						Component = "photon_standard_chevcap91",
+						Inputs = {
+							["Emergency.Warning"] = {
+								["MODE3"] = {},
+							}
+						}
+					},
+				}
+			}
+		}
+	},
+	{
 		Category = "Lightbar",
 		Options = {
 			{
@@ -69,6 +88,12 @@ VEHICLE.Equipment = {
 						SubMaterials = {
 							[0] = "sentry/dippy/black",
 						},
+					},
+					{
+                        Component = "photon_mars_beacon_pa",
+                        Position = Vector( 0, -12, 64.2 ),
+                        Angles = Angle( 0, 180, 3 ),
+                        Scale = 1,
 					},
 				}
 			}

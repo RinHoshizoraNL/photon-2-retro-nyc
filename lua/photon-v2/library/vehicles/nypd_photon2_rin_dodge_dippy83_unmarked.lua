@@ -208,7 +208,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( -16, 270, 0 ),
 						Scale = 1,
 						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_civ_2",
+							[1] = "rin/nypd/props/plates/plate_civ_1",
 						},
 					},
 					{
@@ -217,7 +217,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 0.99,
 						SubMaterials = {
-							[1] = "rin/nypd/props/plates/plate_civ_2",
+							[1] = "rin/nypd/props/plates/plate_civ_1",
 						},
 					},
 				}

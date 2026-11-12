@@ -29,6 +29,25 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
+		Category = "Dummy Lightbar",
+		Options = {
+			{
+				Option = "Federal Signal Streethawk",
+				Props = {
+					{
+						Model = "models/sentry/props/streethawk_speaker.mdl",
+						Position = Vector( 0, 32, 102.2 ),
+						Angles = Angle( 0, 0, -2 ),
+						Scale = 1.07,
+						SubMaterials = {
+							[2] = "rin/housing/props/streethawk/streethawk",
+						},
+					},
+				}
+			}
+		}
+	},
+	{
 		Category = "Siren",
 		Options = {
 			{

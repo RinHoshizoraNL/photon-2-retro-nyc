@@ -66,18 +66,16 @@ VEHICLE.Equipment = {
                 }
 			},
 			{
-				Option = "Federal Signal Aerodynic",
-				Components = {
+				Option = "Federal Signal Streethawk",
+				Props = {
 					{
-                        Component = "fedsig_aerodynic",
-                        Position = Vector( 0, -13, 58.6 ),
-                        Angles = Angle( 0, 180, 2 ),
-                        Scale = 0.9,
-						Inputs = {
-							["Emergency.Warning"] = {
-								["MODE1"] = {},
-							}
-						}
+						Model = "models/sentry/props/streethawk_speaker.mdl",
+						Position = Vector( 0, -19, 59),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1.09,
+						SubMaterials = {
+							[2] = "rin/housing/props/streethawk/streethawk",
+						},
 					},
 				}
 			},

@@ -1,0 +1,7 @@
+"DecalModulate"
+{
+	"$basetexture" "rin/papd/props/streethawk/streethawk"
+	"$model" "1"
+	"$nocull" "1"
+}
+

@@ -63,7 +63,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( -8, 270, 0 ),
 						Scale = 1,
 						SubMaterials = {
-							[1] = "rin/papd/props/plates/plate_port_a",
+							[1] = "rin/papd/props/plates/plate_port_b",
 						},
 					},
 					{
@@ -72,7 +72,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( 4, 90, 0 ),
 						Scale = 1,
 						SubMaterials = {
-							[1] = "rin/papd/props/plates/plate_port_a",
+							[1] = "rin/papd/props/plates/plate_port_b",
 						},
 					},
 				}

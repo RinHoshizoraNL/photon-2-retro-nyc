@@ -183,20 +183,6 @@ VEHICLE.Equipment = {
 					{ BodyGroup = "4bulb_tails", Value = 1 },
 				},
 			},
-			{
-				Option = "2001",
-				BodyGroups = {
-					{ BodyGroup = "doortrim", Value = 5 },
-					{ BodyGroup = "grille", Value = 0 },
-					{ BodyGroup = "reartrim", Value = 0 },
-					{ BodyGroup = "handles", Value = 1 },
-					{ BodyGroup = "trunkmodel", Value = 0 },
-					{ BodyGroup = "mirrors", Value = 0 },
-					{ BodyGroup = "bumperf_chrome", Value = 0 },
-					{ BodyGroup = "bumperr_chrome", Value = 0 },
-					{ BodyGroup = "4bulb_tails", Value = 1 },
-				},
-			},
 		}
 	},
 	{
@@ -263,7 +249,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( 6.5, 90, 0 ),
 						Scale = 0.97,
 						SubMaterials = {
-							[1] = "rin/papd/props/plates/plate_port_b",
+							[1] = "rin/papd/props/plates/plate_port_a",
 						},
 					},
 					{
@@ -272,7 +258,7 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 12, -90 ),
 						Scale = 1,
 						SubMaterials = {
-							[1] = "rin/papd/props/plates/plate_port_b",
+							[1] = "rin/papd/props/plates/plate_port_a",
 						},
 						FollowBone = "trunk"
 					},

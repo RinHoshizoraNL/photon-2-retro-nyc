@@ -18,8 +18,154 @@ VEHICLE.Equipment = {
 				Option = "Patrol 1989",
 				SubMaterials = {
 					{ Id = 7, Material = "rin/papd/caprice89/patrol_89" },
+					{ Id = 14, Material = "rin/papd/props/blue" },
 				},
 			},
+		}
+	},
+	{
+		Category = "Dummy Lightbar",
+		Options = {
+			{
+				Option = "Federal Signal Streethawk",
+				Props = {
+					{
+						Model = "models/sentry/props/streethawk_speaker.mdl",
+						Position = Vector( 0, 0-2, 61.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1.07,
+						SubMaterials = {
+							[2] = "rin/papd/props/streethawk/streethawk",
+						},
+					},
+				}
+			}
+		}
+	},
+	{
+		Category = "Highriser",
+		Options = {
+			{
+				Option = "None",
+			},
+			{
+				Option = "Highriser",
+				Props = {
+					{
+						Model = "models/tdmcars/emergency/equipment/mcdermott_riser.mdl",
+						Position = Vector( 0, -25, 63.5 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 0.95,
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( -24, -15.6, 59.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( 24, -15.6, 59.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( -24, -34.4, 59.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( 24, -34.4, 59.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 3, 3, 1.5 ),
+					},
+					{
+						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
+						Position = Vector( 2.5, -19, 69 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 8.2, 0.2, 0.44 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/sprops/cuboids/height06/size_1/cube_6x6x6.mdl",
+						Position = Vector( -2.5, -31, 69 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 8.2, 0.2, 0.44 ),
+						SubMaterials = {
+							[0] = "rin/nypd/props/white",
+						},
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( -8, -20.2, 70 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 1, 1, 1 ),
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+					{
+						Model = "models/schmal/antenna_data.mdl",
+						Position = Vector( 8, -29.7, 70 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = Vector( 1, 1, 1 ),
+						SubMaterials = {
+							[0] = "sentry/shared/env_cubemap_model",
+						},
+					},
+				},
+				Components = {
+					{
+						Component = "photon_mars_flasher_nypd",
+						Position = Vector( 21.4, -20.2, 68.8 ),
+						Angles = Angle( 90, 0, 0 ),
+						Scale = 1,
+						States = { "~R", "~R" }
+					},
+					{
+						Component = "photon_mars_flasher_nypd",
+						Position = Vector( -21.4, -29.7, 68.8 ),
+						Angles = Angle( -90, 0, 0 ),
+						Scale = 1,
+						Phase = 180,
+						States = { "~R", "~R" }
+					},
+					{
+						Component = "photon_mars_flasher_nypd",
+						Position = Vector( 20, -20.2, 64.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						Phase = 180,
+						States = { "~R", "~R" }
+					},
+					{
+						Component = "photon_mars_flasher_nypd",
+						Position = Vector( -20, -29.7, 64.5 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						States = { "~R", "~R" }
+					},
+					{
+						Component = "photon_highrise_spotlight_nypd",
+						Position = Vector( -8, -20.2, 72 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+					},
+					{
+						Component = "photon_highrise_spotlight_nypd",
+						Position = Vector( 8, -29.7, 72 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+					},
+				}
+			}
 		}
 	},
 	{
