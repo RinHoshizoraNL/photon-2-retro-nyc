@@ -169,6 +169,7 @@ COMPONENT.Segments = {
 		}
 	},
     ["Bottom"] = {
+		Off = "~OFF",
 		Frames = {
 			[1] = "10 11 15 16 17 18",
             [2] = "16",

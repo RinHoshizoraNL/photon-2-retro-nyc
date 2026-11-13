@@ -1,0 +1,7 @@
+"DecalModulate"
+{
+	"$basetexture" "rin/nyc_other/props/streethawk/streethawk_sgpd"
+	"$model" "1"
+	"$nocull" "1"
+}
+
